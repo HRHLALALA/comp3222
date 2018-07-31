@@ -15,7 +15,7 @@ uniting: xy+xy' = x
     iodempotency: x+z+z = x + z
     xy + x'z + yz  = (x'+y)(x+z)+(x+z)y = (x'+y+y)(x+z) = (x'+y)(x+z)
     factoring:  xy + x'z + yz = xy + x'z
-### 3. Determine whether or not the following expression is valid:$x_1 * \overline{x_3}+x_2*x_3+\overline{x_2}*\overline{x_3} = (x_1+\overline{x_2}+x_3)(x_1+x_2+\overline{x_3})(\overline{x_1}+x_2+\overline{x_3}) $
+### 3. Determine whether or not the following expression is valid: $ x_1 * \overline{x_3}+x_2*x_3+\overline{x_2}*\overline{x_3} = (x_1+\overline{x_2}+x_3)(x_1+x_2+\overline{x_3})(\overline{x_1}+x_2+\overline{x_3}) $
 ```
     
     
