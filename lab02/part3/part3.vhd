@@ -1,0 +1,26 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY part3 IS
+	PORT ( S : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+			 U	: IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+			 V	: IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+			 W	: IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+			 M	: OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+			LEDR:OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
+END part3;
+
+ARCHITECTURE Behavior OF part3 IS
+BEGIN
+	LEDR(1 DOWNTO 0)<=U;
+	LEDR(3 DOWNTO 2)<=V;
+	LEDR(5 DOWNTO 4)<=W;
+	LEDR(7 DOWNTO 6)<=S;
+	
+	M<=v when (S="01") else
+		U when (S="00") else W;
+	
+
+
+
+END Behavior;

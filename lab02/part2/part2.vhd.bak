@@ -1,0 +1,18 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY part2 IS
+	PORT ( S : IN STD_LOGIC;
+			X	: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			Y	: IN STD_LOGIC_VECTOR(7 DOWNTO 4);
+			M	: OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+			LEDR:OUT STD_LOGIC_VECTOR(8 DOWNTO 0));
+END part2;
+
+ARCHITECTURE Behavior OF part2 IS
+BEGIN
+	LEDR[8]<=S;
+	LEDR[0,3]<=X;
+	LEDR[1,7]<=Y;
+	--M <= (not s and x) or (s and y);
+END Behavior;
