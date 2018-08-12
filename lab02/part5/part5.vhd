@@ -15,10 +15,10 @@ ARCHITECTURE Behavior OF part5 IS
 	END COMPONENT;
 
 	COMPONENT char_7seg
-		PORT ( C : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-			Display1 : OUT STD_LOGIC_VECTOR(0 TO 6);
-			Display2 : OUT STD_LOGIC_VECTOR(0 TO 6);
-			Display3 : OUT STD_LOGIC_VECTOR(0 TO 6));
+			PORT ( C : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		Display1 : OUT STD_LOGIC_VECTOR(0 TO 6);
+		Display2 : OUT STD_LOGIC_VECTOR(0 TO 6);
+		Display3 : OUT STD_LOGIC_VECTOR(0 TO 6));
 	END COMPONENT;
 
 	SIGNAL M : STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -69,7 +69,5 @@ BEGIN
 					"0110000" when (C="00") else
 					"1111111";--1
 					
-
-	
 --code not shown
 END Behavior;
