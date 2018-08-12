@@ -1,0 +1,6 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+ENTITY CircuitA IS
+	PORT (V: IN STD_LOGIC_VECTOR(0 TO 2);
+				A: OUT STD_LOGIC_VECTOR(0 TO 2));
+END CircuitA;

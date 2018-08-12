@@ -1,0 +1,33 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY Comparator IS
+	PORT (V:	IN STD_LOGIC_VECTOR(0 TO 3);
+			Z: OUT STD_LOGIC);
+END Comparator;
+
+ARCHITECTURE Structure OF Comparator IS
+	SIGNAL S: STD_LOGIC_VECTOR(0 TO 2);
+	COMPONENT BIT_1_COMPARATOR 
+		PORT(A,B,C	: IN STD_LOGIC;
+				D	: OUT STD_LOGIC);
+	END COMPONENT;
+BEGIN
+	stage1: BIT_1_COMPARATOR PORT MAP (V(3),'1','0',S(0));
+	stage2: BIT_1_COMPARATOR PORT MAP (V(2),'0',S(0),S(1));
+		stage3: BIT_1_COMPARATOR PORT MAP (V(1),'1 ',S(1),S(2));
+	stage4: BIT_1_COMPARATOR PORT MAP (V(0),'0',S(2),Z);
+END Structure;
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY BIT_1_COMPARATOR IS
+	PORT(A,B,C	: IN STD_LOGIC;
+			D	: OUT STD_LOGIC);
+END BIT_1_COMPARATOR;
+
+ARCHITECTURE behavior OF BIT_1_COMPARATOR IS
+BEGIN	
+	D<=(A AND NOT B) OR C ;--incorrect
+END behavior;
