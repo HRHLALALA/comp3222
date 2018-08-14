@@ -1,5 +1,5 @@
 Flow report for part5
-Sun Aug 12 17:36:15 2018
+Tue Aug 14 21:53:02 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Sun Aug 12 17:36:06 2018            ;
+; Flow Status                        ; Successful - Tue Aug 14 21:52:52 2018            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; part5                                            ;
 ; Top-level Entity Name              ; part5                                            ;
 ; Family                             ; Cyclone II                                       ;
 ; Device                             ; EP2C20F484C7                                     ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 10 / 18,752 ( < 1 % )                            ;
-;     Total combinational functions  ; 10 / 18,752 ( < 1 % )                            ;
+; Total logic elements               ; 21 / 18,752 ( < 1 % )                            ;
+;     Total combinational functions  ; 21 / 18,752 ( < 1 % )                            ;
 ;     Dedicated logic registers      ; 0 / 18,752 ( 0 % )                               ;
 ; Total registers                    ; 0                                                ;
 ; Total pins                         ; 31 / 315 ( 10 % )                                ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/12/2018 17:35:44 ;
+; Start date & time ; 08/14/2018 21:52:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; part5               ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 167690710072425.153405934406704 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 167690710072425.153424754908992 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top        ;
@@ -90,11 +90,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 4663 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:11     ; 1.0                     ; 5356 MB             ; 00:00:04                           ;
+; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:11     ; 1.0                     ; 5360 MB             ; 00:00:04                           ;
 ; Assembler                 ; 00:00:08     ; 1.0                     ; 4574 MB             ; 00:00:01                           ;
 ; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:36     ; --                      ; --                  ; 00:00:07                           ;
+; Total                     ; 00:00:35     ; --                      ; --                  ; 00:00:07                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

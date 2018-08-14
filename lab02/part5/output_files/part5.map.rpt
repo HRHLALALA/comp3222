@@ -1,5 +1,5 @@
 Analysis & Synthesis report for part5
-Sun Aug 12 17:35:45 2018
+Tue Aug 14 21:52:31 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -42,13 +42,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Aug 12 17:35:45 2018            ;
+; Analysis & Synthesis Status        ; Successful - Tue Aug 14 21:52:31 2018            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; part5                                            ;
 ; Top-level Entity Name              ; part5                                            ;
 ; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 10                                               ;
-;     Total combinational functions  ; 10                                               ;
+; Total logic elements               ; 21                                               ;
+;     Total combinational functions  ; 21                                               ;
 ;     Dedicated logic registers      ; 0                                                ;
 ; Total registers                    ; 0                                                ;
 ; Total pins                         ; 31                                               ;
@@ -175,16 +175,16 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 10    ;
+; Estimated Total logic elements              ; 21    ;
 ;                                             ;       ;
-; Total combinational functions               ; 10    ;
+; Total combinational functions               ; 21    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 6     ;
-;     -- 3 input functions                    ; 2     ;
-;     -- <=2 input functions                  ; 2     ;
+;     -- 4 input functions                    ; 12    ;
+;     -- 3 input functions                    ; 3     ;
+;     -- <=2 input functions                  ; 6     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 10    ;
+;     -- normal mode                          ; 21    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
@@ -194,21 +194,23 @@ applicable agreement for further details.
 ; I/O pins                                    ; 31    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; SW[9] ;
-; Maximum fan-out                             ; 6     ;
-; Total fan-out                               ; 55    ;
-; Average fan-out                             ; 1.34  ;
+; Maximum fan-out                             ; 15    ;
+; Total fan-out                               ; 90    ;
+; Average fan-out                             ; 1.73  ;
 +---------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                             ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
-; |part5                     ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |part5                  ; work         ;
-;    |char_7seg:H0|          ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part5|char_7seg:H0     ; work         ;
-;    |mux_2bit_3to1:M0|      ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part5|mux_2bit_3to1:M0 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
+; |part5                     ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |part5                                   ; work         ;
+;    |mux_2bit_3to1:M0|      ; 21 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part5|mux_2bit_3to1:M0                  ; work         ;
+;       |char_7seg:stage0|   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part5|mux_2bit_3to1:M0|char_7seg:stage0 ; work         ;
+;       |char_7seg:stage1|   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part5|mux_2bit_3to1:M0|char_7seg:stage1 ; work         ;
+;       |char_7seg:stage2|   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part5|mux_2bit_3to1:M0|char_7seg:stage2 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -227,13 +229,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |part5|mux_2bit_3to1:M0|M[1] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |part5|mux_2bit_3to1:M0|TEMPW[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 
 
 +-------------------------------+
@@ -251,7 +253,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Sun Aug 12 17:35:36 2018
+    Info: Processing started: Tue Aug 14 21:52:22 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part5 -c part5
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 6 design units, including 3 entities, in source file part5.vhd
@@ -263,19 +265,19 @@ Info (12021): Found 6 design units, including 3 entities, in source file part5.v
     Info (12023): Found entity 3: char_7seg
 Info (12127): Elaborating entity "part5" for the top level hierarchy
 Info (12128): Elaborating entity "mux_2bit_3to1" for hierarchy "mux_2bit_3to1:M0"
-Info (12128): Elaborating entity "char_7seg" for hierarchy "char_7seg:H0"
+Info (12128): Elaborating entity "char_7seg" for hierarchy "mux_2bit_3to1:M0|char_7seg:stage0"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[6]"
     Warning (15610): No output dependent on input pin "SW[7]"
-Info (21057): Implemented 41 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 52 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 10 logic cells
+    Info (21061): Implemented 21 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4666 megabytes
-    Info: Processing ended: Sun Aug 12 17:35:46 2018
+    Info: Peak virtual memory: 4678 megabytes
+    Info: Processing ended: Tue Aug 14 21:52:32 2018
     Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:02
 
