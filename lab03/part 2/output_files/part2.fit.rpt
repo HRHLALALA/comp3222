@@ -1,6 +1,6 @@
 Fitter report for part2
-Tue Aug 14 11:44:22 2018
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue Aug 14 20:10:23 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -57,26 +57,26 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Fitter Summary                                                                       ;
-+------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Aug 14 11:44:22 2018           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; part2                                           ;
-; Top-level Entity Name              ; part2                                           ;
-; Family                             ; Cyclone II                                      ;
-; Device                             ; EP2C20F484C7                                    ;
-; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 6 / 18,752 ( < 1 % )                            ;
-;     Total combinational functions  ; 6 / 18,752 ( < 1 % )                            ;
-;     Dedicated logic registers      ; 0 / 18,752 ( 0 % )                              ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 22 / 315 ( 7 % )                                ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Fitter Summary                                                                        ;
++------------------------------------+--------------------------------------------------+
+; Fitter Status                      ; Successful - Tue Aug 14 20:10:23 2018            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; part2                                            ;
+; Top-level Entity Name              ; part2                                            ;
+; Family                             ; Cyclone II                                       ;
+; Device                             ; EP2C20F484C7                                     ;
+; Timing Models                      ; Final                                            ;
+; Total logic elements               ; 11 / 18,752 ( < 1 % )                            ;
+;     Total combinational functions  ; 11 / 18,752 ( < 1 % )                            ;
+;     Dedicated logic registers      ; 0 / 18,752 ( 0 % )                               ;
+; Total registers                    ; 0                                                ;
+; Total pins                         ; 30 / 315 ( 10 % )                                ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                              ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                   ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
++------------------------------------+--------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -138,12 +138,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 3.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ; < 0.1%      ;
+;     Processors 2-4         ;  66.7%      ;
 +----------------------------+-------------+
 
 
@@ -327,14 +327,6 @@ applicable agreement for further details.
 ; Location     ;                ;              ; KEY[1]        ; PIN_R21       ; QSF Assignment ;
 ; Location     ;                ;              ; KEY[2]        ; PIN_T22       ; QSF Assignment ;
 ; Location     ;                ;              ; KEY[3]        ; PIN_T21       ; QSF Assignment ;
-; Location     ;                ;              ; LEDG[0]       ; PIN_U22       ; QSF Assignment ;
-; Location     ;                ;              ; LEDG[1]       ; PIN_U21       ; QSF Assignment ;
-; Location     ;                ;              ; LEDG[2]       ; PIN_V22       ; QSF Assignment ;
-; Location     ;                ;              ; LEDG[3]       ; PIN_V21       ; QSF Assignment ;
-; Location     ;                ;              ; LEDG[4]       ; PIN_W22       ; QSF Assignment ;
-; Location     ;                ;              ; LEDG[5]       ; PIN_W21       ; QSF Assignment ;
-; Location     ;                ;              ; LEDG[6]       ; PIN_Y22       ; QSF Assignment ;
-; Location     ;                ;              ; LEDG[7]       ; PIN_Y21       ; QSF Assignment ;
 ; Location     ;                ;              ; LEDR[4]       ; PIN_T18       ; QSF Assignment ;
 ; Location     ;                ;              ; LEDR[5]       ; PIN_V19       ; QSF Assignment ;
 ; Location     ;                ;              ; LEDR[6]       ; PIN_Y18       ; QSF Assignment ;
@@ -511,14 +503,6 @@ applicable agreement for further details.
 ; I/O Standard ;                ;              ; KEY[1]        ; LVTTL         ; QSF Assignment ;
 ; I/O Standard ;                ;              ; KEY[2]        ; LVTTL         ; QSF Assignment ;
 ; I/O Standard ;                ;              ; KEY[3]        ; LVTTL         ; QSF Assignment ;
-; I/O Standard ;                ;              ; LEDG[0]       ; LVTTL         ; QSF Assignment ;
-; I/O Standard ;                ;              ; LEDG[1]       ; LVTTL         ; QSF Assignment ;
-; I/O Standard ;                ;              ; LEDG[2]       ; LVTTL         ; QSF Assignment ;
-; I/O Standard ;                ;              ; LEDG[3]       ; LVTTL         ; QSF Assignment ;
-; I/O Standard ;                ;              ; LEDG[4]       ; LVTTL         ; QSF Assignment ;
-; I/O Standard ;                ;              ; LEDG[5]       ; LVTTL         ; QSF Assignment ;
-; I/O Standard ;                ;              ; LEDG[6]       ; LVTTL         ; QSF Assignment ;
-; I/O Standard ;                ;              ; LEDG[7]       ; LVTTL         ; QSF Assignment ;
 ; I/O Standard ;                ;              ; LEDR[4]       ; LVTTL         ; QSF Assignment ;
 ; I/O Standard ;                ;              ; LEDR[5]       ; LVTTL         ; QSF Assignment ;
 ; I/O Standard ;                ;              ; LEDR[6]       ; LVTTL         ; QSF Assignment ;
@@ -562,8 +546,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 32 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 32 ( 0.00 % )      ;
+;     -- Requested    ; 0 / 45 ( 0.00 % )      ;
+;     -- Achieved     ; 0 / 45 ( 0.00 % )      ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -586,7 +570,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 29      ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 42      ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -594,125 +578,125 @@ applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in Z:/comp3222/lab03/part 2/output_files/part2.pin.
+The pin-out file can be found in C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 2/output_files/part2.pin.
 
 
-+--------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                      ;
-+---------------------------------------------+----------------------+
-; Resource                                    ; Usage                ;
-+---------------------------------------------+----------------------+
-; Total logic elements                        ; 6 / 18,752 ( < 1 % ) ;
-;     -- Combinational with no register       ; 6                    ;
-;     -- Register only                        ; 0                    ;
-;     -- Combinational with a register        ; 0                    ;
-;                                             ;                      ;
-; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 4                    ;
-;     -- 3 input functions                    ; 2                    ;
-;     -- <=2 input functions                  ; 0                    ;
-;     -- Register only                        ; 0                    ;
-;                                             ;                      ;
-; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 6                    ;
-;     -- arithmetic mode                      ; 0                    ;
-;                                             ;                      ;
-; Total registers*                            ; 0 / 19,649 ( 0 % )   ;
-;     -- Dedicated logic registers            ; 0 / 18,752 ( 0 % )   ;
-;     -- I/O registers                        ; 0 / 897 ( 0 % )      ;
-;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 1 / 1,172 ( < 1 % )  ;
-; Virtual pins                                ; 0                    ;
-; I/O pins                                    ; 22 / 315 ( 7 % )     ;
-;     -- Clock pins                           ; 3 / 8 ( 38 % )       ;
-;                                             ;                      ;
-; Global signals                              ; 0                    ;
-; M4Ks                                        ; 0 / 52 ( 0 % )       ;
-; Total block memory bits                     ; 0 / 239,616 ( 0 % )  ;
-; Total block memory implementation bits      ; 0 / 239,616 ( 0 % )  ;
-; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )       ;
-; PLLs                                        ; 0 / 4 ( 0 % )        ;
-; Global clocks                               ; 0 / 16 ( 0 % )       ;
-; JTAGs                                       ; 0 / 1 ( 0 % )        ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
-; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
-; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%         ;
-; Maximum fan-out                             ; 7                    ;
-; Highest non-global fan-out                  ; 7                    ;
-; Total fan-out                               ; 32                   ;
-; Average fan-out                             ; 1.03                 ;
-+---------------------------------------------+----------------------+
++---------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                       ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Total logic elements                        ; 11 / 18,752 ( < 1 % ) ;
+;     -- Combinational with no register       ; 11                    ;
+;     -- Register only                        ; 0                     ;
+;     -- Combinational with a register        ; 0                     ;
+;                                             ;                       ;
+; Logic element usage by number of LUT inputs ;                       ;
+;     -- 4 input functions                    ; 7                     ;
+;     -- 3 input functions                    ; 3                     ;
+;     -- <=2 input functions                  ; 1                     ;
+;     -- Register only                        ; 0                     ;
+;                                             ;                       ;
+; Logic elements by mode                      ;                       ;
+;     -- normal mode                          ; 11                    ;
+;     -- arithmetic mode                      ; 0                     ;
+;                                             ;                       ;
+; Total registers*                            ; 0 / 19,649 ( 0 % )    ;
+;     -- Dedicated logic registers            ; 0 / 18,752 ( 0 % )    ;
+;     -- I/O registers                        ; 0 / 897 ( 0 % )       ;
+;                                             ;                       ;
+; Total LABs:  partially or completely used   ; 1 / 1,172 ( < 1 % )   ;
+; Virtual pins                                ; 0                     ;
+; I/O pins                                    ; 30 / 315 ( 10 % )     ;
+;     -- Clock pins                           ; 3 / 8 ( 38 % )        ;
+;                                             ;                       ;
+; Global signals                              ; 0                     ;
+; M4Ks                                        ; 0 / 52 ( 0 % )        ;
+; Total block memory bits                     ; 0 / 239,616 ( 0 % )   ;
+; Total block memory implementation bits      ; 0 / 239,616 ( 0 % )   ;
+; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )        ;
+; PLLs                                        ; 0 / 4 ( 0 % )         ;
+; Global clocks                               ; 0 / 16 ( 0 % )        ;
+; JTAGs                                       ; 0 / 1 ( 0 % )         ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
+; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
+; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
+; Maximum fan-out                             ; 13                    ;
+; Highest non-global fan-out                  ; 13                    ;
+; Total fan-out                               ; 59                    ;
+; Average fan-out                             ; 1.34                  ;
++---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
 
-+----------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                        ;
-+---------------------------------------------+---------------------+--------------------------------+
-; Statistic                                   ; Top                 ; hard_block:auto_generated_inst ;
-+---------------------------------------------+---------------------+--------------------------------+
-; Difficulty Clustering Region                ; Low                 ; Low                            ;
-;                                             ;                     ;                                ;
-; Total logic elements                        ; 6 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
-;     -- Combinational with no register       ; 6                   ; 0                              ;
-;     -- Register only                        ; 0                   ; 0                              ;
-;     -- Combinational with a register        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 4                   ; 0                              ;
-;     -- 3 input functions                    ; 2                   ; 0                              ;
-;     -- <=2 input functions                  ; 0                   ; 0                              ;
-;     -- Register only                        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 6                   ; 0                              ;
-;     -- arithmetic mode                      ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Total registers                             ; 0                   ; 0                              ;
-;     -- Dedicated logic registers            ; 0 / 18752 ( 0 % )   ; 0 / 18752 ( 0 % )              ;
-;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 1 / 1172 ( < 1 % )  ; 0 / 1172 ( 0 % )               ;
-;                                             ;                     ;                                ;
-; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 22                  ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )      ; 0 / 52 ( 0 % )                 ;
-; Total memory bits                           ; 0                   ; 0                              ;
-; Total RAM block bits                        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Connections                                 ;                     ;                                ;
-;     -- Input Connections                    ; 0                   ; 0                              ;
-;     -- Registered Input Connections         ; 0                   ; 0                              ;
-;     -- Output Connections                   ; 0                   ; 0                              ;
-;     -- Registered Output Connections        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 32                  ; 0                              ;
-;     -- Registered Connections               ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; External Connections                        ;                     ;                                ;
-;     -- Top                                  ; 0                   ; 0                              ;
-;     -- hard_block:auto_generated_inst       ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Partition Interface                         ;                     ;                                ;
-;     -- Input Ports                          ; 4                   ; 0                              ;
-;     -- Output Ports                         ; 18                  ; 0                              ;
-;     -- Bidir Ports                          ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Registered Ports                            ;                     ;                                ;
-;     -- Registered Input Ports               ; 0                   ; 0                              ;
-;     -- Registered Output Ports              ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Port Connectivity                           ;                     ;                                ;
-;     -- Input Ports driven by GND            ; 0                   ; 0                              ;
-;     -- Output Ports driven by GND           ; 0                   ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0                   ; 0                              ;
-;     -- Output Ports driven by VCC           ; 0                   ; 0                              ;
-;     -- Input Ports with no Source           ; 0                   ; 0                              ;
-;     -- Output Ports with no Source          ; 0                   ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0                   ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0                   ; 0                              ;
-+---------------------------------------------+---------------------+--------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                         ;
++---------------------------------------------+----------------------+--------------------------------+
+; Statistic                                   ; Top                  ; hard_block:auto_generated_inst ;
++---------------------------------------------+----------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                  ; Low                            ;
+;                                             ;                      ;                                ;
+; Total logic elements                        ; 11 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
+;     -- Combinational with no register       ; 11                   ; 0                              ;
+;     -- Register only                        ; 0                    ; 0                              ;
+;     -- Combinational with a register        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic element usage by number of LUT inputs ;                      ;                                ;
+;     -- 4 input functions                    ; 7                    ; 0                              ;
+;     -- 3 input functions                    ; 3                    ; 0                              ;
+;     -- <=2 input functions                  ; 1                    ; 0                              ;
+;     -- Register only                        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic elements by mode                      ;                      ;                                ;
+;     -- normal mode                          ; 11                   ; 0                              ;
+;     -- arithmetic mode                      ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Total registers                             ; 0                    ; 0                              ;
+;     -- Dedicated logic registers            ; 0 / 18752 ( 0 % )    ; 0 / 18752 ( 0 % )              ;
+;                                             ;                      ;                                ;
+; Total LABs:  partially or completely used   ; 1 / 1172 ( < 1 % )   ; 0 / 1172 ( 0 % )               ;
+;                                             ;                      ;                                ;
+; Virtual pins                                ; 0                    ; 0                              ;
+; I/O pins                                    ; 30                   ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )       ; 0 / 52 ( 0 % )                 ;
+; Total memory bits                           ; 0                    ; 0                              ;
+; Total RAM block bits                        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Connections                                 ;                      ;                                ;
+;     -- Input Connections                    ; 0                    ; 0                              ;
+;     -- Registered Input Connections         ; 0                    ; 0                              ;
+;     -- Output Connections                   ; 0                    ; 0                              ;
+;     -- Registered Output Connections        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Internal Connections                        ;                      ;                                ;
+;     -- Total Connections                    ; 59                   ; 0                              ;
+;     -- Registered Connections               ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; External Connections                        ;                      ;                                ;
+;     -- Top                                  ; 0                    ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Partition Interface                         ;                      ;                                ;
+;     -- Input Ports                          ; 4                    ; 0                              ;
+;     -- Output Ports                         ; 26                   ; 0                              ;
+;     -- Bidir Ports                          ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Registered Ports                            ;                      ;                                ;
+;     -- Registered Input Ports               ; 0                    ; 0                              ;
+;     -- Registered Output Ports              ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Port Connectivity                           ;                      ;                                ;
+;     -- Input Ports driven by GND            ; 0                    ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                    ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                    ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                    ; 0                              ;
+;     -- Input Ports with no Source           ; 0                    ; 0                              ;
+;     -- Output Ports with no Source          ; 0                    ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                    ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                    ; 0                              ;
++---------------------------------------------+----------------------+--------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -720,10 +704,10 @@ The pin-out file can be found in Z:/comp3222/lab03/part 2/output_files/part2.pin
 +-------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +-------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; SW[0] ; L22   ; 5        ; 50           ; 14           ; 0           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[1] ; L21   ; 5        ; 50           ; 14           ; 1           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[2] ; M22   ; 6        ; 50           ; 14           ; 2           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[3] ; V12   ; 7        ; 26           ; 0            ; 0           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[0] ; L22   ; 5        ; 50           ; 14           ; 0           ; 9                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[1] ; L21   ; 5        ; 50           ; 14           ; 1           ; 13                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[2] ; M22   ; 6        ; 50           ; 14           ; 2           ; 12                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[3] ; V12   ; 7        ; 26           ; 0            ; 0           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +-------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -746,6 +730,14 @@ The pin-out file can be found in Z:/comp3222/lab03/part 2/output_files/part2.pin
 ; HEX1[4] ; G3    ; 2        ; 0            ; 21           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; HEX1[5] ; D2    ; 2        ; 0            ; 22           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; HEX1[6] ; D1    ; 2        ; 0            ; 22           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LEDG[0] ; U22   ; 6        ; 50           ; 7            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LEDG[1] ; U21   ; 6        ; 50           ; 7            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LEDG[2] ; V22   ; 6        ; 50           ; 7            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LEDG[3] ; V21   ; 6        ; 50           ; 6            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LEDG[4] ; W22   ; 6        ; 50           ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LEDG[5] ; W21   ; 6        ; 50           ; 4            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LEDG[6] ; Y22   ; 6        ; 50           ; 6            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LEDG[7] ; Y21   ; 6        ; 50           ; 6            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; LEDR[0] ; R20   ; 6        ; 50           ; 10           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; LEDR[1] ; R19   ; 6        ; 50           ; 8            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; LEDR[2] ; U19   ; 6        ; 50           ; 4            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
@@ -763,7 +755,7 @@ The pin-out file can be found in Z:/comp3222/lab03/part 2/output_files/part2.pin
 ; 3        ; 0 / 43 ( 0 % )   ; 3.3V          ; --           ;
 ; 4        ; 0 / 40 ( 0 % )   ; 3.3V          ; --           ;
 ; 5        ; 2 / 39 ( 5 % )   ; 3.3V          ; --           ;
-; 6        ; 6 / 36 ( 17 % )  ; 3.3V          ; --           ;
+; 6        ; 14 / 36 ( 39 % ) ; 3.3V          ; --           ;
 ; 7        ; 1 / 40 ( 3 % )   ; 3.3V          ; --           ;
 ; 8        ; 0 / 43 ( 0 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
@@ -1190,8 +1182,8 @@ The pin-out file can be found in Z:/comp3222/lab03/part 2/output_files/part2.pin
 ; U18      ; 170        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U19      ; 172        ; 6        ; LEDR[2]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; U20      ; 176        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; U21      ; 182        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U22      ; 183        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U21      ; 182        ; 6        ; LEDG[1]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; U22      ; 183        ; 6        ; LEDG[0]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; V1       ; 65         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V2       ; 66         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V3       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1212,8 +1204,8 @@ The pin-out file can be found in Z:/comp3222/lab03/part 2/output_files/part2.pin
 ; V18      ;            ;          ; GND_PLL4                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V19      ; 166        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V20      ; 173        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V21      ; 180        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V22      ; 181        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V21      ; 180        ; 6        ; LEDG[3]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; V22      ; 181        ; 6        ; LEDG[2]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; W1       ; 71         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W2       ; 72         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W3       ; 75         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1234,8 +1226,8 @@ The pin-out file can be found in Z:/comp3222/lab03/part 2/output_files/part2.pin
 ; W18      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; W19      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W20      ; 167        ; 6        ; ~LVDS91p/nCEO~                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; W21      ; 174        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W22      ; 175        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; W21      ; 174        ; 6        ; LEDG[5]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; W22      ; 175        ; 6        ; LEDG[4]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; Y1       ; 73         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y2       ; 74         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y3       ; 77         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1256,8 +1248,8 @@ The pin-out file can be found in Z:/comp3222/lab03/part 2/output_files/part2.pin
 ; Y18      ; 165        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y19      ; 168        ; 6        ; LEDR[3]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; Y20      ; 169        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; Y21      ; 178        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; Y22      ; 179        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; Y21      ; 178        ; 6        ; LEDG[7]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; Y22      ; 179        ; 6        ; LEDG[6]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 +----------+------------+----------+------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
@@ -1304,8 +1296,11 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name         ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------+--------------+
-; |part2                     ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 22   ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; |part2                      ; work         ;
-;    |displayNumber:stage7|  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; |part2|displayNumber:stage7 ; work         ;
+; |part2                     ; 11 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 30   ; 0            ; 11 (0)       ; 0 (0)             ; 0 (0)            ; |part2                      ; work         ;
+;    |CircuitA:stage2|       ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |part2|CircuitA:stage2      ; work         ;
+;    |Comparator:stage1|     ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |part2|Comparator:stage1    ; work         ;
+;    |displayNumber:stage7|  ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |part2|displayNumber:stage7 ; work         ;
+;    |mul_2_in_1:stage3|     ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |part2|mul_2_in_1:stage3    ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1319,6 +1314,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[1] ; Output   ; --            ; --            ; --                    ; --  ;
 ; LEDR[2] ; Output   ; --            ; --            ; --                    ; --  ;
 ; LEDR[3] ; Output   ; --            ; --            ; --                    ; --  ;
+; LEDG[0] ; Output   ; --            ; --            ; --                    ; --  ;
+; LEDG[1] ; Output   ; --            ; --            ; --                    ; --  ;
+; LEDG[2] ; Output   ; --            ; --            ; --                    ; --  ;
+; LEDG[3] ; Output   ; --            ; --            ; --                    ; --  ;
+; LEDG[4] ; Output   ; --            ; --            ; --                    ; --  ;
+; LEDG[5] ; Output   ; --            ; --            ; --                    ; --  ;
+; LEDG[6] ; Output   ; --            ; --            ; --                    ; --  ;
+; LEDG[7] ; Output   ; --            ; --            ; --                    ; --  ;
 ; HEX0[6] ; Output   ; --            ; --            ; --                    ; --  ;
 ; HEX0[5] ; Output   ; --            ; --            ; --                    ; --  ;
 ; HEX0[4] ; Output   ; --            ; --            ; --                    ; --  ;
@@ -1357,16 +1360,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+---------+
 ; Name                          ; Fan-Out ;
 +-------------------------------+---------+
-; SW[3]                         ; 7       ;
-; SW[2]                         ; 7       ;
-; SW[1]                         ; 6       ;
-; SW[0]                         ; 6       ;
+; SW[1]                         ; 13      ;
+; SW[2]                         ; 12      ;
+; SW[3]                         ; 10      ;
+; SW[0]                         ; 9       ;
+; Comparator:stage1|Z~0         ; 5       ;
+; displayNumber:stage7|HEX~6    ; 1       ;
 ; displayNumber:stage7|HEX~5    ; 1       ;
 ; displayNumber:stage7|HEX~4    ; 1       ;
 ; displayNumber:stage7|HEX[3]~3 ; 1       ;
 ; displayNumber:stage7|HEX[4]~2 ; 1       ;
 ; displayNumber:stage7|HEX~1    ; 1       ;
 ; displayNumber:stage7|HEX~0    ; 1       ;
+; mul_2_in_1:stage3|O~0         ; 1       ;
+; CircuitA:stage2|A[2]~0        ; 1       ;
+; CircuitA:stage2|A[0]          ; 1       ;
 +-------------------------------+---------+
 
 
@@ -1375,69 +1383,78 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 14 / 54,004 ( < 1 % ) ;
-; C16 interconnects           ; 3 / 2,100 ( < 1 % )   ;
-; C4 interconnects            ; 13 / 36,000 ( < 1 % ) ;
-; Direct links                ; 2 / 54,004 ( < 1 % )  ;
+; Block interconnects         ; 23 / 54,004 ( < 1 % ) ;
+; C16 interconnects           ; 7 / 2,100 ( < 1 % )   ;
+; C4 interconnects            ; 30 / 36,000 ( < 1 % ) ;
 ; Global clocks               ; 0 / 16 ( 0 % )        ;
 ; Local interconnects         ; 0 / 18,752 ( 0 % )    ;
-; R24 interconnects           ; 8 / 1,900 ( < 1 % )   ;
-; R4 interconnects            ; 8 / 46,920 ( < 1 % )  ;
+; R24 interconnects           ; 15 / 1,900 ( < 1 % )  ;
+; R4 interconnects            ; 35 / 46,920 ( < 1 % ) ;
 +-----------------------------+-----------------------+
 
 
-+--------------------------------------------------------------------------+
-; LAB Logic Elements                                                       ;
-+--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 6.00) ; Number of LABs  (Total = 1) ;
-+--------------------------------------------+-----------------------------+
-; 1                                          ; 0                           ;
-; 2                                          ; 0                           ;
-; 3                                          ; 0                           ;
-; 4                                          ; 0                           ;
-; 5                                          ; 0                           ;
-; 6                                          ; 1                           ;
-; 7                                          ; 0                           ;
-; 8                                          ; 0                           ;
-; 9                                          ; 0                           ;
-; 10                                         ; 0                           ;
-; 11                                         ; 0                           ;
-; 12                                         ; 0                           ;
-; 13                                         ; 0                           ;
-; 14                                         ; 0                           ;
-; 15                                         ; 0                           ;
-; 16                                         ; 0                           ;
-+--------------------------------------------+-----------------------------+
-
-
 +---------------------------------------------------------------------------+
-; LAB Signals Sourced                                                       ;
+; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 6.00) ; Number of LABs  (Total = 1) ;
+; Number of Logic Elements  (Average = 11.00) ; Number of LABs  (Total = 1) ;
 +---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
-; 6                                           ; 1                           ;
+; 6                                           ; 0                           ;
+; 7                                           ; 0                           ;
+; 8                                           ; 0                           ;
+; 9                                           ; 0                           ;
+; 10                                          ; 0                           ;
+; 11                                          ; 1                           ;
+; 12                                          ; 0                           ;
+; 13                                          ; 0                           ;
+; 14                                          ; 0                           ;
+; 15                                          ; 0                           ;
+; 16                                          ; 0                           ;
 +---------------------------------------------+-----------------------------+
 
 
-+-------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                       ;
-+-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 6.00) ; Number of LABs  (Total = 1) ;
-+-------------------------------------------------+-----------------------------+
-; 0                                               ; 0                           ;
-; 1                                               ; 0                           ;
-; 2                                               ; 0                           ;
-; 3                                               ; 0                           ;
-; 4                                               ; 0                           ;
-; 5                                               ; 0                           ;
-; 6                                               ; 1                           ;
-+-------------------------------------------------+-----------------------------+
++----------------------------------------------------------------------------+
+; LAB Signals Sourced                                                        ;
++----------------------------------------------+-----------------------------+
+; Number of Signals Sourced  (Average = 11.00) ; Number of LABs  (Total = 1) ;
++----------------------------------------------+-----------------------------+
+; 0                                            ; 0                           ;
+; 1                                            ; 0                           ;
+; 2                                            ; 0                           ;
+; 3                                            ; 0                           ;
+; 4                                            ; 0                           ;
+; 5                                            ; 0                           ;
+; 6                                            ; 0                           ;
+; 7                                            ; 0                           ;
+; 8                                            ; 0                           ;
+; 9                                            ; 0                           ;
+; 10                                           ; 0                           ;
+; 11                                           ; 1                           ;
++----------------------------------------------+-----------------------------+
+
+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++--------------------------------------------------+-----------------------------+
+; Number of Signals Sourced Out  (Average = 11.00) ; Number of LABs  (Total = 1) ;
++--------------------------------------------------+-----------------------------+
+; 0                                                ; 0                           ;
+; 1                                                ; 0                           ;
+; 2                                                ; 0                           ;
+; 3                                                ; 0                           ;
+; 4                                                ; 0                           ;
+; 5                                                ; 0                           ;
+; 6                                                ; 0                           ;
+; 7                                                ; 0                           ;
+; 8                                                ; 0                           ;
+; 9                                                ; 0                           ;
+; 10                                               ; 0                           ;
+; 11                                               ; 1                           ;
++--------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
@@ -1610,14 +1627,6 @@ Warning (15709): Ignored I/O standard assignments to the following nodes
     Warning (15710): Ignored I/O standard assignment to node "KEY[1]"
     Warning (15710): Ignored I/O standard assignment to node "KEY[2]"
     Warning (15710): Ignored I/O standard assignment to node "KEY[3]"
-    Warning (15710): Ignored I/O standard assignment to node "LEDG[0]"
-    Warning (15710): Ignored I/O standard assignment to node "LEDG[1]"
-    Warning (15710): Ignored I/O standard assignment to node "LEDG[2]"
-    Warning (15710): Ignored I/O standard assignment to node "LEDG[3]"
-    Warning (15710): Ignored I/O standard assignment to node "LEDG[4]"
-    Warning (15710): Ignored I/O standard assignment to node "LEDG[5]"
-    Warning (15710): Ignored I/O standard assignment to node "LEDG[6]"
-    Warning (15710): Ignored I/O standard assignment to node "LEDG[7]"
     Warning (15710): Ignored I/O standard assignment to node "LEDR[4]"
     Warning (15710): Ignored I/O standard assignment to node "LEDR[5]"
     Warning (15710): Ignored I/O standard assignment to node "LEDR[6]"
@@ -1828,14 +1837,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "KEY[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "KEY[2]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "KEY[3]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[0]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[1]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[2]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[3]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[4]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[5]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[6]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "LEDG[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[4]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[5]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LEDR[6]" is assigned to location or region, but does not exist in design
@@ -1917,18 +1918,26 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y14 to location X11_Y27
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X12_Y14 to location X24_Y27
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.11 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 18 output pins without output pin load capacitance assignment
+Warning (306006): Found 26 output pins without output pin load capacitance assignment
     Info (306007): Pin "LEDR[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "LEDR[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "LEDR[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "LEDR[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LEDG[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LEDG[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LEDG[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LEDG[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LEDG[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LEDG[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LEDG[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LEDG[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "HEX0[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "HEX0[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "HEX0[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1949,17 +1958,17 @@ Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file Z:/comp3222/lab03/part 2/output_files/part2.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 408 warnings
-    Info: Peak virtual memory: 1053 megabytes
-    Info: Processing ended: Tue Aug 14 11:44:22 2018
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:07
+Info (144001): Generated suppressed messages file C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 2/output_files/part2.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 392 warnings
+    Info: Peak virtual memory: 5360 megabytes
+    Info: Processing ended: Tue Aug 14 20:10:23 2018
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in Z:/comp3222/lab03/part 2/output_files/part2.fit.smsg.
+The suppressed messages can be found in C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 2/output_files/part2.fit.smsg.
 
 
