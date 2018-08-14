@@ -1,7 +1,7 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 ENTITY	displayNumber IS
-	PORT(s	:IN	STD_LOGIC_VECTOR(3 DOWNTO 0);
+	PORT(s	:IN	STD_LOGIC_VECTOR(0 TO 3);
 			  HEX	:OUT	STD_LOGIC_VECTOR(0 TO 6));
 END displayNumber;
 

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for part2
-Mon Aug 13 02:12:20 2018
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Tue Aug 14 11:44:06 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -15,12 +15,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Port Connectivity Checks: "mul_2_in_1:stage3"
- 10. Port Connectivity Checks: "Comparator:stage1|BIT_1_COMPARATOR:stage4"
- 11. Port Connectivity Checks: "Comparator:stage1|BIT_1_COMPARATOR:stage3"
- 12. Port Connectivity Checks: "Comparator:stage1|BIT_1_COMPARATOR:stage2"
- 13. Port Connectivity Checks: "Comparator:stage1|BIT_1_COMPARATOR:stage1"
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 10. Port Connectivity Checks: "Comparator:stage1|fulladd:stage3"
+ 11. Port Connectivity Checks: "Comparator:stage1|fulladd:stage2"
+ 12. Port Connectivity Checks: "Comparator:stage1|fulladd:stage1"
+ 13. Port Connectivity Checks: "Comparator:stage1|fulladd:stage0"
+ 14. Port Connectivity Checks: "Comparator:stage1"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -43,24 +44,24 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                          ;
-+------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Aug 13 02:12:20 2018            ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
-; Revision Name                      ; part2                                            ;
-; Top-level Entity Name              ; part2                                            ;
-; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 6                                                ;
-;     Total combinational functions  ; 6                                                ;
-;     Dedicated logic registers      ; 0                                                ;
-; Total registers                    ; 0                                                ;
-; Total pins                         ; 22                                               ;
-; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 0                                                ;
-; Embedded Multiplier 9-bit elements ; 0                                                ;
-; Total PLLs                         ; 0                                                ;
-+------------------------------------+--------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Aug 14 11:44:06 2018           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; part2                                           ;
+; Top-level Entity Name              ; part2                                           ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 6                                               ;
+;     Total combinational functions  ; 6                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 22                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -165,17 +166,18 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------------+---------+
-; CiruitA.vhd                      ; yes             ; User VHDL File        ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 2/CiruitA.vhd       ;         ;
-; Comparator.vhd                   ; yes             ; User VHDL File        ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 2/Comparator.vhd    ;         ;
-; 2_in_one_mul.vhd                 ; yes             ; User VHDL File        ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 2/2_in_one_mul.vhd  ;         ;
-; part2.vhd                        ; yes             ; Auto-Found VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 2/part2.vhd         ;         ;
-; displaynumber.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 2/displaynumber.vhd ;         ;
-+----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                            ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path               ; Library ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------+---------+
+; CiruitA.vhd                      ; yes             ; User VHDL File        ; Z:/comp3222/lab03/part 2/CiruitA.vhd       ;         ;
+; Comparator.vhd                   ; yes             ; User VHDL File        ; Z:/comp3222/lab03/part 2/Comparator.vhd    ;         ;
+; 2_in_one_mul.vhd                 ; yes             ; User VHDL File        ; Z:/comp3222/lab03/part 2/2_in_one_mul.vhd  ;         ;
+; fulladder.vhd                    ; yes             ; User VHDL File        ; Z:/comp3222/lab03/part 2/fulladder.vhd     ;         ;
+; part2.vhd                        ; yes             ; Auto-Found VHDL File  ; Z:/comp3222/lab03/part 2/part2.vhd         ;         ;
+; displaynumber.vhd                ; yes             ; Auto-Found VHDL File  ; Z:/comp3222/lab03/part 2/displaynumber.vhd ;         ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -187,8 +189,8 @@ applicable agreement for further details.
 ;                                             ;       ;
 ; Total combinational functions               ; 6     ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 5     ;
-;     -- 3 input functions                    ; 1     ;
+;     -- 4 input functions                    ; 4     ;
+;     -- 3 input functions                    ; 2     ;
 ;     -- <=2 input functions                  ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
@@ -203,8 +205,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; SW[2] ;
 ; Maximum fan-out                             ; 7     ;
-; Total fan-out                               ; 33    ;
-; Average fan-out                             ; 1.18  ;
+; Total fan-out                               ; 32    ;
+; Average fan-out                             ; 1.14  ;
 +---------------------------------------------+-------+
 
 
@@ -243,41 +245,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+-------+----------+---------------------+
 
 
-+-----------------------------------------------------------------------+
-; Port Connectivity Checks: "Comparator:stage1|BIT_1_COMPARATOR:stage4" ;
-+------+-------+----------+---------------------------------------------+
-; Port ; Type  ; Severity ; Details                                     ;
-+------+-------+----------+---------------------------------------------+
-; b    ; Input ; Info     ; Stuck at GND                                ;
-+------+-------+----------+---------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Comparator:stage1|fulladd:stage3"                                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; s    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------+
-; Port Connectivity Checks: "Comparator:stage1|BIT_1_COMPARATOR:stage3" ;
-+------+-------+----------+---------------------------------------------+
-; Port ; Type  ; Severity ; Details                                     ;
-+------+-------+----------+---------------------------------------------+
-; b    ; Input ; Info     ; Stuck at VCC                                ;
-+------+-------+----------+---------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Comparator:stage1|fulladd:stage2"                                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; s    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------+
-; Port Connectivity Checks: "Comparator:stage1|BIT_1_COMPARATOR:stage2" ;
-+------+-------+----------+---------------------------------------------+
-; Port ; Type  ; Severity ; Details                                     ;
-+------+-------+----------+---------------------------------------------+
-; b    ; Input ; Info     ; Stuck at GND                                ;
-+------+-------+----------+---------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Comparator:stage1|fulladd:stage1"                                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; s    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------+
-; Port Connectivity Checks: "Comparator:stage1|BIT_1_COMPARATOR:stage1" ;
-+------+-------+----------+---------------------------------------------+
-; Port ; Type  ; Severity ; Details                                     ;
-+------+-------+----------+---------------------------------------------+
-; b    ; Input ; Info     ; Stuck at VCC                                ;
-; c    ; Input ; Info     ; Stuck at GND                                ;
-+------+-------+----------+---------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Comparator:stage1|fulladd:stage0"                                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; s    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "Comparator:stage1" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; x[3] ; Input ; Info     ; Stuck at VCC        ;
+; x[2] ; Input ; Info     ; Stuck at GND        ;
+; x[1] ; Input ; Info     ; Stuck at VCC        ;
+; x[0] ; Input ; Info     ; Stuck at GND        ;
++------+-------+----------+---------------------+
 
 
 +-------------------------------+
@@ -294,30 +308,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Aug 13 02:12:11 2018
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Aug 14 11:43:52 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part2 -c part2
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Warning (12019): Can't analyze file -- file ../../lab02/part5/part2.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file ciruita.vhd
     Info (12022): Found design unit 1: CircuitA-Structure
     Info (12023): Found entity 1: CircuitA
-Info (12021): Found 4 design units, including 2 entities, in source file comparator.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file comparator.vhd
     Info (12022): Found design unit 1: Comparator-Structure
-    Info (12022): Found design unit 2: BIT_1_COMPARATOR-behavior
     Info (12023): Found entity 1: Comparator
-    Info (12023): Found entity 2: BIT_1_COMPARATOR
 Info (12021): Found 2 design units, including 1 entities, in source file 2_in_one_mul.vhd
     Info (12022): Found design unit 1: mul_2_in_1-behavior
     Info (12023): Found entity 1: mul_2_in_1
 Warning (12019): Can't analyze file -- file ../part 1/displayNumber.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file fulladder.vhd
+    Info (12022): Found design unit 1: fulladd-LogicFunction
+    Info (12023): Found entity 1: fulladd
 Warning (12125): Using design file part2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: part2-Structure
     Info (12023): Found entity 1: part2
 Info (12127): Elaborating entity "part2" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at part2.vhd(12): used implicit default value for signal "HEX1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:stage1"
-Info (12128): Elaborating entity "BIT_1_COMPARATOR" for hierarchy "Comparator:stage1|BIT_1_COMPARATOR:stage1"
+Warning (10036): Verilog HDL or VHDL warning at Comparator.vhd(10): object "S" assigned a value but never read
+Info (12128): Elaborating entity "fulladd" for hierarchy "Comparator:stage1|fulladd:stage0"
 Info (12128): Elaborating entity "CircuitA" for hierarchy "CircuitA:stage2"
 Info (12128): Elaborating entity "mul_2_in_1" for hierarchy "mul_2_in_1:stage3"
 Warning (12125): Using design file displaynumber.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
@@ -339,10 +355,10 @@ Info (21057): Implemented 28 device resources after synthesis - the final resour
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 18 output pins
     Info (21061): Implemented 6 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4663 megabytes
-    Info: Processing ended: Mon Aug 13 02:12:20 2018
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 480 megabytes
+    Info: Processing ended: Tue Aug 14 11:44:06 2018
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:06
 
 
