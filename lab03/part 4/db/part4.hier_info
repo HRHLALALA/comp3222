@@ -1,0 +1,532 @@
+|part4
+SW[0] => displayNumber:init3.s[0]
+SW[0] => Comparator:init5.X[0]
+SW[0] => adder4:stage0.X[0]
+SW[0] => LEDR[0].DATAIN
+SW[1] => displayNumber:init3.s[1]
+SW[1] => Comparator:init5.X[1]
+SW[1] => adder4:stage0.X[1]
+SW[1] => LEDR[1].DATAIN
+SW[2] => displayNumber:init3.s[2]
+SW[2] => Comparator:init5.X[2]
+SW[2] => adder4:stage0.X[2]
+SW[2] => LEDR[2].DATAIN
+SW[3] => displayNumber:init3.s[3]
+SW[3] => Comparator:init5.X[3]
+SW[3] => adder4:stage0.X[3]
+SW[3] => LEDR[3].DATAIN
+SW[4] => displayNumber:init2.s[0]
+SW[4] => Comparator:init4.X[0]
+SW[4] => adder4:stage0.Y[0]
+SW[4] => LEDR[4].DATAIN
+SW[5] => displayNumber:init2.s[1]
+SW[5] => Comparator:init4.X[1]
+SW[5] => adder4:stage0.Y[1]
+SW[5] => LEDR[5].DATAIN
+SW[6] => displayNumber:init2.s[2]
+SW[6] => Comparator:init4.X[2]
+SW[6] => adder4:stage0.Y[2]
+SW[6] => LEDR[6].DATAIN
+SW[7] => displayNumber:init2.s[3]
+SW[7] => Comparator:init4.X[3]
+SW[7] => adder4:stage0.Y[3]
+SW[7] => LEDR[7].DATAIN
+SW[8] => LEDR[8].DATAIN
+LEDR[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= SW[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= SW[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= SW[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= SW[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= SW[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= SW[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= SW[8].DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= part2:stage3.HEX0[6]
+HEX0[5] <= part2:stage3.HEX0[5]
+HEX0[4] <= part2:stage3.HEX0[4]
+HEX0[3] <= part2:stage3.HEX0[3]
+HEX0[2] <= part2:stage3.HEX0[2]
+HEX0[1] <= part2:stage3.HEX0[1]
+HEX0[0] <= part2:stage3.HEX0[0]
+HEX1[6] <= part2:stage3.HEX1[6]
+HEX1[5] <= part2:stage3.HEX1[5]
+HEX1[4] <= part2:stage3.HEX1[4]
+HEX1[3] <= part2:stage3.HEX1[3]
+HEX1[2] <= part2:stage3.HEX1[2]
+HEX1[1] <= part2:stage3.HEX1[1]
+HEX1[0] <= part2:stage3.HEX1[0]
+HEX2[6] <= displayNumber:init3.HEX[6]
+HEX2[5] <= displayNumber:init3.HEX[5]
+HEX2[4] <= displayNumber:init3.HEX[4]
+HEX2[3] <= displayNumber:init3.HEX[3]
+HEX2[2] <= displayNumber:init3.HEX[2]
+HEX2[1] <= displayNumber:init3.HEX[1]
+HEX2[0] <= displayNumber:init3.HEX[0]
+HEX3[6] <= displayNumber:init2.HEX[6]
+HEX3[5] <= displayNumber:init2.HEX[5]
+HEX3[4] <= displayNumber:init2.HEX[4]
+HEX3[3] <= displayNumber:init2.HEX[3]
+HEX3[2] <= displayNumber:init2.HEX[2]
+HEX3[1] <= displayNumber:init2.HEX[1]
+HEX3[0] <= displayNumber:init2.HEX[0]
+LEDG[0] <= adder4:stage0.S[0]
+LEDG[1] <= adder4:stage0.S[1]
+LEDG[2] <= adder4:stage0.S[2]
+LEDG[3] <= adder4:stage0.S[3]
+LEDG[4] <= adder4:stage0.Cout
+LEDG[5] <= <GND>
+LEDG[6] <= <GND>
+LEDG[7] <= LEDG.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|displayNumber:init2
+s[3] => HEX.IN0
+s[3] => HEX.IN0
+s[3] => HEX.IN1
+s[3] => HEX.IN1
+s[3] => HEX.IN1
+s[3] => HEX.IN1
+s[3] => HEX.IN0
+s[3] => HEX.IN0
+s[3] => HEX.IN1
+s[3] => HEX.IN0
+s[2] => HEX.IN0
+s[2] => HEX.IN1
+s[2] => HEX.IN0
+s[2] => HEX.IN0
+s[2] => HEX.IN0
+s[2] => HEX.IN1
+s[2] => HEX.IN1
+s[2] => HEX.IN0
+s[2] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN0
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN0
+s[1] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[0] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|displayNumber:init3
+s[3] => HEX.IN0
+s[3] => HEX.IN0
+s[3] => HEX.IN1
+s[3] => HEX.IN1
+s[3] => HEX.IN1
+s[3] => HEX.IN1
+s[3] => HEX.IN0
+s[3] => HEX.IN0
+s[3] => HEX.IN1
+s[3] => HEX.IN0
+s[2] => HEX.IN0
+s[2] => HEX.IN1
+s[2] => HEX.IN0
+s[2] => HEX.IN0
+s[2] => HEX.IN0
+s[2] => HEX.IN1
+s[2] => HEX.IN1
+s[2] => HEX.IN0
+s[2] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN0
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN0
+s[1] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[0] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|Comparator:init4
+X[0] => ~NO_FANOUT~
+X[1] => Z.IN0
+X[2] => Z.IN0
+X[3] => Z.IN1
+X[3] => Z.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|Comparator:init5
+X[0] => ~NO_FANOUT~
+X[1] => Z.IN0
+X[2] => Z.IN0
+X[3] => Z.IN1
+X[3] => Z.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|adder4:stage0
+Cin => fulladd:stage0.Cin
+X[0] => fulladd:stage0.x
+X[1] => fulladd:stage1.x
+X[2] => fulladd:stage2.x
+X[3] => fulladd:stage3.x
+Y[0] => fulladd:stage0.y
+Y[1] => fulladd:stage1.y
+Y[2] => fulladd:stage2.y
+Y[3] => fulladd:stage3.y
+S[0] <= fulladd:stage0.s
+S[1] <= fulladd:stage1.s
+S[2] <= fulladd:stage2.s
+S[3] <= fulladd:stage3.s
+Cout <= fulladd:stage3.Cout
+
+
+|part4|adder4:stage0|fulladd:stage0
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|adder4:stage0|fulladd:stage1
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|adder4:stage0|fulladd:stage2
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|adder4:stage0|fulladd:stage3
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|part2:stage3
+SW[0] => Comparator:stage1.X[0]
+SW[0] => CircuitA:stage2.V[2]
+SW[0] => mul_2_in_1:stage7.V
+SW[1] => Comparator:stage1.X[1]
+SW[1] => CircuitA:stage2.V[1]
+SW[1] => mul_2_in_1:stage5.V
+SW[2] => Comparator:stage1.X[2]
+SW[2] => CircuitA:stage2.V[0]
+SW[2] => mul_2_in_1:stage4.V
+SW[3] => Comparator:stage1.X[3]
+SW[3] => mul_2_in_1:stage3.V
+C => CircuitA:stage2.C
+C => mul_2_in_1:stage6.Z
+C => adder4:stage9.Y[2]
+C => adder4:stage9.Y[1]
+HEX0[6] <= displayNumber:stage10.HEX[6]
+HEX0[5] <= displayNumber:stage10.HEX[5]
+HEX0[4] <= displayNumber:stage10.HEX[4]
+HEX0[3] <= displayNumber:stage10.HEX[3]
+HEX0[2] <= displayNumber:stage10.HEX[2]
+HEX0[1] <= displayNumber:stage10.HEX[1]
+HEX0[0] <= displayNumber:stage10.HEX[0]
+HEX1[6] <= circuitB:stage11.HEX[6]
+HEX1[5] <= circuitB:stage11.HEX[5]
+HEX1[4] <= circuitB:stage11.HEX[4]
+HEX1[3] <= circuitB:stage11.HEX[3]
+HEX1[2] <= circuitB:stage11.HEX[2]
+HEX1[1] <= circuitB:stage11.HEX[1]
+HEX1[0] <= circuitB:stage11.HEX[0]
+
+
+|part4|part2:stage3|Comparator:stage1
+X[0] => ~NO_FANOUT~
+X[1] => Z.IN0
+X[2] => Z.IN0
+X[3] => Z.IN1
+X[3] => Z.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|part2:stage3|CircuitA:stage2
+V[2] => A.IN1
+V[1] => A.IN0
+V[1] => A.IN0
+V[1] => A.IN0
+V[1] => A[1].DATAIN
+V[0] => A.IN1
+V[0] => A.IN1
+V[0] => A.IN1
+C => ~NO_FANOUT~
+A[0] <= A.DB_MAX_OUTPUT_PORT_TYPE
+A[1] <= V[1].DB_MAX_OUTPUT_PORT_TYPE
+A[2] <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|part2:stage3|mul_2_in_1:stage3
+V => O.IN0
+S => O.IN0
+Z => O.IN1
+Z => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|part2:stage3|mul_2_in_1:stage4
+V => O.IN0
+S => O.IN0
+Z => O.IN1
+Z => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|part2:stage3|mul_2_in_1:stage5
+V => O.IN0
+S => O.IN0
+Z => O.IN1
+Z => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|part2:stage3|mul_2_in_1:stage6
+V => O.IN0
+S => O.IN0
+Z => O.IN1
+Z => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|part2:stage3|mul_2_in_1:stage7
+V => O.IN0
+S => O.IN0
+Z => O.IN1
+Z => O.IN1
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|part2:stage3|adder4:stage9
+Cin => fulladd:stage0.Cin
+X[0] => fulladd:stage0.x
+X[1] => fulladd:stage1.x
+X[2] => fulladd:stage2.x
+X[3] => fulladd:stage3.x
+Y[0] => fulladd:stage0.y
+Y[1] => fulladd:stage1.y
+Y[2] => fulladd:stage2.y
+Y[3] => fulladd:stage3.y
+S[0] <= fulladd:stage0.s
+S[1] <= fulladd:stage1.s
+S[2] <= fulladd:stage2.s
+S[3] <= fulladd:stage3.s
+Cout <= fulladd:stage3.Cout
+
+
+|part4|part2:stage3|adder4:stage9|fulladd:stage0
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|part2:stage3|adder4:stage9|fulladd:stage1
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|part2:stage3|adder4:stage9|fulladd:stage2
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|part2:stage3|adder4:stage9|fulladd:stage3
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|part2:stage3|displayNumber:stage10
+s[3] => HEX.IN0
+s[3] => HEX.IN0
+s[3] => HEX.IN1
+s[3] => HEX.IN1
+s[3] => HEX.IN1
+s[3] => HEX.IN1
+s[3] => HEX.IN0
+s[3] => HEX.IN0
+s[3] => HEX.IN1
+s[3] => HEX.IN0
+s[2] => HEX.IN0
+s[2] => HEX.IN1
+s[2] => HEX.IN0
+s[2] => HEX.IN0
+s[2] => HEX.IN0
+s[2] => HEX.IN1
+s[2] => HEX.IN1
+s[2] => HEX.IN0
+s[2] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN0
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN0
+s[1] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[0] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|part2:stage3|circuitB:stage11
+Z => displayNumber:stage2.s[0]
+HEX[6] <= displayNumber:stage2.HEX[6]
+HEX[5] <= displayNumber:stage2.HEX[5]
+HEX[4] <= displayNumber:stage2.HEX[4]
+HEX[3] <= displayNumber:stage2.HEX[3]
+HEX[2] <= displayNumber:stage2.HEX[2]
+HEX[1] <= displayNumber:stage2.HEX[1]
+HEX[0] <= displayNumber:stage2.HEX[0]
+
+
+|part4|part2:stage3|circuitB:stage11|displayNumber:stage2
+s[3] => HEX.IN0
+s[3] => HEX.IN0
+s[3] => HEX.IN1
+s[3] => HEX.IN1
+s[3] => HEX.IN1
+s[3] => HEX.IN1
+s[3] => HEX.IN0
+s[3] => HEX.IN0
+s[3] => HEX.IN1
+s[3] => HEX.IN0
+s[2] => HEX.IN0
+s[2] => HEX.IN1
+s[2] => HEX.IN0
+s[2] => HEX.IN0
+s[2] => HEX.IN0
+s[2] => HEX.IN1
+s[2] => HEX.IN1
+s[2] => HEX.IN0
+s[2] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN0
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN1
+s[1] => HEX.IN0
+s[1] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+s[0] => HEX.IN1
+HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[0] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+
+
