@@ -1,6 +1,6 @@
 Analysis & Synthesis report for part5
-Wed Aug 15 16:58:50 2018
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Thu Aug 16 21:29:25 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -39,24 +39,24 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Aug 15 16:58:50 2018           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; part5                                           ;
-; Top-level Entity Name              ; part5                                           ;
-; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 26                                              ;
-;     Total combinational functions  ; 26                                              ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 51                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++------------------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Aug 16 21:29:24 2018            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; part5                                            ;
+; Top-level Entity Name              ; part5                                            ;
+; Family                             ; Cyclone II                                       ;
+; Total logic elements               ; 30                                               ;
+;     Total combinational functions  ; 30                                               ;
+;     Dedicated logic registers      ; 0                                                ;
+; Total registers                    ; 0                                                ;
+; Total pins                         ; 46                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
++------------------------------------+--------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -161,44 +161,44 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                      ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path               ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
-; part5.vhd                        ; yes             ; User VHDL File  ; Z:/comp3222/lab03/part 5/part5.vhd         ;         ;
-; displayNumber.vhd                ; yes             ; User VHDL File  ; Z:/comp3222/lab03/part 5/displayNumber.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; part5.vhd                        ; yes             ; User VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 5/part5.vhd         ;         ;
+; displayNumber.vhd                ; yes             ; User VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 5/displayNumber.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                           ;
-+---------------------------------------------+-------------------------+
-; Resource                                    ; Usage                   ;
-+---------------------------------------------+-------------------------+
-; Estimated Total logic elements              ; 26                      ;
-;                                             ;                         ;
-; Total combinational functions               ; 26                      ;
-; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 21                      ;
-;     -- 3 input functions                    ; 4                       ;
-;     -- <=2 input functions                  ; 1                       ;
-;                                             ;                         ;
-; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 23                      ;
-;     -- arithmetic mode                      ; 3                       ;
-;                                             ;                         ;
-; Total registers                             ; 0                       ;
-;     -- Dedicated logic registers            ; 0                       ;
-;     -- I/O registers                        ; 0                       ;
-;                                             ;                         ;
-; I/O pins                                    ; 51                      ;
-; Embedded Multiplier 9-bit elements          ; 0                       ;
-; Maximum fan-out node                        ; fulladder:stage3|Add0~2 ;
-; Maximum fan-out                             ; 9                       ;
-; Total fan-out                               ; 133                     ;
-; Average fan-out                             ; 1.73                    ;
-+---------------------------------------------+-------------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 30    ;
+;                                             ;       ;
+; Total combinational functions               ; 30    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 22    ;
+;     -- 3 input functions                    ; 7     ;
+;     -- <=2 input functions                  ; 1     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 26    ;
+;     -- arithmetic mode                      ; 4     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 46    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; SW[4] ;
+; Maximum fan-out                             ; 9     ;
+; Total fan-out                               ; 143   ;
+; Average fan-out                             ; 1.88  ;
++---------------------------------------------+-------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -206,11 +206,11 @@ applicable agreement for further details.
 +-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
 ; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Library Name ;
 +-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
-; |part5                        ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 51   ; 0            ; |part5                          ; work         ;
+; |part5                        ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 46   ; 0            ; |part5                          ; work         ;
 ;    |displayNumber:stage1|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part5|displayNumber:stage1     ; work         ;
 ;    |displayNumber:stage2|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part5|displayNumber:stage2     ; work         ;
 ;    |displayTwoNumbers:stage4| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part5|displayTwoNumbers:stage4 ; work         ;
-;    |fulladder:stage3|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part5|fulladder:stage3         ; work         ;
+;    |fulladder:stage3|         ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part5|fulladder:stage3         ; work         ;
 +-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -253,8 +253,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Aug 15 16:58:37 2018
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Thu Aug 16 21:29:15 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part5 -c part5
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 6 design units, including 3 entities, in source file part5.vhd
@@ -268,30 +268,24 @@ Info (12021): Found 2 design units, including 1 entities, in source file display
     Info (12022): Found design unit 1: displayNumber-Behavior
     Info (12023): Found entity 1: displayNumber
 Info (12127): Elaborating entity "part5" for the top level hierarchy
-Warning (10873): Using initial value X (don't care) for net "LEDG[4..1]" at part5.vhd(12)
 Info (12128): Elaborating entity "displayNumber" for hierarchy "displayNumber:stage1"
 Info (12128): Elaborating entity "fulladder" for hierarchy "fulladder:stage3"
 Info (12128): Elaborating entity "displayTwoNumbers" for hierarchy "displayTwoNumbers:stage4"
-Warning (10036): Verilog HDL or VHDL warning at part5.vhd(94): object "Z" assigned a value but never read
-Warning (10492): VHDL Process Statement warning at part5.vhd(108): signal "N" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at part5.vhd(103): signal "N" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX1[6]" is stuck at VCC
     Warning (13410): Pin "HEX1[2]" is stuck at GND
     Warning (13410): Pin "HEX1[1]" is stuck at GND
-    Warning (13410): Pin "LEDG[1]" is stuck at GND
-    Warning (13410): Pin "LEDG[2]" is stuck at GND
-    Warning (13410): Pin "LEDG[3]" is stuck at GND
-    Warning (13410): Pin "LEDG[4]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 77 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 76 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 26 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 493 megabytes
-    Info: Processing ended: Wed Aug 15 16:58:50 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:05
+    Info (21059): Implemented 37 output pins
+    Info (21061): Implemented 30 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4666 megabytes
+    Info: Processing ended: Thu Aug 16 21:29:25 2018
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:02
 
 

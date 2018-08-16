@@ -8,8 +8,7 @@ ENTITY part5 IS
 		  HEX1: OUT STD_LOGIC_VECTOR(0 TO 6);
 		  HEX2: OUT STD_LOGIC_VECTOR(0 TO 6);
 		  HEX3: OUT STD_LOGIC_VECTOR(0 TO 6);
-		  LEDR: OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
-		  LEDG: OUT STD_LOGIC_VECTOR(4 DOWNTO 0));
+		  LEDR: OUT STD_LOGIC_VECTOR(8 DOWNTO 0));
 		  
 END part5;
 
@@ -39,7 +38,6 @@ BEGIN
 	stage1: displayNumber PORT MAP(SW(7 DOWNTO 4),HEX3);
 	stage2: displayNumber PORT MAP(SW(3 DOWNTO 0),HEX2);
 	stage3: fulladder PORT MAP('0',SW(7 DOWNTO 4),SW(3 DOWNTO 0),display,TEMPC);
-	stageextra: LEDG(0)<=TEMPC;
 	stage4: displayTwoNumbers PORT MAP(display,TEMPC,HEX1,HEX0);
 END Structure;
 
@@ -55,17 +53,15 @@ ENTITY fulladder IS
 END fulladder;
 
 ARCHITECTURE LogicFunction OF fulladder IS
-	SIGNAL TEMPA,TEMPB: STD_LOGIC_VECTOR(3 DOWNTO 0);
-	SIGNAL N:STD_LOGIC;
 	SIGNAL Z,TEMPC,Q,T,V:STD_LOGIC_VECTOR(4 DOWNTO 0);
 BEGIN 
 	TEMPC<="0000" & Cin;
 	Q<= ('0'&A)+('0'&B);
 	T <= TEMPC +Q;
-	N<=(T(3) AND T(2)) OR (T(3) AND T(1));
-	PROCESS(N)
+	PROCESS(T
+	)
 	BEGIN
-		IF N='1' THEN
+		IF T>"1001" THEN
 			Z<= "01010";
 			Cout <= '1';
 		ELSE
@@ -91,10 +87,9 @@ END displayTwoNumbers;
 
 ARCHITECTURE LogicFunction OF displayTwoNumbers IS
 	SIGNAL T,N: STD_LOGIC_VECTOR(3 DOWNTO 0);
-	SIGNAL H,Z: STD_LOGIC;
+	SIGNAL H: STD_LOGIC;
 BEGIN
 	N<=L;
-	Z<=(N(3) AND N(2)) OR (N(3) AND N(1));
 	PROCESS(C)
 	BEGIN
 	IF C='0' THEN
@@ -115,7 +110,7 @@ BEGIN
 				WHEN "0110" => HEX0<="0100000";
 				WHEN "0111" => HEX0<="0001111";
 				WHEN "1000" => HEX0<="0000000";
-				WHEN "1001" => HEX0<="0001110";
+				WHEN "1001" => HEX0<="0000100";
 				WHEN OTHERS => HEX0<="-------";
 	END CASE;
 	END PROCESS;	
