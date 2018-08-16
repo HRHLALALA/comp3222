@@ -14,9 +14,9 @@
 
 -- VENDOR "Altera"
 -- PROGRAM "Quartus II 64-Bit"
--- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
+-- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "08/15/2018 00:11:15"
+-- DATE "08/15/2018 14:43:05"
 
 -- 
 -- Device: Altera EP2C20F484C7 Package FBGA484
@@ -151,6 +151,12 @@ SIGNAL \SW~combout\ : std_logic_vector(8 DOWNTO 0);
 SIGNAL \init2|HEX\ : std_logic_vector(0 TO 6);
 SIGNAL \stage3|stage10|HEX\ : std_logic_vector(0 TO 6);
 SIGNAL \init3|HEX\ : std_logic_vector(0 TO 6);
+SIGNAL \init3|ALT_INV_HEX~0_combout\ : std_logic;
+SIGNAL \stage3|stage10|ALT_INV_HEX~4_combout\ : std_logic;
+SIGNAL \stage3|stage10|ALT_INV_HEX~3_combout\ : std_logic;
+SIGNAL \stage3|stage10|ALT_INV_HEX~2_combout\ : std_logic;
+SIGNAL \stage3|stage10|ALT_INV_HEX~1_combout\ : std_logic;
+SIGNAL \stage3|stage10|ALT_INV_HEX~0_combout\ : std_logic;
 SIGNAL \init2|ALT_INV_HEX~5_combout\ : std_logic;
 SIGNAL \init2|ALT_INV_HEX~4_combout\ : std_logic;
 SIGNAL \init2|ALT_INV_HEX~3_combout\ : std_logic;
@@ -160,12 +166,6 @@ SIGNAL \init3|ALT_INV_HEX~5_combout\ : std_logic;
 SIGNAL \init3|ALT_INV_HEX~4_combout\ : std_logic;
 SIGNAL \init3|ALT_INV_HEX~3_combout\ : std_logic;
 SIGNAL \init3|ALT_INV_HEX~1_combout\ : std_logic;
-SIGNAL \init3|ALT_INV_HEX~0_combout\ : std_logic;
-SIGNAL \stage3|stage10|ALT_INV_HEX~4_combout\ : std_logic;
-SIGNAL \stage3|stage10|ALT_INV_HEX~3_combout\ : std_logic;
-SIGNAL \stage3|stage10|ALT_INV_HEX~2_combout\ : std_logic;
-SIGNAL \stage3|stage10|ALT_INV_HEX~1_combout\ : std_logic;
-SIGNAL \stage3|stage10|ALT_INV_HEX~0_combout\ : std_logic;
 
 BEGIN
 
@@ -179,6 +179,12 @@ LEDG <= ww_LEDG;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
+\init3|ALT_INV_HEX~0_combout\ <= NOT \init3|HEX~0_combout\;
+\stage3|stage10|ALT_INV_HEX~4_combout\ <= NOT \stage3|stage10|HEX~4_combout\;
+\stage3|stage10|ALT_INV_HEX~3_combout\ <= NOT \stage3|stage10|HEX~3_combout\;
+\stage3|stage10|ALT_INV_HEX~2_combout\ <= NOT \stage3|stage10|HEX~2_combout\;
+\stage3|stage10|ALT_INV_HEX~1_combout\ <= NOT \stage3|stage10|HEX~1_combout\;
+\stage3|stage10|ALT_INV_HEX~0_combout\ <= NOT \stage3|stage10|HEX~0_combout\;
 \init2|ALT_INV_HEX~5_combout\ <= NOT \init2|HEX~5_combout\;
 \init2|ALT_INV_HEX~4_combout\ <= NOT \init2|HEX~4_combout\;
 \init2|ALT_INV_HEX~3_combout\ <= NOT \init2|HEX~3_combout\;
@@ -188,12 +194,6 @@ ww_devpor <= devpor;
 \init3|ALT_INV_HEX~4_combout\ <= NOT \init3|HEX~4_combout\;
 \init3|ALT_INV_HEX~3_combout\ <= NOT \init3|HEX~3_combout\;
 \init3|ALT_INV_HEX~1_combout\ <= NOT \init3|HEX~1_combout\;
-\init3|ALT_INV_HEX~0_combout\ <= NOT \init3|HEX~0_combout\;
-\stage3|stage10|ALT_INV_HEX~4_combout\ <= NOT \stage3|stage10|HEX~4_combout\;
-\stage3|stage10|ALT_INV_HEX~3_combout\ <= NOT \stage3|stage10|HEX~3_combout\;
-\stage3|stage10|ALT_INV_HEX~2_combout\ <= NOT \stage3|stage10|HEX~2_combout\;
-\stage3|stage10|ALT_INV_HEX~1_combout\ <= NOT \stage3|stage10|HEX~1_combout\;
-\stage3|stage10|ALT_INV_HEX~0_combout\ <= NOT \stage3|stage10|HEX~0_combout\;
 
 -- Location: PIN_L22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \SW[0]~I\ : cycloneii_io

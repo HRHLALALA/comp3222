@@ -1,6 +1,6 @@
 Analysis & Synthesis report for part2
-Tue Aug 14 20:10:12 2018
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Wed Aug 15 16:51:09 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -40,24 +40,24 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                          ;
-+------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Aug 14 20:10:12 2018            ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
-; Revision Name                      ; part2                                            ;
-; Top-level Entity Name              ; part2                                            ;
-; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 11                                               ;
-;     Total combinational functions  ; 11                                               ;
-;     Dedicated logic registers      ; 0                                                ;
-; Total registers                    ; 0                                                ;
-; Total pins                         ; 30                                               ;
-; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 0                                                ;
-; Embedded Multiplier 9-bit elements ; 0                                                ;
-; Total PLLs                         ; 0                                                ;
-+------------------------------------+--------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Aug 15 16:51:09 2018           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; part2                                           ;
+; Top-level Entity Name              ; part2                                           ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 11                                              ;
+;     Total combinational functions  ; 11                                              ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 30                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -162,18 +162,18 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------------+---------+
-; CiruitA.vhd                      ; yes             ; User VHDL File        ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 2/CiruitA.vhd       ;         ;
-; Comparator.vhd                   ; yes             ; User VHDL File        ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 2/Comparator.vhd    ;         ;
-; 2_in_one_mul.vhd                 ; yes             ; User VHDL File        ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 2/2_in_one_mul.vhd  ;         ;
-; part2.vhd                        ; yes             ; Auto-Found VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 2/part2.vhd         ;         ;
-; displaynumber.vhd                ; yes             ; Auto-Found VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 2/displaynumber.vhd ;         ;
-; circuitb.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab03/part 2/circuitb.vhd      ;         ;
-+----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                            ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path               ; Library ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------+---------+
+; CiruitA.vhd                      ; yes             ; User VHDL File        ; Z:/comp3222/lab03/part 2/CiruitA.vhd       ;         ;
+; Comparator.vhd                   ; yes             ; User VHDL File        ; Z:/comp3222/lab03/part 2/Comparator.vhd    ;         ;
+; 2_in_one_mul.vhd                 ; yes             ; User VHDL File        ; Z:/comp3222/lab03/part 2/2_in_one_mul.vhd  ;         ;
+; part2.vhd                        ; yes             ; Auto-Found VHDL File  ; Z:/comp3222/lab03/part 2/part2.vhd         ;         ;
+; displaynumber.vhd                ; yes             ; Auto-Found VHDL File  ; Z:/comp3222/lab03/part 2/displaynumber.vhd ;         ;
+; circuitb.vhd                     ; yes             ; Auto-Found VHDL File  ; Z:/comp3222/lab03/part 2/circuitb.vhd      ;         ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -267,8 +267,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Aug 14 20:10:02 2018
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Aug 15 16:50:53 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part2 -c part2
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Warning (12019): Can't analyze file -- file ../../lab02/part5/part2.vhd is missing
@@ -318,9 +318,9 @@ Info (21057): Implemented 41 device resources after synthesis - the final resour
     Info (21059): Implemented 26 output pins
     Info (21061): Implemented 11 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4659 megabytes
-    Info: Processing ended: Tue Aug 14 20:10:12 2018
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 480 megabytes
+    Info: Processing ended: Wed Aug 15 16:51:09 2018
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:08
 
 
