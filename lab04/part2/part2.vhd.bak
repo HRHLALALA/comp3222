@@ -1,0 +1,19 @@
+LIBRARY ieee;
+
+USE ieee.std_logic_1164.all
+
+ENTITY part1 IS
+	PORT(Clk,R,S: IN STD_LOGIC;
+			Q:		: OUT STD_LOGIC);
+END part1;
+
+ARCHITECTURE Structural OF part1 IS
+	SIGNAL R_g,S_g,Qa,Qb: STD_LOGIC;
+	ATTRIBUTE keep: boolean;
+	ATTRIBUTE keep of R_g,S_g,Qa,Qb:	SIGNAL IS true;
+
+BEGIN
+	S_g <= D NAND R;
+	R_g <= NOT D NAND Clk;
+	Qa	 <= S_g NAND Qb
+	Qb	 <= R_g NAND Qa

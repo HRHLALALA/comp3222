@@ -1,0 +1,2 @@
+LIBRARY ieee;
+USE std_logic_1164.all
