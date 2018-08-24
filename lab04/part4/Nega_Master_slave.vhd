@@ -16,6 +16,6 @@ ARCHITECTURE structure OF N_master_slave IS
 	SIGNAL Qm: STD_LOGIC;
 	
 BEGIN
-	stage0: N_master_slave PORT MAP(D,CLK,QM)
+	stage0: N_master_slave PORT MAP(D,CLK,QM);
 	stage1: N_master_slave PORT MAP(QM,NOT CLK,Q);
 END STRucture;

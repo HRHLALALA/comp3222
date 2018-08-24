@@ -24,25 +24,13 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "part2")
-  (DATE "08/21/2018 19:57:25")
+  (DATE "08/22/2018 16:06:08")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
-  (VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version")
+  (VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition")
   (DIVIDER .)
   (TIMESCALE 1 ps)
 
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE stage0\|R_g)
-    (DELAY
-      (ABSOLUTE
-        (PORT datac (463:463:463) (463:463:463))
-        (PORT datad (461:461:461) (461:461:461))
-        (IOPATH datac combout (110:110:110) (110:110:110))
-        (IOPATH datad combout (79:79:79) (79:79:79))
-      )
-    )
-  )
   (CELL
     (CELLTYPE "cycloneii_asynch_io")
     (INSTANCE SW\[1\]\~I.asynch_inst)
@@ -63,37 +51,15 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE stage0\|Qb)
+    (INSTANCE stage0\|Qa\~0)
     (DELAY
       (ABSOLUTE
-        (PORT dataa (111:111:111) (111:111:111))
-        (PORT datad (105:105:105) (105:105:105))
+        (PORT dataa (110:110:110) (110:110:110))
+        (PORT datab (312:312:312) (312:312:312))
+        (PORT datac (319:319:319) (319:319:319))
         (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datad combout (79:79:79) (79:79:79))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE stage0\|S_g)
-    (DELAY
-      (ABSOLUTE
-        (PORT datac (463:463:463) (463:463:463))
-        (PORT datad (460:460:460) (460:460:460))
-        (IOPATH datac combout (110:110:110) (110:110:110))
-        (IOPATH datad combout (79:79:79) (79:79:79))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE stage0\|Qa)
-    (DELAY
-      (ABSOLUTE
-        (PORT datab (105:105:105) (105:105:105))
-        (PORT datad (100:100:100) (100:100:100))
         (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datad combout (79:79:79) (79:79:79))
+        (IOPATH datac combout (107:107:107) (107:107:107))
       )
     )
   )
@@ -102,7 +68,7 @@
     (INSTANCE LEDR\[1\]\~I.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (454:454:454) (454:454:454))
+        (PORT datain (461:461:461) (461:461:461))
         (IOPATH datain padio (1398:1398:1398) (1398:1398:1398))
       )
     )
@@ -112,7 +78,7 @@
     (INSTANCE LEDR\[0\]\~I.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (316:316:316) (316:316:316))
+        (PORT datain (315:315:315) (315:315:315))
         (IOPATH datain padio (1408:1408:1408) (1408:1408:1408))
       )
     )
@@ -131,7 +97,7 @@
     (INSTANCE LEDG\[0\]\~I.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (216:216:216) (216:216:216))
+        (PORT datain (360:360:360) (360:360:360))
         (IOPATH datain padio (1418:1418:1418) (1418:1418:1418))
       )
     )

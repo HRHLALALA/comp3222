@@ -14,9 +14,9 @@
 
 // VENDOR "Altera"
 // PROGRAM "Quartus II 64-Bit"
-// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
+// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "08/21/2018 19:57:25"
+// DATE "08/22/2018 16:06:08"
 
 // 
 // Device: Altera EP2C20F484C7 Package FBGA484
@@ -60,29 +60,9 @@ tri1 devoe;
 initial $sdf_annotate("part2_v.sdo");
 // synopsys translate_on
 
-wire \stage0|R_g~combout ;
-wire \stage0|Qb~combout ;
-wire \stage0|S_g~combout ;
-wire \stage0|Qa~combout ;
+wire \stage0|Qa~0_combout ;
 wire [0:1] \SW~combout ;
 
-
-// Location: LCCOMB_X49_Y7_N6
-cycloneii_lcell_comb \stage0|R_g (
-// Equation(s):
-// \stage0|R_g~combout  = LCELL((\SW~combout [0]) # (!\SW~combout [1]))
-
-	.dataa(vcc),
-	.datab(vcc),
-	.datac(\SW~combout [0]),
-	.datad(\SW~combout [1]),
-	.cin(gnd),
-	.combout(\stage0|R_g~combout ),
-	.cout());
-// synopsys translate_off
-defparam \stage0|R_g .lut_mask = 16'hF0FF;
-defparam \stage0|R_g .sum_lutc_input = "datac";
-// synopsys translate_on
 
 // Location: PIN_L21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \SW[1]~I (
@@ -156,55 +136,21 @@ defparam \SW[0]~I .output_register_mode = "none";
 defparam \SW[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: LCCOMB_X49_Y7_N28
-cycloneii_lcell_comb \stage0|Qb (
+// Location: LCCOMB_X49_Y10_N16
+cycloneii_lcell_comb \stage0|Qa~0 (
 // Equation(s):
-// \stage0|Qb~combout  = LCELL((!\stage0|Qa~combout ) # (!\stage0|R_g~combout ))
+// \stage0|Qa~0_combout  = (\SW~combout [1] & ((!\SW~combout [0]))) # (!\SW~combout [1] & (\stage0|Qa~0_combout ))
 
-	.dataa(\stage0|R_g~combout ),
-	.datab(vcc),
-	.datac(vcc),
-	.datad(\stage0|Qa~combout ),
+	.dataa(\stage0|Qa~0_combout ),
+	.datab(\SW~combout [0]),
+	.datac(\SW~combout [1]),
+	.datad(vcc),
 	.cin(gnd),
-	.combout(\stage0|Qb~combout ),
+	.combout(\stage0|Qa~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \stage0|Qb .lut_mask = 16'h55FF;
-defparam \stage0|Qb .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X49_Y7_N2
-cycloneii_lcell_comb \stage0|S_g (
-// Equation(s):
-// \stage0|S_g~combout  = LCELL((\SW~combout [0]) # (!\SW~combout [1]))
-
-	.dataa(vcc),
-	.datab(vcc),
-	.datac(\SW~combout [0]),
-	.datad(\SW~combout [1]),
-	.cin(gnd),
-	.combout(\stage0|S_g~combout ),
-	.cout());
-// synopsys translate_off
-defparam \stage0|S_g .lut_mask = 16'hF0FF;
-defparam \stage0|S_g .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X49_Y7_N0
-cycloneii_lcell_comb \stage0|Qa (
-// Equation(s):
-// \stage0|Qa~combout  = LCELL((!\stage0|S_g~combout ) # (!\stage0|Qb~combout ))
-
-	.dataa(vcc),
-	.datab(\stage0|Qb~combout ),
-	.datac(vcc),
-	.datad(\stage0|S_g~combout ),
-	.cin(gnd),
-	.combout(\stage0|Qa~combout ),
-	.cout());
-// synopsys translate_off
-defparam \stage0|Qa .lut_mask = 16'h33FF;
-defparam \stage0|Qa .sum_lutc_input = "datac";
+defparam \stage0|Qa~0 .lut_mask = 16'h3A3A;
+defparam \stage0|Qa~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: PIN_R19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
@@ -317,7 +263,7 @@ defparam \LEDG[1]~I .output_sync_reset = "none";
 
 // Location: PIN_U22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \LEDG[0]~I (
-	.datain(\stage0|Qa~combout ),
+	.datain(!\stage0|Qa~0_combout ),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),

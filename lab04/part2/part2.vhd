@@ -26,14 +26,14 @@ ENTITY D_latch IS
 END D_latch;
 ARCHITECTURE Structural OF D_latch IS
 	SIGNAL R,S,R_g,S_g,Qa,Qb: STD_LOGIC;
-	ATTRIBUTE keep: boolean;
-	ATTRIBUTE keep of R_g,S_g,Qa,Qb:	SIGNAL IS true;
+--	ATTRIBUTE keep: boolean;
+--	ATTRIBUTE keep of R_g,S_g,Qa,Qb:	SIGNAL IS true;
 
 BEGIN
 	S<=D;
 	R<=NOT D;
-	S_g <= Clk NAND R;
-	R_g <= NOT S NAND Clk;
+	S_g <= Clk NAND S;
+	R_g <=  R NAND Clk;
 	Qa	 <= S_g NAND Qb;
 	Qb	 <= R_g NAND Qa;
 	
