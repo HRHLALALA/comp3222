@@ -1,6 +1,6 @@
 Analysis & Synthesis report for part4
-Wed Aug 22 15:29:01 2018
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Fri Aug 24 17:22:08 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -10,7 +10,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -33,24 +39,24 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Aug 22 15:29:00 2018               ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; part4                                           ;
-; Top-level Entity Name              ; part4                                           ;
-; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++------------------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Aug 24 17:22:08 2018            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; part4                                            ;
+; Top-level Entity Name              ; part4                                            ;
+; Family                             ; Cyclone II                                       ;
+; Total logic elements               ; 4                                                ;
+;     Total combinational functions  ; 4                                                ;
+;     Dedicated logic registers      ; 0                                                ;
+; Total registers                    ; 0                                                ;
+; Total pins                         ; 5                                                ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
++------------------------------------+--------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -155,32 +161,138 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; part4.vhd                        ; yes             ; User VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab04/part4/part4.vhd             ;         ;
+; latch.vhd                        ; yes             ; User VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab04/part4/latch.vhd             ;         ;
+; Nega_Master_slave.vhd            ; yes             ; User VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab04/part4/Nega_Master_slave.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 4     ;
+;                                             ;       ;
+; Total combinational functions               ; 4     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 4     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 4     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 5     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; Clock ;
+; Maximum fan-out                             ; 4     ;
+; Total fan-out                               ; 15    ;
+; Average fan-out                             ; 1.67  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                 ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
+; |part4                     ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |part4                                      ; work         ;
+;    |D_latch:STAGE0|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part4|D_latch:STAGE0                       ; work         ;
+;    |N_master_slave:STAGE1| ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part4|N_master_slave:STAGE1                ; work         ;
+;       |D_latch:stage0|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part4|N_master_slave:STAGE1|D_latch:stage0 ; work         ;
+;       |D_latch:stage1|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part4|N_master_slave:STAGE1|D_latch:stage1 ; work         ;
+;    |N_master_slave:STAGE2| ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part4|N_master_slave:STAGE2                ; work         ;
+;       |D_latch:stage1|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part4|N_master_slave:STAGE2|D_latch:stage1 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; D_latch:STAGE0|Q                                   ; Clock               ; yes                    ;
+; N_master_slave:STAGE1|D_latch:stage1|Q             ; Clock               ; yes                    ;
+; N_master_slave:STAGE2|D_latch:stage1|Q             ; Clock               ; yes                    ;
+; N_master_slave:STAGE1|D_latch:stage0|Q             ; Clock               ; yes                    ;
+; N_master_slave:STAGE2|D_latch:stage0|Q             ; Clock               ; yes                    ;
+; Number of user-specified and inferred latches = 5  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Aug 22 15:28:51 2018
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Fri Aug 24 17:21:59 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part4 -c part4
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file part4.vhd
     Info (12022): Found design unit 1: part4-structure
     Info (12023): Found entity 1: part4
-Warning (12018): Entity "latch" will be ignored because it conflicts with Quartus II primitive name
 Info (12021): Found 2 design units, including 1 entities, in source file latch.vhd
-    Info (12022): Found design unit 1: latch-Behavior
+    Info (12022): Found design unit 1: D_latch-Behavior
+    Info (12023): Found entity 1: D_latch
 Info (12021): Found 2 design units, including 1 entities, in source file nega_master_slave.vhd
     Info (12022): Found design unit 1: N_master_slave-structure
     Info (12023): Found entity 1: N_master_slave
 Warning (12019): Can't analyze file -- file Positive_Master_slave.vhd is missing
 Info (12127): Elaborating entity "part4" for the top level hierarchy
-Error (12004): Port "CLK" does not exist in primitive "latch" of instance "STAGE0" File: Z:/comp3222/lab04/part4/part4.vhd Line: 21
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 2 warnings
-    Error: Peak virtual memory: 479 megabytes
-    Error: Processing ended: Wed Aug 22 15:29:01 2018
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:02
+Info (12128): Elaborating entity "D_latch" for hierarchy "D_latch:STAGE0"
+Warning (10631): VHDL Process Statement warning at latch.vhd(11): inferring latch(es) for signal or variable "Q", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Q" at latch.vhd(11)
+Info (12128): Elaborating entity "N_master_slave" for hierarchy "N_master_slave:STAGE1"
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "N_master_slave:STAGE2|D_latch:stage0|Q" merged with LATCH primitive "D_latch:STAGE0|Q"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 9 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 4 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4673 megabytes
+    Info: Processing ended: Fri Aug 24 17:22:08 2018
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:01
 
 

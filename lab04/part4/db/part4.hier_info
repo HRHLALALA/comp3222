@@ -1,0 +1,56 @@
+|part4
+D => D_latch:STAGE0.D
+D => N_master_slave:STAGE1.D
+D => N_master_slave:STAGE2.D
+Clock => D_latch:STAGE0.CLK
+Clock => N_master_slave:STAGE2.CLK
+Clock => N_master_slave:STAGE1.CLK
+Qa <= D_latch:STAGE0.Q
+Qb <= N_master_slave:STAGE1.Q
+Qc <= N_master_slave:STAGE2.Q
+
+
+|part4|D_latch:STAGE0
+D => Q$latch.DATAIN
+CLK => Q$latch.LATCH_ENABLE
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|N_master_slave:STAGE1
+D => D_latch:stage0.D
+CLK => D_latch:stage0.CLK
+CLK => D_latch:stage1.CLK
+Q <= D_latch:stage1.Q
+
+
+|part4|N_master_slave:STAGE1|D_latch:stage0
+D => Q$latch.DATAIN
+CLK => Q$latch.LATCH_ENABLE
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|N_master_slave:STAGE1|D_latch:stage1
+D => Q$latch.DATAIN
+CLK => Q$latch.LATCH_ENABLE
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|N_master_slave:STAGE2
+D => D_latch:stage0.D
+CLK => D_latch:stage0.CLK
+CLK => D_latch:stage1.CLK
+Q <= D_latch:stage1.Q
+
+
+|part4|N_master_slave:STAGE2|D_latch:stage0
+D => Q$latch.DATAIN
+CLK => Q$latch.LATCH_ENABLE
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part4|N_master_slave:STAGE2|D_latch:stage1
+D => Q$latch.DATAIN
+CLK => Q$latch.LATCH_ENABLE
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

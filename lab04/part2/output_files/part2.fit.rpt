@@ -1,6 +1,6 @@
 Fitter report for part2
-Wed Aug 22 16:05:33 2018
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Fri Aug 24 14:15:15 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -57,26 +57,26 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Fitter Summary                                                                       ;
-+------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Aug 22 16:05:33 2018           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; part2                                           ;
-; Top-level Entity Name              ; part2                                           ;
-; Family                             ; Cyclone II                                      ;
-; Device                             ; EP2C20F484C7                                    ;
-; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 1 / 18,752 ( < 1 % )                            ;
-;     Total combinational functions  ; 1 / 18,752 ( < 1 % )                            ;
-;     Dedicated logic registers      ; 0 / 18,752 ( 0 % )                              ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 6 / 315 ( 2 % )                                 ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Fitter Summary                                                                        ;
++------------------------------------+--------------------------------------------------+
+; Fitter Status                      ; Successful - Fri Aug 24 14:15:15 2018            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; part2                                            ;
+; Top-level Entity Name              ; part2                                            ;
+; Family                             ; Cyclone II                                       ;
+; Device                             ; EP2C20F484C7                                     ;
+; Timing Models                      ; Final                                            ;
+; Total logic elements               ; 1 / 18,752 ( < 1 % )                             ;
+;     Total combinational functions  ; 1 / 18,752 ( < 1 % )                             ;
+;     Dedicated logic registers      ; 0 / 18,752 ( 0 % )                               ;
+; Total registers                    ; 0                                                ;
+; Total pins                         ; 6 / 315 ( 2 % )                                  ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                              ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                   ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
++------------------------------------+--------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -137,12 +137,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.60        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ; < 0.1%      ;
+;     Processors 2-4         ;  20.0%      ;
 +----------------------------+-------------+
 
 
@@ -625,7 +625,7 @@ applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in Z:/comp3222/lab04/part2/output_files/part2.pin.
+The pin-out file can be found in C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab04/part2/output_files/part2.pin.
 
 
 +--------------------------------------------------------------------+
@@ -1943,17 +1943,17 @@ Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file Z:/comp3222/lab04/part2/output_files/part2.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 440 warnings
-    Info: Peak virtual memory: 1061 megabytes
-    Info: Processing ended: Wed Aug 22 16:05:33 2018
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:08
+Info (144001): Generated suppressed messages file C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab04/part2/output_files/part2.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 441 warnings
+    Info: Peak virtual memory: 5251 megabytes
+    Info: Processing ended: Fri Aug 24 14:15:15 2018
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in Z:/comp3222/lab04/part2/output_files/part2.fit.smsg.
+The suppressed messages can be found in C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab04/part2/output_files/part2.fit.smsg.
 
 

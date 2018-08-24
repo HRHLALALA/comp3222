@@ -1,12 +1,12 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY latch IS
+ENTITY D_latch IS
 	PORT ( D, CLK : IN STD_LOGIC ;
 				Q : OUT STD_LOGIC) ;
-END latch ;
+END D_latch ;
 
-ARCHITECTURE Behavior OF latch IS
+ARCHITECTURE Behavior OF D_latch IS
 BEGIN
 	PROCESS ( D, CLK )
 	BEGIN
