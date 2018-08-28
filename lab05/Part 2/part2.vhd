@@ -1,0 +1,25 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_signed.all;
+ENTITY part2 IS
+	PORT(EN,CLK,CLR	: IN STD_LOGIC;
+			Q: OUT STD_LOGIC_VECTOR(15 DOWNTO 0));
+END part2;
+
+ARCHITECTURE Behavior of part2 IS
+	SIGNAL COUNT: STD_LOGIC_VECTOR (15 DOWNTO 0);
+BEGIN 
+	PROCESS(CLK,CLR)
+	BEGIN
+		IF CLR = '0' THEN
+			COUNT <= "0000000000000000";
+		ELSIF CLK'EVENT AND CLK = '1' THEN
+			IF EN = '1' THEN
+				COUNT  <= COUNT +1;
+			ELSE
+				COUNT <= COUNT;
+			END IF;
+		END IF;
+	END PROCESS;
+	Q <= COUNT;
+END Behavior;

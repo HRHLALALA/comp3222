@@ -1,6 +1,6 @@
 Analysis & Synthesis report for part1
-Tue Aug 28 12:11:49 2018
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Tue Aug 28 22:25:09 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -38,24 +38,24 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Aug 28 12:11:49 2018           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; part1                                           ;
-; Top-level Entity Name              ; part1                                           ;
-; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 12                                              ;
-;     Total combinational functions  ; 12                                              ;
-;     Dedicated logic registers      ; 8                                               ;
-; Total registers                    ; 8                                               ;
-; Total pins                         ; 11                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++------------------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Aug 28 22:25:09 2018            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; part1                                            ;
+; Top-level Entity Name              ; part1                                            ;
+; Family                             ; Cyclone II                                       ;
+; Total logic elements               ; 25                                               ;
+;     Total combinational functions  ; 25                                               ;
+;     Dedicated logic registers      ; 8                                                ;
+; Total registers                    ; 8                                                ;
+; Total pins                         ; 39                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
++------------------------------------+--------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -160,61 +160,64 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                   ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path            ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------+---------+
-; t_flipflop.vhd                   ; yes             ; User VHDL File  ; Z:/comp3222/lab05/Part 1/t_flipflop.vhd ;         ;
-; part1.vhd                        ; yes             ; User VHDL File  ; Z:/comp3222/lab05/Part 1/part1.vhd      ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
+; T_FF.vhd                         ; yes             ; User VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab05/Part 1/T_FF.vhd       ;         ;
+; displayHEX.vhd                   ; yes             ; User VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab05/Part 1/displayHEX.vhd ;         ;
+; part1.vhd                        ; yes             ; User VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab05/Part 1/part1.vhd      ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 12    ;
-;                                             ;       ;
-; Total combinational functions               ; 12    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 7     ;
-;     -- 3 input functions                    ; 3     ;
-;     -- <=2 input functions                  ; 2     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 12    ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 8     ;
-;     -- Dedicated logic registers            ; 8     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 11    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; CLK   ;
-; Maximum fan-out                             ; 8     ;
-; Total fan-out                               ; 65    ;
-; Average fan-out                             ; 2.10  ;
-+---------------------------------------------+-------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 25              ;
+;                                             ;                 ;
+; Total combinational functions               ; 25              ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 19              ;
+;     -- 3 input functions                    ; 3               ;
+;     -- <=2 input functions                  ; 3               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 25              ;
+;     -- arithmetic mode                      ; 0               ;
+;                                             ;                 ;
+; Total registers                             ; 8               ;
+;     -- Dedicated logic registers            ; 8               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 39              ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+; Maximum fan-out node                        ; T_FF:STAGE4|TMP ;
+; Maximum fan-out                             ; 13              ;
+; Total fan-out                               ; 137             ;
+; Average fan-out                             ; 1.90            ;
++---------------------------------------------+-----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |part1                     ; 12 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |part1              ; work         ;
-;    |T_FF:STAGE1|           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE1  ; work         ;
-;    |T_FF:STAGE2|           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE2  ; work         ;
-;    |T_FF:STAGE3|           ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE3  ; work         ;
-;    |T_FF:STAGE4|           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE4  ; work         ;
-;    |T_FF:STAGE5|           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE5  ; work         ;
-;    |T_FF:STAGE6|           ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE6  ; work         ;
-;    |T_FF:STAGE7|           ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE7  ; work         ;
-;    |T_FF:STAGE8|           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE8  ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                               ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; |part1                     ; 25 (1)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 39   ; 0            ; |part1                    ; work         ;
+;    |T_FF:STAGE1|           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE1        ; work         ;
+;    |T_FF:STAGE2|           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE2        ; work         ;
+;    |T_FF:STAGE3|           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE3        ; work         ;
+;    |T_FF:STAGE4|           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE4        ; work         ;
+;    |T_FF:STAGE5|           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE5        ; work         ;
+;    |T_FF:STAGE6|           ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE6        ; work         ;
+;    |T_FF:STAGE7|           ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE7        ; work         ;
+;    |T_FF:STAGE8|           ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|T_FF:STAGE8        ; work         ;
+;    |displayHEX:STAGE10|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|displayHEX:STAGE10 ; work         ;
+;    |displayHEX:STAGE9|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|displayHEX:STAGE9  ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -226,7 +229,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total registers                              ; 8     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -238,7 +241,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -247,34 +250,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Aug 28 12:11:36 2018
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Tue Aug 28 22:25:00 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part1 -c part1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file t_flipflop.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file t_ff.vhd
     Info (12022): Found design unit 1: T_FF-Behavior
     Info (12023): Found entity 1: T_FF
+Info (12021): Found 2 design units, including 1 entities, in source file displayhex.vhd
+    Info (12022): Found design unit 1: displayHEX-Behavior
+    Info (12023): Found entity 1: displayHEX
+Warning (12019): Can't analyze file -- file t_flipflop.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file d_flipflop.vhd
     Info (12022): Found design unit 1: D_FF-Behavior
     Info (12023): Found entity 1: D_FF
 Info (12021): Found 2 design units, including 1 entities, in source file part1.vhd
     Info (12022): Found design unit 1: part1-Structure
     Info (12023): Found entity 1: part1
+Info (12021): Found 2 design units, including 1 entities, in source file bit4_counter.vhd
+    Info (12022): Found design unit 1: bit4_counter-structure
+    Info (12023): Found entity 1: bit4_counter
 Info (12127): Elaborating entity "part1" for the top level hierarchy
 Info (12128): Elaborating entity "T_FF" for hierarchy "T_FF:STAGE1"
-Warning (10492): VHDL Process Statement warning at t_flipflop.vhd(16): signal "CLR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at t_flipflop.vhd(25): signal "TMP" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at t_flipflop.vhd(26): signal "TMP" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at T_FF.vhd(16): signal "CLR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "displayHEX" for hierarchy "displayHEX:STAGE9"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 23 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 64 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 12 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 480 megabytes
-    Info: Processing ended: Tue Aug 28 12:11:49 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:06
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 25 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4671 megabytes
+    Info: Processing ended: Tue Aug 28 22:25:09 2018
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -14,16 +14,13 @@ BEGIN
 	PROCESS (CLK)
 	BEGIN
 		IF CLR ='0' THEN 
-			Q <= '0';
+			TMP <= '0';
 		ELSIF CLK'EVENT AND CLK = '1' THEN
-			IF T ='0' THEN 
-				TMP <= TMP;
-			ELSIF T = '1' THEN
+			IF T = '1' THEN 
 				TMP <= NOT TMP;
 			END IF;
 		END IF;
-		Q <= TMP;
 	END PROCESS;
-			
+	Q <= TMP;
 
 END Behavior;	
