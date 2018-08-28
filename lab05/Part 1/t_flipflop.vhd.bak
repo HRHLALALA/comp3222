@@ -1,0 +1,11 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
+ENTITY t_FF IS
+	PORT(T : IN STD_LOGIC;
+		  Q : OUT STD_LOGIC);
+		 
+END ENTITY;
+
+ARCHITECTURE Behavior OF t_FF IS
