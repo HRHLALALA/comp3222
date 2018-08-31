@@ -24,7 +24,7 @@ begin
 			counter <= (OTHERS => '0');
 			seconds <= "0000";
 		ELSIF rising_edge(CLOCK_50) THEN
-			IF counter < "0010111110101111000010000000" THEN
+			IF counter < "10110111000110110000000000" THEN
 				counter <= counter+1;
 			ELSE
 				counter <= (OTHERS=>'0');
