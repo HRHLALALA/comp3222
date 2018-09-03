@@ -1,0 +1,27 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_signed.all;
+
+ENTITY displayCHAR IS
+	PORT( char: IN character;
+			 hex:	OUT std_logic_vector(0 to 6));
+			 
+END displayCHAR;
+
+ARCHITECTURE Behavior OF displayCHAR is
+BEGIN
+	process(char)
+	begin
+	case char is
+		when 'E' => hex <= "0110000";
+		when 'I' => hex <= "1001111";
+		when 'L' => hex <= "1110001";
+		when 'O' => hex <= "0000001";
+		when 'V' => hex <= "1000001";
+		when 'Y' => hex <= "1000100";
+		when '^' => hex <= "0011101";
+		when '_' => hex <= "1110111";
+		when others => hex <= "1111111";
+	end case;
+	end process;
+END Behavior;

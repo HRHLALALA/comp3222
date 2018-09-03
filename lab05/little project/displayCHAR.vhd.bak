@@ -1,0 +1,15 @@
+LIBRARY ieee;
+USE std_logic_1164.all;
+USE std_logic_unsigned;
+
+ENTITY displayCHAR IS
+	PORT( char: character;
+			 hex:	std_logic_vector(0 to 6);)
+			 
+END ENTITY;
+
+ARCHITECTURE Behavior OF displayCHAR is
+BEGIN
+	CASE char:
+		hex <= "0110000" when 'I',
+		hex <= "1111111" when others;
