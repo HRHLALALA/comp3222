@@ -1,5 +1,5 @@
 Flow report for HEXrun
-Tue Sep 04 00:52:09 2018
+Tue Sep 04 01:05:07 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Tue Sep 04 00:52:09 2018            ;
+; Flow Status                        ; Successful - Tue Sep 04 01:05:07 2018            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; HEXrun                                           ;
 ; Top-level Entity Name              ; HEXrun                                           ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/04/2018 00:51:26 ;
+; Start date & time ; 09/04/2018 01:04:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; HEXrun              ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 167690710072425.153598628620880 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 167690710072425.153598706600676 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
@@ -92,12 +92,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 4673 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:11     ; 1.0                     ; 5362 MB             ; 00:00:06                           ;
+; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 4678 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:11     ; 1.0                     ; 5344 MB             ; 00:00:06                           ;
 ; Assembler                 ; 00:00:09     ; 1.0                     ; 4590 MB             ; 00:00:01                           ;
 ; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 4603 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:08     ; 1.0                     ; 4540 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:45     ; --                      ; --                  ; 00:00:10                           ;
+; EDA Netlist Writer        ; 00:00:08     ; 1.0                     ; 4540 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:45     ; --                      ; --                  ; 00:00:11                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

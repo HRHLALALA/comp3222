@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HEXrun
-Tue Sep 04 00:51:28 2018
+Tue Sep 04 01:04:27 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -43,7 +43,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Sep 04 00:51:28 2018            ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 04 01:04:27 2018            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; HEXrun                                           ;
 ; Top-level Entity Name              ; HEXrun                                           ;
@@ -285,7 +285,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Sep 04 00:51:18 2018
+    Info: Processing started: Tue Sep 04 01:04:18 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HEXrun -c HEXrun
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file displaychar.vhd
@@ -308,9 +308,9 @@ Info (21057): Implemented 224 device resources after synthesis - the final resou
     Info (21059): Implemented 46 output pins
     Info (21061): Implemented 177 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4675 megabytes
-    Info: Processing ended: Tue Sep 04 00:51:28 2018
-    Info: Elapsed time: 00:00:10
+    Info: Peak virtual memory: 4685 megabytes
+    Info: Processing ended: Tue Sep 04 01:04:27 2018
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:02
 
 
