@@ -1,0 +1,31 @@
+|part2
+sw[0] => Y_D.F.DATAA
+sw[0] => Y_D.G.DATAB
+sw[0] => Y_D.H.DATAB
+sw[0] => Y_D.I.DATAB
+sw[0] => Selector0.IN1
+sw[0] => Y_D.C.DATAB
+sw[0] => Y_D.D.DATAB
+sw[0] => Selector1.IN1
+sw[1] => y_Q.OUTPUTSELECT
+sw[1] => y_Q.OUTPUTSELECT
+sw[1] => y_Q.OUTPUTSELECT
+sw[1] => y_Q.OUTPUTSELECT
+sw[1] => y_Q.OUTPUTSELECT
+sw[1] => y_Q.OUTPUTSELECT
+sw[1] => y_Q.OUTPUTSELECT
+sw[1] => y_Q.OUTPUTSELECT
+sw[1] => y_Q.OUTPUTSELECT
+key[0] => y_Q~1.DATAIN
+key[1] => ~NO_FANOUT~
+ledr[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+ledr[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+ledr[2] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+ledr[3] <= ledr[3].DB_MAX_OUTPUT_PORT_TYPE
+ledg[0] <= process_2.DB_MAX_OUTPUT_PORT_TYPE
+ledg[1] <= <GND>
+ledg[2] <= <GND>
+ledg[3] <= <GND>
+ledg[4] <= <GND>
+
+
