@@ -1,0 +1,101 @@
+|part1
+key[0] => D_FF:A.CLOCK
+key[0] => D_FF:B.CLOCK
+key[0] => D_FF:C.CLOCK
+key[0] => D_FF:D.CLOCK
+key[0] => D_FF:E.CLOCK
+key[0] => D_FF:F.CLOCK
+key[0] => D_FF:G.CLOCK
+key[0] => D_FF:H.CLOCK
+key[0] => D_FF:I.CLOCK
+key[1] => ~NO_FANOUT~
+sw[0] => comb.IN1
+sw[0] => comb.IN1
+sw[0] => comb.IN1
+sw[0] => comb.IN1
+sw[0] => comb.IN1
+sw[0] => comb.IN1
+sw[0] => comb.IN1
+sw[0] => comb.IN1
+sw[0] => D_FF:A.D
+sw[1] => comb.IN1
+sw[1] => comb.IN1
+sw[1] => comb.IN1
+sw[1] => comb.IN1
+sw[1] => comb.IN1
+sw[1] => comb.IN1
+sw[1] => comb.IN1
+sw[1] => comb.IN1
+LEDG[0] <= D_FF:A.Q
+LEDG[1] <= D_FF:B.Q
+LEDG[2] <= D_FF:C.Q
+LEDG[3] <= D_FF:D.Q
+LEDG[4] <= D_FF:E.Q
+LEDG[5] <= D_FF:F.Q
+LEDG[6] <= D_FF:G.Q
+LEDG[7] <= D_FF:H.Q
+LEDR[0] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= D_FF:I.Q
+
+
+|part1|D_FF:A
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|D_FF:B
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|D_FF:C
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|D_FF:D
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|D_FF:E
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|D_FF:F
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|D_FF:G
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|D_FF:H
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|D_FF:I
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
