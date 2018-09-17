@@ -1,5 +1,5 @@
 Analysis & Synthesis report for part1
-Mon Sep 17 23:47:17 2018
+Tue Sep 18 00:24:56 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -41,13 +41,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Sep 17 23:47:17 2018            ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 18 00:24:56 2018            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; part1                                            ;
 ; Top-level Entity Name              ; part1                                            ;
 ; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 21                                               ;
-;     Total combinational functions  ; 20                                               ;
+; Total logic elements               ; 20                                               ;
+;     Total combinational functions  ; 19                                               ;
 ;     Dedicated logic registers      ; 9                                                ;
 ; Total registers                    ; 9                                                ;
 ; Total pins                         ; 21                                               ;
@@ -175,16 +175,16 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 21    ;
+; Estimated Total logic elements              ; 20    ;
 ;                                             ;       ;
-; Total combinational functions               ; 20    ;
+; Total combinational functions               ; 19    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 8     ;
-;     -- 3 input functions                    ; 9     ;
-;     -- <=2 input functions                  ; 3     ;
+;     -- 4 input functions                    ; 9     ;
+;     -- 3 input functions                    ; 8     ;
+;     -- <=2 input functions                  ; 2     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 20    ;
+;     -- normal mode                          ; 19    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 9     ;
@@ -194,9 +194,9 @@ applicable agreement for further details.
 ; I/O pins                                    ; 21    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; sw[0] ;
-; Maximum fan-out                             ; 9     ;
-; Total fan-out                               ; 100   ;
-; Average fan-out                             ; 2.00  ;
+; Maximum fan-out                             ; 10    ;
+; Total fan-out                               ; 99    ;
+; Average fan-out                             ; 2.02  ;
 +---------------------------------------------+-------+
 
 
@@ -205,7 +205,7 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |part1                     ; 20 (20)           ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |part1              ; work         ;
+; |part1                     ; 19 (19)           ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |part1              ; work         ;
 ;    |D_FF:A|                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|D_FF:A       ; work         ;
 ;    |D_FF:B|                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|D_FF:B       ; work         ;
 ;    |D_FF:C|                ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|D_FF:C       ; work         ;
@@ -249,7 +249,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Sep 17 23:47:05 2018
+    Info: Processing started: Tue Sep 18 00:24:47 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part1 -c part1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file d_flipflop.vhd
@@ -264,14 +264,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "key[1]"
-Info (21057): Implemented 42 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 41 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 21 logic cells
+    Info (21061): Implemented 20 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4678 megabytes
-    Info: Processing ended: Mon Sep 17 23:47:17 2018
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4672 megabytes
+    Info: Processing ended: Tue Sep 18 00:24:56 2018
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:01
 
 

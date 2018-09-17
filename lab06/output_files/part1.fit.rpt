@@ -1,5 +1,5 @@
 Fitter report for part1
-Mon Sep 17 23:47:29 2018
+Tue Sep 18 00:25:08 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -62,15 +62,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                        ;
 +------------------------------------+--------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Sep 17 23:47:29 2018            ;
+; Fitter Status                      ; Successful - Tue Sep 18 00:25:08 2018            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; part1                                            ;
 ; Top-level Entity Name              ; part1                                            ;
 ; Family                             ; Cyclone II                                       ;
 ; Device                             ; EP2C20F484C7                                     ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 21 / 18,752 ( < 1 % )                            ;
-;     Total combinational functions  ; 20 / 18,752 ( < 1 % )                            ;
+; Total logic elements               ; 20 / 18,752 ( < 1 % )                            ;
+;     Total combinational functions  ; 19 / 18,752 ( < 1 % )                            ;
 ;     Dedicated logic registers      ; 9 / 18,752 ( < 1 % )                             ;
 ; Total registers                    ; 9                                                ;
 ; Total pins                         ; 21 / 315 ( 7 % )                                 ;
@@ -565,8 +565,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 54 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 54 ( 0.00 % )      ;
+;     -- Requested    ; 0 / 53 ( 0.00 % )      ;
+;     -- Achieved     ; 0 / 53 ( 0.00 % )      ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -589,7 +589,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 51      ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 50      ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -605,19 +605,19 @@ The pin-out file can be found in C:/Users/HRHLALALA/Documents/GitHub/comp3222/la
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 21 / 18,752 ( < 1 % ) ;
-;     -- Combinational with no register       ; 12                    ;
+; Total logic elements                        ; 20 / 18,752 ( < 1 % ) ;
+;     -- Combinational with no register       ; 11                    ;
 ;     -- Register only                        ; 1                     ;
 ;     -- Combinational with a register        ; 8                     ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 8                     ;
-;     -- 3 input functions                    ; 9                     ;
-;     -- <=2 input functions                  ; 3                     ;
+;     -- 4 input functions                    ; 9                     ;
+;     -- 3 input functions                    ; 8                     ;
+;     -- <=2 input functions                  ; 2                     ;
 ;     -- Register only                        ; 1                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 20                    ;
+;     -- normal mode                          ; 19                    ;
 ;     -- arithmetic mode                      ; 0                     ;
 ;                                             ;                       ;
 ; Total registers*                            ; 9 / 19,649 ( < 1 % )  ;
@@ -641,10 +641,10 @@ The pin-out file can be found in C:/Users/HRHLALALA/Documents/GitHub/comp3222/la
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
-; Maximum fan-out                             ; 9                     ;
-; Highest non-global fan-out                  ; 9                     ;
-; Total fan-out                               ; 100                   ;
-; Average fan-out                             ; 1.89                  ;
+; Maximum fan-out                             ; 10                    ;
+; Highest non-global fan-out                  ; 10                    ;
+; Total fan-out                               ; 99                    ;
+; Average fan-out                             ; 1.90                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -657,19 +657,19 @@ The pin-out file can be found in C:/Users/HRHLALALA/Documents/GitHub/comp3222/la
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 21 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
-;     -- Combinational with no register       ; 12                   ; 0                              ;
+; Total logic elements                        ; 20 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
+;     -- Combinational with no register       ; 11                   ; 0                              ;
 ;     -- Register only                        ; 1                    ; 0                              ;
 ;     -- Combinational with a register        ; 8                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 8                    ; 0                              ;
-;     -- 3 input functions                    ; 9                    ; 0                              ;
-;     -- <=2 input functions                  ; 3                    ; 0                              ;
+;     -- 4 input functions                    ; 9                    ; 0                              ;
+;     -- 3 input functions                    ; 8                    ; 0                              ;
+;     -- <=2 input functions                  ; 2                    ; 0                              ;
 ;     -- Register only                        ; 1                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 20                   ; 0                              ;
+;     -- normal mode                          ; 19                   ; 0                              ;
 ;     -- arithmetic mode                      ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total registers                             ; 9                    ; 0                              ;
@@ -690,8 +690,8 @@ The pin-out file can be found in C:/Users/HRHLALALA/Documents/GitHub/comp3222/la
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 100                  ; 0                              ;
-;     -- Registered Connections               ; 48                   ; 0                              ;
+;     -- Total Connections                    ; 99                   ; 0                              ;
+;     -- Registered Connections               ; 47                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -725,7 +725,7 @@ The pin-out file can be found in C:/Users/HRHLALALA/Documents/GitHub/comp3222/la
 +--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; key[0] ; R22   ; 6        ; 50           ; 10           ; 1           ; 9                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; key[1] ; R21   ; 6        ; 50           ; 10           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; sw[0]  ; L22   ; 5        ; 50           ; 14           ; 0           ; 9                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; sw[0]  ; L22   ; 5        ; 50           ; 14           ; 0           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; sw[1]  ; L21   ; 5        ; 50           ; 14           ; 1           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
@@ -1306,7 +1306,7 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |part1                     ; 21 (12)     ; 9 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 21   ; 0            ; 12 (12)      ; 1 (0)             ; 8 (8)            ; |part1              ; work         ;
+; |part1                     ; 20 (11)     ; 9 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 21   ; 0            ; 11 (11)      ; 1 (0)             ; 8 (8)            ; |part1              ; work         ;
 ;    |D_FF:A|                ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |part1|D_FF:A       ; work         ;
 ;    |D_FF:B|                ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |part1|D_FF:B       ; work         ;
 ;    |D_FF:C|                ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |part1|D_FF:C       ; work         ;
@@ -1358,14 +1358,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sw[0]               ;                   ;         ;
 ; key[0]              ;                   ;         ;
 ;      - D_FF:A|Q     ; 1                 ; 0       ;
-;      - D_FF:B|Q     ; 0                 ; 0       ;
-;      - D_FF:C|Q     ; 0                 ; 0       ;
-;      - D_FF:D|Q     ; 0                 ; 0       ;
-;      - D_FF:E|Q     ; 0                 ; 0       ;
-;      - D_FF:F|Q     ; 0                 ; 0       ;
-;      - D_FF:G|Q     ; 0                 ; 0       ;
-;      - D_FF:H|Q     ; 0                 ; 0       ;
-;      - D_FF:I|Q     ; 0                 ; 0       ;
+;      - D_FF:B|Q     ; 1                 ; 0       ;
+;      - D_FF:C|Q     ; 1                 ; 0       ;
+;      - D_FF:D|Q     ; 1                 ; 0       ;
+;      - D_FF:E|Q     ; 1                 ; 0       ;
+;      - D_FF:F|Q     ; 1                 ; 0       ;
+;      - D_FF:G|Q     ; 1                 ; 0       ;
+;      - D_FF:H|Q     ; 1                 ; 0       ;
+;      - D_FF:I|Q     ; 1                 ; 0       ;
 ; sw[1]               ;                   ;         ;
 +---------------------+-------------------+---------+
 
@@ -1381,42 +1381,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +---------------------------------+
 ; Non-Global High Fan-Out Signals ;
-+----------+----------------------+
-; Name     ; Fan-Out              ;
-+----------+----------------------+
-; key[0]   ; 9                    ;
-; sw[0]    ; 9                    ;
-; sw[1]    ; 8                    ;
-; D_FF:E|Q ; 7                    ;
-; LEDR~0   ; 6                    ;
-; D_FF:I|Q ; 6                    ;
-; D_FF:H|Q ; 6                    ;
-; D_FF:D|Q ; 6                    ;
-; D_FF:C|Q ; 6                    ;
-; D_FF:G|Q ; 5                    ;
-; D_FF:F|Q ; 4                    ;
-; D_FF:B|Q ; 4                    ;
-; D_FF:A|Q ; 4                    ;
-; LEDR~1   ; 2                    ;
-; comb~8   ; 1                    ;
-; comb~7   ; 1                    ;
-; comb~6   ; 1                    ;
-; comb~5   ; 1                    ;
-; comb~4   ; 1                    ;
-; comb~3   ; 1                    ;
-; comb~2   ; 1                    ;
-; comb~1   ; 1                    ;
-; comb~0   ; 1                    ;
-; LEDR~10  ; 1                    ;
-; LEDR~9   ; 1                    ;
-; LEDR~8   ; 1                    ;
-; LEDR~7   ; 1                    ;
-; LEDR~6   ; 1                    ;
-; LEDR~5   ; 1                    ;
-; LEDR~4   ; 1                    ;
-; LEDR~3   ; 1                    ;
-; LEDR~2   ; 1                    ;
-+----------+----------------------+
++-----------+---------------------+
+; Name      ; Fan-Out             ;
++-----------+---------------------+
+; sw[0]     ; 10                  ;
+; key[0]    ; 9                   ;
+; sw[1]     ; 8                   ;
+; D_FF:E|Q  ; 7                   ;
+; LEDR~0    ; 6                   ;
+; D_FF:I|Q  ; 6                   ;
+; D_FF:H|Q  ; 6                   ;
+; D_FF:D|Q  ; 6                   ;
+; D_FF:G|Q  ; 5                   ;
+; D_FF:C|Q  ; 5                   ;
+; D_FF:F|Q  ; 4                   ;
+; D_FF:B|Q  ; 4                   ;
+; D_FF:A|Q  ; 4                   ;
+; WideOr2~0 ; 2                   ;
+; comb~7    ; 1                   ;
+; comb~6    ; 1                   ;
+; comb~5    ; 1                   ;
+; comb~4    ; 1                   ;
+; comb~3    ; 1                   ;
+; comb~2    ; 1                   ;
+; comb~1    ; 1                   ;
+; comb~0    ; 1                   ;
+; LEDR~9    ; 1                   ;
+; LEDR~8    ; 1                   ;
+; LEDR~7    ; 1                   ;
+; LEDR~6    ; 1                   ;
+; LEDR~5    ; 1                   ;
+; LEDR~4    ; 1                   ;
+; LEDR~3    ; 1                   ;
+; LEDR~2    ; 1                   ;
+; LEDR~1    ; 1                   ;
++-----------+---------------------+
 
 
 +-----------------------------------------------------+
@@ -1424,25 +1423,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 41 / 54,004 ( < 1 % ) ;
+; Block interconnects         ; 40 / 54,004 ( < 1 % ) ;
 ; C16 interconnects           ; 0 / 2,100 ( 0 % )     ;
-; C4 interconnects            ; 21 / 36,000 ( < 1 % ) ;
-; Direct links                ; 8 / 54,004 ( < 1 % )  ;
+; C4 interconnects            ; 22 / 36,000 ( < 1 % ) ;
+; Direct links                ; 10 / 54,004 ( < 1 % ) ;
 ; Global clocks               ; 0 / 16 ( 0 % )        ;
-; Local interconnects         ; 11 / 18,752 ( < 1 % ) ;
+; Local interconnects         ; 10 / 18,752 ( < 1 % ) ;
 ; R24 interconnects           ; 0 / 1,900 ( 0 % )     ;
-; R4 interconnects            ; 10 / 46,920 ( < 1 % ) ;
+; R4 interconnects            ; 13 / 46,920 ( < 1 % ) ;
 +-----------------------------+-----------------------+
 
 
 +--------------------------------------------------------------------------+
 ; LAB Logic Elements                                                       ;
 +--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 5.25) ; Number of LABs  (Total = 4) ;
+; Number of Logic Elements  (Average = 5.00) ; Number of LABs  (Total = 4) ;
 +--------------------------------------------+-----------------------------+
-; 1                                          ; 1                           ;
+; 1                                          ; 2                           ;
 ; 2                                          ; 1                           ;
-; 3                                          ; 1                           ;
+; 3                                          ; 0                           ;
 ; 4                                          ; 0                           ;
 ; 5                                          ; 0                           ;
 ; 6                                          ; 0                           ;
@@ -1454,8 +1453,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 12                                         ; 0                           ;
 ; 13                                         ; 0                           ;
 ; 14                                         ; 0                           ;
-; 15                                         ; 1                           ;
-; 16                                         ; 0                           ;
+; 15                                         ; 0                           ;
+; 16                                         ; 1                           ;
 +--------------------------------------------+-----------------------------+
 
 
@@ -1471,12 +1470,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 7.25) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced  (Average = 7.00) ; Number of LABs  (Total = 4) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
-; 1                                           ; 1                           ;
+; 1                                           ; 2                           ;
 ; 2                                           ; 1                           ;
-; 3                                           ; 1                           ;
+; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
@@ -1496,19 +1495,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 20                                          ; 0                           ;
 ; 21                                          ; 0                           ;
 ; 22                                          ; 0                           ;
-; 23                                          ; 1                           ;
+; 23                                          ; 0                           ;
+; 24                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 4.50) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced Out  (Average = 4.75) ; Number of LABs  (Total = 4) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 1                           ;
+; 1                                               ; 2                           ;
 ; 2                                               ; 1                           ;
-; 3                                               ; 1                           ;
+; 3                                               ; 0                           ;
 ; 4                                               ; 0                           ;
 ; 5                                               ; 0                           ;
 ; 6                                               ; 0                           ;
@@ -1517,20 +1517,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 9                                               ; 0                           ;
 ; 10                                              ; 0                           ;
 ; 11                                              ; 0                           ;
-; 12                                              ; 1                           ;
+; 12                                              ; 0                           ;
+; 13                                              ; 0                           ;
+; 14                                              ; 0                           ;
+; 15                                              ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 3.25) ; Number of LABs  (Total = 4) ;
+; Number of Distinct Inputs  (Average = 3.00) ; Number of LABs  (Total = 4) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
 ; 2                                           ; 1                           ;
-; 3                                           ; 1                           ;
-; 4                                           ; 2                           ;
+; 3                                           ; 2                           ;
+; 4                                           ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -2002,7 +2005,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.31 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.30 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 17 output pins without output pin load capacitance assignment
     Info (306007): Pin "LEDG[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2031,7 +2034,7 @@ Warning (169174): The Reserve All Unused Pins setting has not been specified, an
 Info (144001): Generated suppressed messages file C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab06/output_files/part1.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 409 warnings
     Info: Peak virtual memory: 5364 megabytes
-    Info: Processing ended: Mon Sep 17 23:47:29 2018
+    Info: Processing ended: Tue Sep 18 00:25:08 2018
     Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:05
 

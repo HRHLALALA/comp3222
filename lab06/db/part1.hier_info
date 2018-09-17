@@ -17,6 +17,7 @@ sw[0] => comb.IN1
 sw[0] => comb.IN1
 sw[0] => comb.IN1
 sw[0] => comb.IN1
+sw[0] => LEDR.IN1
 sw[0] => D_FF:A.D
 sw[1] => comb.IN1
 sw[1] => comb.IN1

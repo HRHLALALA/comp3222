@@ -18,9 +18,9 @@ architecture structure of part1 is
 	signal result: std_LOGIC_vector(8 downto 0):="000000000";
 begin
 	--w:sw(1)   reset:sw(0) clk: key(0)  z:ledg0
-	--stage1:LEDG(0)<=v(4) or v(8);
+	stage1:LEDG(0)<=v(4) or v(8);
 	A: D_FF port map(sw(0),key(0),v(0));
-	B: D_FF port map(sw(0) and (or_reduce(result(8 downto 5)) or result(0)) and not result(2) and not sw(1),key(0),v(1));
+	B: D_FF port map(sw(0) and  (or_reduce(result(8 downto 5)) or result(0)) and not sw(1),key(0),v(1));
 	C: D_FF port map(sw(0) and result(1) and not sw(1),key(0),v(2));
 	D: D_FF port map(sw(0) and result(2) and not sw(1),key(0),v(3));
 	E: D_FF port map(sw(0) and (result(3) or result(4)) and not sw(1),key(0),v(4));
@@ -28,8 +28,8 @@ begin
 	G: D_FF port map(sw(0) and result(5) and sw(1),key(0),v(6));
 	H: D_FF port map(sw(0) and result(6) and sw(1),key(0),v(7));
 	I: D_FF port map(sw(0) and (result(7)or result(8)) and sw(1),key(0),v(8));
-	display1: ledr(0)<=v(0) and not or_reduce(v(8 downto 1));
-	display2: ledr(1)<=v(1) and not or_reduce(v(8 downto 2));
+	display1: ledr(0)<= SW(0) and or_reduce(v(8 downto 1));
+	display2: ledr(1)<=v(1) and not or_reduce(v(8 downto 2)) and v(0);
 	display3: ledr(2)<=v(2) and not or_reduce(v(8 downto 3));
 	display4: ledr(3)<=v(3) and not or_reduce(v(8 downto 4));
 	display5: ledr(4)<=v(4) and not or_reduce(v(8 downto 5));
@@ -37,7 +37,7 @@ begin
 	display7: ledr(6)<=v(6) and not or_reduce(v(8 downto 7));
 	display8: ledr(7)<=v(7) and not v(8);
 	display9: ledr(8)<=v(8);
-	print:LEDG<=result(7 downto 0);
+	--print: ledg<=v(7 Downto 0);
 	print2:result<=v;
 end structure;
 	
