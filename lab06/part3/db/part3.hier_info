@@ -1,0 +1,20 @@
+|part3
+sw[0] => result[0].ACLR
+sw[0] => result[1].ACLR
+sw[0] => result[2].ACLR
+sw[0] => result[3].ACLR
+sw[0] => prev.ENA
+sw[1] => process_0.IN1
+sw[1] => prev.DATAA
+key[0] => prev.CLK
+key[0] => result[0].CLK
+key[0] => result[1].CLK
+key[0] => result[2].CLK
+key[0] => result[3].CLK
+ledr[0] <= result[0].DB_MAX_OUTPUT_PORT_TYPE
+ledr[1] <= result[1].DB_MAX_OUTPUT_PORT_TYPE
+ledr[2] <= result[2].DB_MAX_OUTPUT_PORT_TYPE
+ledr[3] <= result[3].DB_MAX_OUTPUT_PORT_TYPE
+ledg[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+

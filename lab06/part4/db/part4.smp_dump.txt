@@ -1,0 +1,14 @@
+
+State Machine - |part4|f_p
+Name f_p.dark f_p.wa f_p.full f_p.re 
+f_p.re 0 0 0 0 
+f_p.full 0 0 1 1 
+f_p.wa 0 1 0 1 
+f_p.dark 1 0 0 1 
+
+State Machine - |part4|f_q
+Name f_q.dark f_q.wa f_q.full f_q.re 
+f_q.re 0 0 0 0 
+f_q.full 0 0 1 1 
+f_q.wa 0 1 0 1 
+f_q.dark 1 0 0 1 
