@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\HRHLALALA\Documents\GitHub\comp3222\lab08\part2\simulation\qsim
+vpart2
+Z1 I6<Ja_F^K1TCjQIFlh`<[m3
+Z2 Vch12MGDgMYU^G`AODYI^Z3
+Z3 dC:\Users\HRHLALALA\Documents\GitHub\comp3222\lab08\part2\simulation\qsim
+Z4 w1538240340
+Z5 8part2.vo
+Z6 Fpart2.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|part2.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 mV1^MzkPEk;2iEJfVmHKO0
+!s85 0
+Z11 !s108 1538240341.509000
+Z12 !s107 part2.vo|
+!s101 -O0
+vpart2_vlg_check_tst
+!i10b 1
+Z13 !s100 l=7SNHbHW9QbF4c^0Y7lh0
+Z14 ITP^Q:]NXchX5jJN:hXX6:3
+Z15 V3mINkZoI0KeN;m7OZIB<50
+R3
+Z16 w1538240332
+Z17 8part2.vt
+Z18 Fpart2.vt
+L0 57
+R7
+r1
+!s85 0
+31
+Z19 !s108 1538240341.620000
+Z20 !s107 part2.vt|
+Z21 !s90 -work|work|part2.vt|
+!s101 -O0
+R9
+vpart2_vlg_sample_tst
+!i10b 1
+Z22 !s100 LNlZZE1UW<8Qk1R??CRmP0
+Z23 IN5]7gzWXhL:B1BgT9@[Rc1
+Z24 VCf[KUl`6kk]5nYXobZXj@0
+R3
+R16
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+vpart2_vlg_vec_tst
+!i10b 1
+Z25 !s100 g^bGQK1jdAI;gRcmWQURI2
+Z26 I36TYGW@:a:bWT?CfWQ8MW1
+Z27 VifI:LfULZ:6Nce^B2GIZ]3
+R3
+R16
+R17
+R18
+Z28 L0 313
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9

@@ -1,0 +1,31 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_signed.all;
+ENTITY proc IS
+PORT ( 	DIN : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+			Resetn, Clock, Run : IN STD_LOGIC;
+			Done : BUFFER STD_LOGIC;
+			BusWires : BUFFER STD_LOGIC_VECTOR(8 DOWNTO 0));
+END proc;
+
+ARCHITECTURE Behavior OF proc IS
+---declare components
+---declare signals
+TYPE State_type IS (T0, T1, T2, T3);
+SIGNAL Tstep_Q, Tstep_D: State_type;
+---
+BEGIN
+	High <= ’1’;
+	I <= IR(1 TO 3);
+	decX: dec3to8 PORT MAP (IR(4 TO 6), High, Xreg);
+	decY: dec3to8 PORT MAP (IR(7 TO 9), High, Yreg);
+	statetable: PROCESS (Tstep_Q, Run, Done)
+	BEGIN
+	CASE Tstep_Q IS
+		WHEN T0 => 
+			IF(Run = ’0’) THEN Tstep_D <= T0;
+			ELSE Tstep_D <= T1;
+			END IF; - - data is loaded into IR in this time step
+---other states
+END CASE;
+END PROCESS;
