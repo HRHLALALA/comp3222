@@ -1,6 +1,6 @@
 TimeQuest Timing Analyzer report for part1
-Sun Sep 30 01:18:46 2018
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Wed Oct 03 16:43:24 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -74,17 +74,17 @@ applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------------+
-; TimeQuest Timing Analyzer Summary                                                       ;
-+--------------------+--------------------------------------------------------------------+
-; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
-; Revision Name      ; part1                                                              ;
-; Device Family      ; Cyclone II                                                         ;
-; Device Name        ; EP2C20F484C7                                                       ;
-; Timing Models      ; Final                                                              ;
-; Delay Model        ; Combined                                                           ;
-; Rise/Fall Delays   ; Unavailable                                                        ;
-+--------------------+--------------------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; part1                                                             ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
 
 
 +------------------------------------------+
@@ -96,11 +96,12 @@ applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -113,13 +114,13 @@ applicable agreement for further details.
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
 
 
-+-------------------------------------------------+
-; Slow Model Fmax Summary                         ;
-+-----------+-----------------+------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
-+-----------+-----------------+------------+------+
-; 97.21 MHz ; 97.21 MHz       ; KEY[1]     ;      ;
-+-----------+-----------------+------------+------+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 100.06 MHz ; 100.06 MHz      ; KEY[1]     ;      ;
++------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -128,7 +129,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+---------------+
 ; Clock  ; Slack  ; End Point TNS ;
 +--------+--------+---------------+
-; KEY[1] ; -9.287 ; -717.575      ;
+; KEY[1] ; -8.994 ; -703.218      ;
 +--------+--------+---------------+
 
 
@@ -167,106 +168,106 @@ No paths to report.
 +--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
-; -9.287 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 10.379     ;
-; -9.257 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 10.349     ;
-; -9.253 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.316      ; 10.607     ;
-; -9.228 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 10.320     ;
-; -9.207 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 10.299     ;
-; -9.177 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 10.269     ;
-; -9.173 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.316      ; 10.527     ;
-; -9.148 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 10.240     ;
-; -9.082 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.317      ; 10.437     ;
-; -9.033 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 10.125     ;
-; -9.003 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 10.095     ;
-; -9.002 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.317      ; 10.357     ;
-; -8.999 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.316      ; 10.353     ;
-; -8.974 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 10.066     ;
-; -8.953 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 10.045     ;
-; -8.927 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.317      ; 10.282     ;
-; -8.923 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 10.015     ;
-; -8.919 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.316      ; 10.273     ;
-; -8.894 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.986      ;
-; -8.873 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.965      ;
-; -8.847 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.317      ; 10.202     ;
-; -8.843 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.935      ;
-; -8.839 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.316      ; 10.193     ;
-; -8.828 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.317      ; 10.183     ;
-; -8.822 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.914      ;
-; -8.814 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.906      ;
-; -8.800 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.031      ; 9.869      ;
-; -8.779 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.031      ; 9.848      ;
-; -8.748 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.317      ; 10.103     ;
-; -8.742 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.834      ;
-; -8.740 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.832      ;
-; -8.720 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.031      ; 9.789      ;
-; -8.710 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.802      ;
-; -8.706 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.316      ; 10.060     ;
-; -8.699 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.031      ; 9.768      ;
-; -8.686 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.316      ; 10.040     ;
-; -8.681 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.773      ;
-; -8.673 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.317      ; 10.028     ;
-; -8.668 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.317      ; 10.023     ;
-; -8.660 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.752      ;
-; -8.630 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.722      ;
-; -8.626 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.316      ; 9.980      ;
-; -8.613 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_3|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.047      ; 9.698      ;
-; -8.606 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.316      ; 9.960      ;
-; -8.601 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.693      ;
-; -8.593 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.317      ; 9.948      ;
-; -8.583 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_3|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.047      ; 9.668      ;
-; -8.580 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.672      ;
-; -8.579 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_3|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.309      ; 9.926      ;
-; -8.578 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.670      ;
-; -8.568 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.660      ;
-; -8.554 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_3|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.047      ; 9.639      ;
-; -8.550 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.642      ;
-; -8.546 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.031      ; 9.615      ;
-; -8.546 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.316      ; 9.900      ;
-; -8.535 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.317      ; 9.890      ;
-; -8.525 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.031      ; 9.594      ;
-; -8.521 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.613      ;
-; -8.513 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.317      ; 9.868      ;
-; -8.498 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.590      ;
-; -8.488 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.580      ;
-; -8.466 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.031      ; 9.535      ;
-; -8.455 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.317      ; 9.810      ;
-; -8.445 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_5|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.082      ; 9.565      ;
-; -8.445 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.031      ; 9.514      ;
-; -8.432 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.316      ; 9.786      ;
-; -8.430 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_3|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.026     ; 9.442      ;
-; -8.427 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_2|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.024     ; 9.441      ;
-; -8.415 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_5|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.082      ; 9.535      ;
-; -8.411 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_5|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.344      ; 9.793      ;
-; -8.408 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.054      ; 9.500      ;
-; -8.408 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_3|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.310      ; 9.756      ;
-; -8.400 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_3|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.026     ; 9.412      ;
-; -8.397 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_2|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.024     ; 9.411      ;
-; -8.396 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_3|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.236      ; 9.670      ;
-; -8.393 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_2|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.238      ; 9.669      ;
-; -8.390 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.036      ; 9.464      ;
-; -8.389 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.037      ; 9.464      ;
-; -8.389 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_4|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.036      ; 9.463      ;
-; -8.387 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_0|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.037      ; 9.462      ;
-; -8.386 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.031      ; 9.455      ;
-; -8.386 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_5|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.082      ; 9.506      ;
-; -8.380 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.317      ; 9.735      ;
-; -8.375 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.317      ; 9.730      ;
-; -8.371 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_3|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.026     ; 9.383      ;
-; -8.368 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_2|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; -0.024     ; 9.382      ;
-; -8.365 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.031      ; 9.434      ;
-; -8.360 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.036      ; 9.434      ;
-; -8.359 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.037      ; 9.434      ;
-; -8.359 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_4|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.036      ; 9.433      ;
-; -8.357 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_0|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.037      ; 9.432      ;
-; -8.356 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.298      ; 9.692      ;
-; -8.355 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.299      ; 9.692      ;
-; -8.355 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_4|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.298      ; 9.691      ;
-; -8.353 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_0|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.299      ; 9.690      ;
-; -8.352 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.316      ; 9.706      ;
-; -8.331 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.036      ; 9.405      ;
-; -8.330 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.037      ; 9.405      ;
-; -8.330 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_4|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.036      ; 9.404      ;
-; -8.328 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_0|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.037      ; 9.403      ;
+; -8.994 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 10.301     ;
+; -8.914 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 10.221     ;
+; -8.827 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 10.136     ;
+; -8.747 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 10.056     ;
+; -8.740 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 10.047     ;
+; -8.667 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.257      ; 9.962      ;
+; -8.660 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 9.967      ;
+; -8.647 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.956      ;
+; -8.587 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.257      ; 9.882      ;
+; -8.580 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 9.887      ;
+; -8.573 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.882      ;
+; -8.567 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.876      ;
+; -8.500 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 9.807      ;
+; -8.493 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.802      ;
+; -8.444 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.256      ; 9.738      ;
+; -8.420 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 9.727      ;
+; -8.413 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.257      ; 9.708      ;
+; -8.413 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.722      ;
+; -8.393 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.702      ;
+; -8.364 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.256      ; 9.658      ;
+; -8.340 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 9.647      ;
+; -8.333 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.257      ; 9.628      ;
+; -8.333 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.642      ;
+; -8.329 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.638      ;
+; -8.324 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.633      ;
+; -8.313 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.622      ;
+; -8.297 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 9.604      ;
+; -8.264 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_1|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.251      ; 9.553      ;
+; -8.256 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_3|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.249      ; 9.543      ;
+; -8.253 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.257      ; 9.548      ;
+; -8.253 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.562      ;
+; -8.249 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.558      ;
+; -8.244 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.553      ;
+; -8.233 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.542      ;
+; -8.217 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 9.524      ;
+; -8.190 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.256      ; 9.484      ;
+; -8.173 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.257      ; 9.468      ;
+; -8.173 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.482      ;
+; -8.153 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.462      ;
+; -8.141 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.249      ; 9.428      ;
+; -8.110 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.256      ; 9.404      ;
+; -8.103 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_5|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.341      ; 9.482      ;
+; -8.097 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_3|Q[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.220      ; 9.355      ;
+; -8.097 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_1|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.253      ; 9.388      ;
+; -8.093 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.257      ; 9.388      ;
+; -8.089 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_3|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.251      ; 9.378      ;
+; -8.087 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.257      ; 9.382      ;
+; -8.077 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.386      ;
+; -8.075 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.384      ;
+; -8.073 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.382      ;
+; -8.070 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.379      ;
+; -8.043 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 9.350      ;
+; -8.030 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.256      ; 9.324      ;
+; -8.017 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.323      ; 9.378      ;
+; -8.017 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.322      ; 9.377      ;
+; -8.013 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.257      ; 9.308      ;
+; -8.008 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_2|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.252      ; 9.298      ;
+; -8.007 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.257      ; 9.302      ;
+; -7.997 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.306      ;
+; -7.995 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.304      ;
+; -7.993 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.302      ;
+; -7.990 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.299      ;
+; -7.974 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.251      ; 9.263      ;
+; -7.963 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 9.270      ;
+; -7.956 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_1|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.251      ; 9.245      ;
+; -7.950 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_1|Q[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.213      ; 9.201      ;
+; -7.950 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.256      ; 9.244      ;
+; -7.937 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_1|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.239      ; 9.214      ;
+; -7.936 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_5|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.343      ; 9.317      ;
+; -7.930 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_3|Q[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.222      ; 9.190      ;
+; -7.929 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_3|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.237      ; 9.204      ;
+; -7.917 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_1|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.253      ; 9.208      ;
+; -7.915 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.224      ;
+; -7.910 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.219      ;
+; -7.909 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_3|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.251      ; 9.198      ;
+; -7.907 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 9.214      ;
+; -7.883 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_7|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.238      ; 9.159      ;
+; -7.883 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 9.190      ;
+; -7.878 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_3|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.249      ; 9.165      ;
+; -7.875 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.256      ; 9.169      ;
+; -7.870 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.256      ; 9.164      ;
+; -7.862 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_1|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.251      ; 9.151      ;
+; -7.858 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_1|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.251      ; 9.147      ;
+; -7.856 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_2|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.252      ; 9.146      ;
+; -7.855 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_1|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.251      ; 9.144      ;
+; -7.855 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_5|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.298      ; 9.191      ;
+; -7.854 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_6|Q[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.295      ; 9.187      ;
+; -7.850 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.325      ; 9.213      ;
+; -7.850 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.324      ; 9.212      ;
+; -7.848 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_2|Q[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.343      ; 9.229      ;
+; -7.844 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_A|Q[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.346      ; 9.228      ;
+; -7.841 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_2|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.254      ; 9.133      ;
+; -7.835 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.144      ;
+; -7.833 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.257      ; 9.128      ;
+; -7.830 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.139      ;
+; -7.823 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.271      ; 9.132      ;
+; -7.814 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.237      ; 9.089      ;
+; -7.803 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.269      ; 9.110      ;
+; -7.795 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.256      ; 9.089      ;
+; -7.794 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.251      ; 9.083      ;
 +--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -276,105 +277,105 @@ No paths to report.
 ; Slack ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.445 ; proc:run|Tstep_Q.T3      ; proc:run|Tstep_Q.T3      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.731      ;
-; 0.643 ; proc:run|Tstep_Q.T3      ; proc:run|Tstep_Q.T2      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.929      ;
-; 0.648 ; proc:run|Tstep_Q.T3      ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.934      ;
-; 0.826 ; proc:run|regn:start|Q[7] ; proc:run|Tstep_Q.T2      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 1.113      ;
-; 0.996 ; proc:run|Tstep_Q.T1      ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.282      ;
-; 1.020 ; proc:run|regn:start|Q[8] ; proc:run|Tstep_Q.T2      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 1.307      ;
-; 1.021 ; proc:run|regn:start|Q[8] ; proc:run|Tstep_Q.T3      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 1.308      ;
-; 1.064 ; proc:run|regn:start|Q[7] ; proc:run|Tstep_Q.T3      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 1.351      ;
-; 1.226 ; proc:run|Tstep_Q.T1      ; proc:run|Tstep_Q.T2      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.512      ;
-; 1.248 ; proc:run|regn:reg_5|Q[8] ; proc:run|regn:reg_4|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.056     ; 1.478      ;
-; 1.259 ; proc:run|regn:reg_3|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.545      ;
-; 1.262 ; proc:run|regn:reg_3|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.548      ;
-; 1.310 ; proc:run|regn:reg_3|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.596      ;
-; 1.313 ; proc:run|regn:reg_3|Q[3] ; proc:run|regn:reg_A|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.599      ;
-; 1.320 ; proc:run|regn:reg_6|Q[7] ; proc:run|regn:reg_4|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.057     ; 1.549      ;
-; 1.340 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.262      ; 1.888      ;
-; 1.340 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.262      ; 1.888      ;
-; 1.340 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.262      ; 1.888      ;
-; 1.340 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.262      ; 1.888      ;
-; 1.340 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.262      ; 1.888      ;
-; 1.433 ; proc:run|regn:reg_4|Q[7] ; proc:run|regn:reg_4|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.719      ;
-; 1.435 ; proc:run|regn:reg_A|Q[6] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 1.728      ;
-; 1.454 ; proc:run|Tstep_Q.T0      ; proc:run|Tstep_Q.T1      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.740      ;
-; 1.457 ; proc:run|regn:reg_4|Q[2] ; proc:run|regn:reg_A|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.020      ; 1.763      ;
-; 1.465 ; proc:run|regn:reg_4|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.021      ; 1.772      ;
-; 1.479 ; proc:run|regn:reg_A|Q[2] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.002     ; 1.763      ;
-; 1.492 ; proc:run|regn:reg_7|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.003      ; 1.781      ;
-; 1.498 ; proc:run|regn:reg_4|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.011      ; 1.795      ;
-; 1.522 ; proc:run|regn:reg_A|Q[7] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.030      ; 1.838      ;
-; 1.554 ; proc:run|regn:reg_4|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.042      ; 1.882      ;
-; 1.555 ; proc:run|regn:reg_A|Q[8] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.030      ; 1.871      ;
-; 1.562 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.030      ; 1.878      ;
-; 1.580 ; proc:run|regn:reg_4|Q[3] ; proc:run|regn:reg_A|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.011      ; 1.877      ;
-; 1.586 ; proc:run|regn:reg_6|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.036     ; 1.836      ;
-; 1.609 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 1.894      ;
-; 1.609 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 1.894      ;
-; 1.714 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.316      ; 2.316      ;
-; 1.737 ; proc:run|regn:reg_4|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.009      ; 2.032      ;
-; 1.771 ; proc:run|regn:reg_7|Q[8] ; proc:run|regn:reg_4|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 2.057      ;
-; 1.794 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.316      ; 2.396      ;
-; 1.866 ; proc:run|regn:reg_5|Q[8] ; proc:run|regn:reg_7|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.056     ; 2.096      ;
-; 1.867 ; proc:run|regn:reg_6|Q[3] ; proc:run|regn:reg_A|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.036     ; 2.117      ;
-; 1.871 ; proc:run|regn:reg_0|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.008      ; 2.165      ;
-; 1.874 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.316      ; 2.476      ;
-; 1.876 ; proc:run|regn:reg_5|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.035     ; 2.127      ;
-; 1.892 ; proc:run|regn:reg_3|Q[5] ; proc:run|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 2.178      ;
-; 1.894 ; proc:run|regn:reg_5|Q[2] ; proc:run|regn:reg_A|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.026     ; 2.154      ;
-; 1.916 ; proc:run|regn:reg_A|Q[2] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.002     ; 2.200      ;
-; 1.920 ; proc:run|regn:reg_5|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.035     ; 2.171      ;
-; 1.923 ; proc:run|regn:reg_6|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.038     ; 2.171      ;
-; 1.954 ; proc:run|regn:reg_A|Q[7] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.030      ; 2.270      ;
-; 1.954 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.316      ; 2.556      ;
-; 1.973 ; proc:run|regn:reg_A|Q[6] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 2.266      ;
-; 1.989 ; proc:run|regn:reg_4|Q[0] ; proc:run|regn:reg_1|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.014     ; 2.261      ;
-; 1.995 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.030      ; 2.311      ;
-; 1.996 ; proc:run|regn:reg_A|Q[2] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.002     ; 2.280      ;
-; 2.013 ; proc:run|regn:reg_3|Q[6] ; proc:run|regn:reg_1|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.009     ; 2.290      ;
-; 2.016 ; proc:run|regn:reg_3|Q[6] ; proc:run|regn:reg_2|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.012     ; 2.290      ;
-; 2.034 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.316      ; 2.636      ;
-; 2.050 ; proc:run|regn:reg_4|Q[8] ; proc:run|regn:reg_4|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 2.336      ;
-; 2.053 ; proc:run|regn:reg_A|Q[6] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 2.346      ;
-; 2.055 ; proc:run|regn:reg_2|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.012      ; 2.353      ;
-; 2.063 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_A|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.287      ; 2.636      ;
-; 2.063 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_A|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.287      ; 2.636      ;
-; 2.063 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_A|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.287      ; 2.636      ;
-; 2.064 ; proc:run|regn:reg_6|Q[8] ; proc:run|regn:reg_4|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.057     ; 2.293      ;
-; 2.075 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.308      ; 2.669      ;
-; 2.075 ; proc:run|regn:reg_7|Q[7] ; proc:run|regn:reg_4|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 2.361      ;
-; 2.075 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.030      ; 2.391      ;
-; 2.076 ; proc:run|regn:reg_A|Q[2] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.002     ; 2.360      ;
-; 2.090 ; proc:run|Tstep_Q.T0      ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 2.376      ;
-; 2.109 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_4|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.018     ; 2.377      ;
-; 2.109 ; proc:run|regn:reg_A|Q[1] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.009      ; 2.404      ;
-; 2.114 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.316      ; 2.716      ;
-; 2.126 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_A|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.287      ; 2.699      ;
-; 2.126 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_A|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.287      ; 2.699      ;
-; 2.126 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_A|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.287      ; 2.699      ;
-; 2.138 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.308      ; 2.732      ;
-; 2.139 ; proc:run|regn:reg_3|Q[6] ; proc:run|regn:reg_3|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 2.425      ;
-; 2.155 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.030      ; 2.471      ;
-; 2.156 ; proc:run|regn:reg_A|Q[2] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.002     ; 2.440      ;
-; 2.164 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.317      ; 2.767      ;
-; 2.164 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.317      ; 2.767      ;
-; 2.164 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.317      ; 2.767      ;
-; 2.164 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.317      ; 2.767      ;
-; 2.164 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.317      ; 2.767      ;
-; 2.164 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.317      ; 2.767      ;
-; 2.164 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.317      ; 2.767      ;
-; 2.164 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.317      ; 2.767      ;
-; 2.164 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.317      ; 2.767      ;
-; 2.171 ; proc:run|regn:reg_7|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.021      ; 2.478      ;
-; 2.176 ; proc:run|regn:reg_7|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 2.467      ;
-; 2.187 ; proc:run|regn:reg_4|Q[5] ; proc:run|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.042      ; 2.515      ;
-; 2.194 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.316      ; 2.796      ;
-; 2.199 ; proc:run|regn:reg_A|Q[3] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 2.492      ;
-; 2.209 ; proc:run|regn:reg_5|Q[7] ; proc:run|regn:reg_4|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.056     ; 2.439      ;
-; 2.211 ; proc:run|regn:reg_A|Q[4] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 2.504      ;
-; 2.216 ; proc:run|regn:reg_4|Q[6] ; proc:run|regn:reg_1|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.012      ; 2.514      ;
-; 2.219 ; proc:run|regn:reg_6|Q[5] ; proc:run|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.036     ; 2.469      ;
-; 2.219 ; proc:run|regn:reg_4|Q[6] ; proc:run|regn:reg_2|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.009      ; 2.514      ;
+; 0.824 ; proc:run|Tstep_Q.T2      ; proc:run|Tstep_Q.T3      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.044      ; 1.154      ;
+; 0.955 ; proc:run|Tstep_Q.T3      ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.241      ;
+; 1.199 ; proc:run|regn:start|Q[8] ; proc:run|Tstep_Q.T3      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.046      ; 1.531      ;
+; 1.304 ; proc:run|regn:reg_A|Q[4] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.073     ; 1.517      ;
+; 1.316 ; proc:run|regn:start|Q[7] ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.046      ; 1.648      ;
+; 1.398 ; proc:run|regn:reg_5|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 1.685      ;
+; 1.425 ; proc:run|regn:start|Q[8] ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.046      ; 1.757      ;
+; 1.430 ; proc:run|regn:reg_2|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.090      ; 1.806      ;
+; 1.472 ; proc:run|regn:reg_2|Q[8] ; proc:run|regn:reg_A|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.018      ; 1.776      ;
+; 1.485 ; proc:run|regn:start|Q[7] ; proc:run|Tstep_Q.T3      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.046      ; 1.817      ;
+; 1.501 ; proc:run|Tstep_Q.T1      ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.044      ; 1.831      ;
+; 1.527 ; proc:run|regn:reg_2|Q[7] ; proc:run|regn:reg_A|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.018      ; 1.831      ;
+; 1.547 ; proc:run|Tstep_Q.T0      ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.833      ;
+; 1.553 ; proc:run|regn:reg_A|Q[1] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.044     ; 1.795      ;
+; 1.565 ; proc:run|regn:reg_A|Q[6] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.073     ; 1.778      ;
+; 1.569 ; proc:run|regn:reg_3|Q[0] ; proc:run|regn:reg_7|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.051      ; 1.906      ;
+; 1.588 ; proc:run|regn:reg_A|Q[5] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.073     ; 1.801      ;
+; 1.603 ; proc:run|regn:reg_7|Q[8] ; proc:run|regn:reg_A|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.889      ;
+; 1.636 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.077     ; 1.845      ;
+; 1.689 ; proc:run|regn:reg_3|Q[3] ; proc:run|regn:reg_A|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.064      ; 2.039      ;
+; 1.706 ; proc:run|regn:reg_5|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.015      ; 2.007      ;
+; 1.714 ; proc:run|regn:reg_4|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.020      ; 2.020      ;
+; 1.718 ; proc:run|regn:reg_0|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.019      ; 2.023      ;
+; 1.721 ; proc:run|regn:reg_0|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.019      ; 2.026      ;
+; 1.723 ; proc:run|regn:reg_7|Q[3] ; proc:run|regn:reg_A|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.002      ; 2.011      ;
+; 1.727 ; proc:run|regn:reg_7|Q[7] ; proc:run|regn:reg_A|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 2.013      ;
+; 1.729 ; proc:run|regn:reg_7|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.002      ; 2.017      ;
+; 1.730 ; proc:run|regn:reg_5|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 2.017      ;
+; 1.737 ; proc:run|regn:reg_A|Q[4] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.073     ; 1.950      ;
+; 1.742 ; proc:run|regn:start|Q[7] ; proc:run|Tstep_Q.T2      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.002      ; 2.030      ;
+; 1.747 ; proc:run|regn:reg_4|Q[8] ; proc:run|regn:reg_A|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.064     ; 1.969      ;
+; 1.762 ; proc:run|regn:reg_7|Q[2] ; proc:run|regn:reg_A|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.002      ; 2.050      ;
+; 1.771 ; proc:run|Tstep_Q.T0      ; proc:run|Tstep_Q.T1      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.044     ; 2.013      ;
+; 1.796 ; proc:run|regn:reg_6|Q[7] ; proc:run|regn:reg_A|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.062     ; 2.020      ;
+; 1.798 ; proc:run|regn:reg_3|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.093      ; 2.177      ;
+; 1.804 ; proc:run|regn:reg_A|Q[8] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.031      ; 2.121      ;
+; 1.817 ; proc:run|regn:reg_A|Q[4] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.073     ; 2.030      ;
+; 1.818 ; proc:run|regn:reg_2|Q[2] ; proc:run|regn:reg_A|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.061      ; 2.165      ;
+; 1.821 ; proc:run|regn:reg_2|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.061      ; 2.168      ;
+; 1.831 ; proc:run|regn:reg_7|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.104      ; 2.221      ;
+; 1.884 ; proc:run|regn:reg_4|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.009     ; 2.161      ;
+; 1.884 ; proc:run|regn:reg_7|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.104      ; 2.274      ;
+; 1.886 ; proc:run|Tstep_Q.T3      ; proc:run|Tstep_Q.T2      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.044     ; 2.128      ;
+; 1.888 ; proc:run|regn:reg_5|Q[3] ; proc:run|regn:reg_A|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.015      ; 2.189      ;
+; 1.890 ; proc:run|regn:start|Q[8] ; proc:run|Tstep_Q.T2      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.002      ; 2.178      ;
+; 1.918 ; proc:run|regn:reg_2|Q[5] ; proc:run|regn:reg_5|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.089      ; 2.293      ;
+; 1.932 ; proc:run|regn:reg_5|Q[2] ; proc:run|regn:reg_A|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.015      ; 2.233      ;
+; 1.937 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_5|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.300      ; 2.523      ;
+; 1.937 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_5|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.300      ; 2.523      ;
+; 1.937 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_5|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.300      ; 2.523      ;
+; 1.937 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_5|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.300      ; 2.523      ;
+; 1.939 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_6|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.297      ; 2.522      ;
+; 1.939 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_6|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.297      ; 2.522      ;
+; 1.939 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_6|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.297      ; 2.522      ;
+; 1.939 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_6|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.297      ; 2.522      ;
+; 1.966 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.031     ; 2.221      ;
+; 1.966 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.031     ; 2.221      ;
+; 1.979 ; proc:run|regn:reg_4|Q[2] ; proc:run|regn:reg_A|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.009     ; 2.256      ;
+; 1.984 ; proc:run|regn:reg_A|Q[1] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.044     ; 2.226      ;
+; 1.991 ; proc:run|regn:reg_A|Q[4] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.073     ; 2.204      ;
+; 2.007 ; proc:run|regn:reg_0|Q[3] ; proc:run|regn:reg_A|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.010     ; 2.283      ;
+; 2.016 ; proc:run|regn:reg_2|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.090      ; 2.392      ;
+; 2.019 ; proc:run|regn:reg_A|Q[5] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.073     ; 2.232      ;
+; 2.038 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.269      ; 2.593      ;
+; 2.041 ; proc:run|regn:reg_0|Q[0] ; proc:run|regn:reg_7|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.052     ; 2.275      ;
+; 2.048 ; proc:run|regn:reg_0|Q[7] ; proc:run|regn:reg_A|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.085     ; 2.249      ;
+; 2.064 ; proc:run|regn:reg_A|Q[1] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.044     ; 2.306      ;
+; 2.071 ; proc:run|regn:reg_A|Q[4] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.073     ; 2.284      ;
+; 2.073 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.077     ; 2.282      ;
+; 2.095 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_5|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.285      ; 2.666      ;
+; 2.095 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_5|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.285      ; 2.666      ;
+; 2.095 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_5|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.285      ; 2.666      ;
+; 2.095 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_5|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.285      ; 2.666      ;
+; 2.096 ; proc:run|regn:reg_A|Q[7] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.031      ; 2.413      ;
+; 2.101 ; proc:run|regn:reg_2|Q[8] ; proc:run|regn:reg_7|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.018      ; 2.405      ;
+; 2.101 ; proc:run|regn:reg_A|Q[6] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.073     ; 2.314      ;
+; 2.118 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.269      ; 2.673      ;
+; 2.141 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.269      ; 2.696      ;
+; 2.141 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.269      ; 2.696      ;
+; 2.141 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.269      ; 2.696      ;
+; 2.141 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.269      ; 2.696      ;
+; 2.141 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.269      ; 2.696      ;
+; 2.141 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.269      ; 2.696      ;
+; 2.141 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.269      ; 2.696      ;
+; 2.144 ; proc:run|regn:reg_A|Q[1] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.044     ; 2.386      ;
+; 2.153 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.077     ; 2.362      ;
+; 2.181 ; proc:run|regn:reg_A|Q[6] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.073     ; 2.394      ;
+; 2.185 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_6|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.282      ; 2.753      ;
+; 2.185 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_6|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.282      ; 2.753      ;
+; 2.185 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_6|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.282      ; 2.753      ;
+; 2.185 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_6|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.282      ; 2.753      ;
+; 2.193 ; proc:run|regn:reg_A|Q[5] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.073     ; 2.406      ;
+; 2.206 ; proc:run|regn:reg_0|Q[5] ; proc:run|regn:reg_5|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.018      ; 2.510      ;
+; 2.213 ; proc:run|regn:reg_1|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.091      ; 2.590      ;
+; 2.223 ; proc:run|regn:reg_3|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.093      ; 2.602      ;
+; 2.224 ; proc:run|regn:reg_A|Q[1] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.044     ; 2.466      ;
+; 2.228 ; proc:run|regn:reg_2|Q[5] ; proc:run|regn:reg_4|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.070      ; 2.584      ;
+; 2.231 ; proc:run|regn:reg_A|Q[2] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.044     ; 2.473      ;
+; 2.232 ; proc:run|regn:reg_7|Q[8] ; proc:run|regn:reg_7|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 2.518      ;
 +-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -491,17 +492,17 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; SW[*]     ; KEY[1]     ; 4.787 ; 4.787 ; Rise       ; KEY[1]          ;
-;  SW[0]    ; KEY[1]     ; 4.058 ; 4.058 ; Rise       ; KEY[1]          ;
-;  SW[1]    ; KEY[1]     ; 3.818 ; 3.818 ; Rise       ; KEY[1]          ;
-;  SW[2]    ; KEY[1]     ; 4.427 ; 4.427 ; Rise       ; KEY[1]          ;
-;  SW[3]    ; KEY[1]     ; 4.015 ; 4.015 ; Rise       ; KEY[1]          ;
-;  SW[4]    ; KEY[1]     ; 4.787 ; 4.787 ; Rise       ; KEY[1]          ;
-;  SW[5]    ; KEY[1]     ; 3.412 ; 3.412 ; Rise       ; KEY[1]          ;
-;  SW[6]    ; KEY[1]     ; 3.475 ; 3.475 ; Rise       ; KEY[1]          ;
-;  SW[7]    ; KEY[1]     ; 3.432 ; 3.432 ; Rise       ; KEY[1]          ;
-;  SW[8]    ; KEY[1]     ; 3.023 ; 3.023 ; Rise       ; KEY[1]          ;
-;  SW[9]    ; KEY[1]     ; 1.621 ; 1.621 ; Rise       ; KEY[1]          ;
+; SW[*]     ; KEY[1]     ; 3.053 ; 3.053 ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 2.518 ; 2.518 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 2.418 ; 2.418 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 2.910 ; 2.910 ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 2.822 ; 2.822 ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 2.896 ; 2.896 ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; 2.954 ; 2.954 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 2.479 ; 2.479 ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; 3.053 ; 3.053 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; 2.673 ; 2.673 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; 1.453 ; 1.453 ; Rise       ; KEY[1]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -510,17 +511,17 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; SW[*]     ; KEY[1]     ; 0.315  ; 0.315  ; Rise       ; KEY[1]          ;
-;  SW[0]    ; KEY[1]     ; -0.241 ; -0.241 ; Rise       ; KEY[1]          ;
-;  SW[1]    ; KEY[1]     ; 0.299  ; 0.299  ; Rise       ; KEY[1]          ;
-;  SW[2]    ; KEY[1]     ; 0.315  ; 0.315  ; Rise       ; KEY[1]          ;
-;  SW[3]    ; KEY[1]     ; -0.790 ; -0.790 ; Rise       ; KEY[1]          ;
-;  SW[4]    ; KEY[1]     ; -0.243 ; -0.243 ; Rise       ; KEY[1]          ;
-;  SW[5]    ; KEY[1]     ; -0.543 ; -0.543 ; Rise       ; KEY[1]          ;
-;  SW[6]    ; KEY[1]     ; -0.025 ; -0.025 ; Rise       ; KEY[1]          ;
-;  SW[7]    ; KEY[1]     ; -0.638 ; -0.638 ; Rise       ; KEY[1]          ;
-;  SW[8]    ; KEY[1]     ; -0.742 ; -0.742 ; Rise       ; KEY[1]          ;
-;  SW[9]    ; KEY[1]     ; -0.729 ; -0.729 ; Rise       ; KEY[1]          ;
+; SW[*]     ; KEY[1]     ; 0.382  ; 0.382  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 0.155  ; 0.155  ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 0.382  ; 0.382  ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 0.350  ; 0.350  ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; -0.149 ; -0.149 ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; -0.261 ; -0.261 ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; -0.404 ; -0.404 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; -0.024 ; -0.024 ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; -0.514 ; -0.514 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; -0.743 ; -0.743 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; -0.984 ; -0.984 ; Rise       ; KEY[1]          ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -529,17 +530,17 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; LEDR[*]   ; KEY[1]     ; 15.119 ; 15.119 ; Rise       ; KEY[1]          ;
-;  LEDR[0]  ; KEY[1]     ; 14.441 ; 14.441 ; Rise       ; KEY[1]          ;
-;  LEDR[1]  ; KEY[1]     ; 14.186 ; 14.186 ; Rise       ; KEY[1]          ;
-;  LEDR[2]  ; KEY[1]     ; 14.818 ; 14.818 ; Rise       ; KEY[1]          ;
-;  LEDR[3]  ; KEY[1]     ; 15.119 ; 15.119 ; Rise       ; KEY[1]          ;
-;  LEDR[4]  ; KEY[1]     ; 14.842 ; 14.842 ; Rise       ; KEY[1]          ;
-;  LEDR[5]  ; KEY[1]     ; 14.674 ; 14.674 ; Rise       ; KEY[1]          ;
-;  LEDR[6]  ; KEY[1]     ; 14.655 ; 14.655 ; Rise       ; KEY[1]          ;
-;  LEDR[7]  ; KEY[1]     ; 15.072 ; 15.072 ; Rise       ; KEY[1]          ;
-;  LEDR[8]  ; KEY[1]     ; 13.947 ; 13.947 ; Rise       ; KEY[1]          ;
-;  LEDR[9]  ; KEY[1]     ; 7.952  ; 7.952  ; Rise       ; KEY[1]          ;
+; LEDR[*]   ; KEY[1]     ; 15.098 ; 15.098 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 15.098 ; 15.098 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 14.528 ; 14.528 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 14.764 ; 14.764 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 14.768 ; 14.768 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 14.679 ; 14.679 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 14.894 ; 14.894 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 14.503 ; 14.503 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 14.608 ; 14.608 ; Rise       ; KEY[1]          ;
+;  LEDR[8]  ; KEY[1]     ; 14.579 ; 14.579 ; Rise       ; KEY[1]          ;
+;  LEDR[9]  ; KEY[1]     ; 9.293  ; 9.293  ; Rise       ; KEY[1]          ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -548,17 +549,17 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDR[*]   ; KEY[1]     ; 7.167 ; 7.167 ; Rise       ; KEY[1]          ;
-;  LEDR[0]  ; KEY[1]     ; 8.647 ; 8.647 ; Rise       ; KEY[1]          ;
-;  LEDR[1]  ; KEY[1]     ; 8.598 ; 8.598 ; Rise       ; KEY[1]          ;
-;  LEDR[2]  ; KEY[1]     ; 8.553 ; 8.553 ; Rise       ; KEY[1]          ;
-;  LEDR[3]  ; KEY[1]     ; 8.784 ; 8.784 ; Rise       ; KEY[1]          ;
-;  LEDR[4]  ; KEY[1]     ; 8.552 ; 8.552 ; Rise       ; KEY[1]          ;
-;  LEDR[5]  ; KEY[1]     ; 8.685 ; 8.685 ; Rise       ; KEY[1]          ;
-;  LEDR[6]  ; KEY[1]     ; 8.685 ; 8.685 ; Rise       ; KEY[1]          ;
-;  LEDR[7]  ; KEY[1]     ; 9.153 ; 9.153 ; Rise       ; KEY[1]          ;
-;  LEDR[8]  ; KEY[1]     ; 7.958 ; 7.958 ; Rise       ; KEY[1]          ;
-;  LEDR[9]  ; KEY[1]     ; 7.167 ; 7.167 ; Rise       ; KEY[1]          ;
+; LEDR[*]   ; KEY[1]     ; 8.600 ; 8.600 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 9.346 ; 9.346 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 9.163 ; 9.163 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 9.453 ; 9.453 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 9.384 ; 9.384 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 9.042 ; 9.042 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 9.293 ; 9.293 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 9.191 ; 9.191 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 9.055 ; 9.055 ; Rise       ; KEY[1]          ;
+;  LEDR[8]  ; KEY[1]     ; 8.790 ; 8.790 ; Rise       ; KEY[1]          ;
+;  LEDR[9]  ; KEY[1]     ; 8.600 ; 8.600 ; Rise       ; KEY[1]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -567,15 +568,15 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDR[0]     ; 8.320 ;    ;    ; 8.320 ;
-; SW[1]      ; LEDR[1]     ; 7.810 ;    ;    ; 7.810 ;
-; SW[2]      ; LEDR[2]     ; 9.019 ;    ;    ; 9.019 ;
-; SW[3]      ; LEDR[3]     ; 8.847 ;    ;    ; 8.847 ;
-; SW[4]      ; LEDR[4]     ; 9.503 ;    ;    ; 9.503 ;
-; SW[5]      ; LEDR[5]     ; 8.227 ;    ;    ; 8.227 ;
-; SW[6]      ; LEDR[6]     ; 8.458 ;    ;    ; 8.458 ;
-; SW[7]      ; LEDR[7]     ; 8.528 ;    ;    ; 8.528 ;
-; SW[8]      ; LEDR[8]     ; 7.693 ;    ;    ; 7.693 ;
+; SW[0]      ; LEDR[0]     ; 7.622 ;    ;    ; 7.622 ;
+; SW[1]      ; LEDR[1]     ; 7.075 ;    ;    ; 7.075 ;
+; SW[2]      ; LEDR[2]     ; 7.805 ;    ;    ; 7.805 ;
+; SW[3]      ; LEDR[3]     ; 7.844 ;    ;    ; 7.844 ;
+; SW[4]      ; LEDR[4]     ; 7.905 ;    ;    ; 7.905 ;
+; SW[5]      ; LEDR[5]     ; 8.267 ;    ;    ; 8.267 ;
+; SW[6]      ; LEDR[6]     ; 7.494 ;    ;    ; 7.494 ;
+; SW[7]      ; LEDR[7]     ; 8.042 ;    ;    ; 8.042 ;
+; SW[8]      ; LEDR[8]     ; 8.061 ;    ;    ; 8.061 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -584,15 +585,15 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDR[0]     ; 8.320 ;    ;    ; 8.320 ;
-; SW[1]      ; LEDR[1]     ; 7.810 ;    ;    ; 7.810 ;
-; SW[2]      ; LEDR[2]     ; 9.019 ;    ;    ; 9.019 ;
-; SW[3]      ; LEDR[3]     ; 8.847 ;    ;    ; 8.847 ;
-; SW[4]      ; LEDR[4]     ; 9.503 ;    ;    ; 9.503 ;
-; SW[5]      ; LEDR[5]     ; 8.227 ;    ;    ; 8.227 ;
-; SW[6]      ; LEDR[6]     ; 8.458 ;    ;    ; 8.458 ;
-; SW[7]      ; LEDR[7]     ; 8.528 ;    ;    ; 8.528 ;
-; SW[8]      ; LEDR[8]     ; 7.693 ;    ;    ; 7.693 ;
+; SW[0]      ; LEDR[0]     ; 7.622 ;    ;    ; 7.622 ;
+; SW[1]      ; LEDR[1]     ; 7.075 ;    ;    ; 7.075 ;
+; SW[2]      ; LEDR[2]     ; 7.805 ;    ;    ; 7.805 ;
+; SW[3]      ; LEDR[3]     ; 7.844 ;    ;    ; 7.844 ;
+; SW[4]      ; LEDR[4]     ; 7.905 ;    ;    ; 7.905 ;
+; SW[5]      ; LEDR[5]     ; 8.267 ;    ;    ; 8.267 ;
+; SW[6]      ; LEDR[6]     ; 7.494 ;    ;    ; 7.494 ;
+; SW[7]      ; LEDR[7]     ; 8.042 ;    ;    ; 8.042 ;
+; SW[8]      ; LEDR[8]     ; 8.061 ;    ;    ; 8.061 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -601,7 +602,7 @@ No paths to report.
 +--------+--------+---------------+
 ; Clock  ; Slack  ; End Point TNS ;
 +--------+--------+---------------+
-; KEY[1] ; -2.822 ; -205.885      ;
+; KEY[1] ; -2.655 ; -194.345      ;
 +--------+--------+---------------+
 
 
@@ -640,106 +641,106 @@ No paths to report.
 +--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
-; -2.822 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.893      ;
-; -2.798 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.869      ;
-; -2.798 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.869      ;
-; -2.787 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.858      ;
-; -2.786 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.952      ;
-; -2.763 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.834      ;
-; -2.763 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.834      ;
-; -2.751 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.917      ;
-; -2.733 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.899      ;
-; -2.698 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.864      ;
-; -2.693 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.764      ;
-; -2.688 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.027      ; 3.747      ;
-; -2.678 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.844      ;
-; -2.669 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.740      ;
-; -2.669 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.740      ;
-; -2.666 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.027      ; 3.725      ;
-; -2.658 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.729      ;
-; -2.657 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.823      ;
-; -2.653 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.027      ; 3.712      ;
-; -2.643 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.809      ;
-; -2.634 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.705      ;
-; -2.634 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.705      ;
-; -2.631 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.027      ; 3.690      ;
-; -2.629 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.700      ;
-; -2.623 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.694      ;
-; -2.622 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.788      ;
-; -2.605 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_3|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.034      ; 3.671      ;
-; -2.604 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.770      ;
-; -2.599 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.670      ;
-; -2.599 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.670      ;
-; -2.597 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.763      ;
-; -2.594 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.665      ;
-; -2.587 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.753      ;
-; -2.581 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_3|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.034      ; 3.647      ;
-; -2.581 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_3|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.034      ; 3.647      ;
-; -2.569 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.735      ;
-; -2.569 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_3|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.129      ; 3.730      ;
-; -2.562 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.728      ;
-; -2.559 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.027      ; 3.618      ;
-; -2.555 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.626      ;
-; -2.549 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.715      ;
-; -2.537 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.027      ; 3.596      ;
-; -2.534 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.700      ;
-; -2.531 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.602      ;
-; -2.531 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.602      ;
-; -2.527 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.598      ;
-; -2.524 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.027      ; 3.583      ;
-; -2.522 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.028      ; 3.582      ;
-; -2.521 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.029      ; 3.582      ;
-; -2.520 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.591      ;
-; -2.519 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.685      ;
-; -2.516 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_3|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.129      ; 3.677      ;
-; -2.514 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.680      ;
-; -2.503 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_5|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.050      ; 3.585      ;
-; -2.502 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.027      ; 3.561      ;
-; -2.500 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.571      ;
-; -2.499 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_4|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.029      ; 3.560      ;
-; -2.499 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_0|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.028      ; 3.559      ;
-; -2.498 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.028      ; 3.558      ;
-; -2.498 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.028      ; 3.558      ;
-; -2.497 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.029      ; 3.558      ;
-; -2.497 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.029      ; 3.558      ;
-; -2.496 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.567      ;
-; -2.496 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.567      ;
-; -2.492 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.563      ;
-; -2.489 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_3|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 3.524      ;
-; -2.489 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_2|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 3.525      ;
-; -2.489 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.027      ; 3.548      ;
-; -2.486 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.123      ; 3.641      ;
-; -2.485 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.556      ;
-; -2.485 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.124      ; 3.641      ;
-; -2.484 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.650      ;
-; -2.483 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.649      ;
-; -2.479 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.645      ;
-; -2.479 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_5|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.050      ; 3.561      ;
-; -2.479 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_5|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.050      ; 3.561      ;
-; -2.477 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_1|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.001      ; 3.510      ;
-; -2.475 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_4|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.029      ; 3.536      ;
-; -2.475 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_4|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.029      ; 3.536      ;
-; -2.475 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_0|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.028      ; 3.535      ;
-; -2.475 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_0|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.028      ; 3.535      ;
-; -2.470 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_6|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 3.506      ;
-; -2.468 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.134      ; 3.634      ;
-; -2.467 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_5|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.145      ; 3.644      ;
-; -2.467 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.027      ; 3.526      ;
-; -2.465 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.536      ;
-; -2.465 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_3|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 3.500      ;
-; -2.465 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_3|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.003      ; 3.500      ;
-; -2.465 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_2|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 3.501      ;
-; -2.465 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_2|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.004      ; 3.501      ;
-; -2.463 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_4|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.124      ; 3.619      ;
-; -2.463 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_0|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.123      ; 3.618      ;
-; -2.462 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_0|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.028      ; 3.522      ;
-; -2.461 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_3|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.129      ; 3.622      ;
-; -2.461 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.532      ;
-; -2.461 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.039      ; 3.532      ;
-; -2.457 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_4|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.022      ; 3.511      ;
-; -2.456 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_7|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.022      ; 3.510      ;
-; -2.454 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_5|Q[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.050      ; 3.536      ;
-; -2.454 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.027      ; 3.513      ;
+; -2.655 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.091      ; 3.778      ;
+; -2.620 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.091      ; 3.743      ;
+; -2.606 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.084      ; 3.722      ;
+; -2.605 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.727      ;
+; -2.571 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.084      ; 3.687      ;
+; -2.570 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.692      ;
+; -2.537 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.659      ;
+; -2.526 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.091      ; 3.649      ;
+; -2.507 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.086      ; 3.625      ;
+; -2.502 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.624      ;
+; -2.491 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.091      ; 3.614      ;
+; -2.480 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.602      ;
+; -2.477 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.084      ; 3.593      ;
+; -2.476 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.598      ;
+; -2.472 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.086      ; 3.590      ;
+; -2.456 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.091      ; 3.579      ;
+; -2.450 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.572      ;
+; -2.445 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.567      ;
+; -2.442 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.084      ; 3.558      ;
+; -2.441 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.563      ;
+; -2.421 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.091      ; 3.544      ;
+; -2.415 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.537      ;
+; -2.411 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.091      ; 3.534      ;
+; -2.408 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.530      ;
+; -2.407 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_1|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.113      ; 3.552      ;
+; -2.407 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.084      ; 3.523      ;
+; -2.406 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.528      ;
+; -2.398 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_3|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.114      ; 3.544      ;
+; -2.386 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.091      ; 3.509      ;
+; -2.381 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.084      ; 3.497      ;
+; -2.378 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.086      ; 3.496      ;
+; -2.376 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.498      ;
+; -2.376 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.091      ; 3.499      ;
+; -2.373 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.495      ;
+; -2.372 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.084      ; 3.488      ;
+; -2.371 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.493      ;
+; -2.357 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_1|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.112      ; 3.501      ;
+; -2.357 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_1|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.106      ; 3.495      ;
+; -2.351 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.091      ; 3.474      ;
+; -2.351 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.473      ;
+; -2.348 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_3|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.113      ; 3.493      ;
+; -2.348 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_3|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.107      ; 3.487      ;
+; -2.346 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_5|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.129      ; 3.507      ;
+; -2.346 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.084      ; 3.462      ;
+; -2.343 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.086      ; 3.461      ;
+; -2.341 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.463      ;
+; -2.338 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.460      ;
+; -2.337 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.084      ; 3.453      ;
+; -2.336 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.458      ;
+; -2.330 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.114      ; 3.476      ;
+; -2.324 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_3|Q[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.093      ; 3.449      ;
+; -2.321 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.443      ;
+; -2.317 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.124      ; 3.473      ;
+; -2.316 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.438      ;
+; -2.315 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.124      ; 3.471      ;
+; -2.308 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.086      ; 3.426      ;
+; -2.307 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.086      ; 3.425      ;
+; -2.303 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.425      ;
+; -2.302 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.084      ; 3.418      ;
+; -2.301 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.423      ;
+; -2.296 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_5|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.128      ; 3.456      ;
+; -2.296 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_5|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.122      ; 3.450      ;
+; -2.294 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_1|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.113      ; 3.439      ;
+; -2.289 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_1|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.112      ; 3.433      ;
+; -2.286 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.408      ;
+; -2.282 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.091      ; 3.405      ;
+; -2.281 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.403      ;
+; -2.280 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_5|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.116      ; 3.428      ;
+; -2.280 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_3|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.113      ; 3.425      ;
+; -2.280 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.113      ; 3.425      ;
+; -2.280 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.107      ; 3.419      ;
+; -2.280 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.117      ; 3.429      ;
+; -2.278 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.117      ; 3.427      ;
+; -2.275 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_3|Q[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.086      ; 3.393      ;
+; -2.274 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_3|Q[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.092      ; 3.398      ;
+; -2.273 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.086      ; 3.391      ;
+; -2.272 ; proc:run|regn:start|Q[1] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.086      ; 3.390      ;
+; -2.268 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.390      ;
+; -2.267 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_2|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.113      ; 3.412      ;
+; -2.267 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_0|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.123      ; 3.422      ;
+; -2.265 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_4|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.123      ; 3.420      ;
+; -2.261 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_1|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.106      ; 3.399      ;
+; -2.258 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_1|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.108      ; 3.398      ;
+; -2.252 ; proc:run|regn:start|Q[2] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.084      ; 3.368      ;
+; -2.251 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_3|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.114      ; 3.397      ;
+; -2.251 ; proc:run|regn:start|Q[0] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.373      ;
+; -2.249 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_3|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.109      ; 3.390      ;
+; -2.247 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.369      ;
+; -2.247 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.091      ; 3.370      ;
+; -2.247 ; proc:run|regn:start|Q[3] ; proc:run|regn:reg_5|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.109      ; 3.388      ;
+; -2.246 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.368      ;
+; -2.246 ; proc:run|Tstep_Q.T3      ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.077      ; 3.355      ;
+; -2.244 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_1|Q[3] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.113      ; 3.389      ;
+; -2.244 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_1|Q[8] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.112      ; 3.388      ;
+; -2.242 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_7|Q[5] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.105      ; 3.379      ;
+; -2.238 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.086      ; 3.356      ;
+; -2.237 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_1|Q[0] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.086      ; 3.355      ;
+; -2.233 ; proc:run|regn:start|Q[8] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.090      ; 3.355      ;
+; -2.231 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_1|Q[4] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.112      ; 3.375      ;
+; -2.230 ; proc:run|Tstep_Q.T1      ; proc:run|regn:reg_0|Q[7] ; KEY[1]       ; KEY[1]      ; 1.000        ; 0.124      ; 3.386      ;
 +--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -749,105 +750,105 @@ No paths to report.
 ; Slack ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.215 ; proc:run|Tstep_Q.T3      ; proc:run|Tstep_Q.T3      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.367      ;
-; 0.253 ; proc:run|Tstep_Q.T3      ; proc:run|Tstep_Q.T2      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.405      ;
-; 0.258 ; proc:run|Tstep_Q.T3      ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.410      ;
-; 0.323 ; proc:run|regn:start|Q[7] ; proc:run|Tstep_Q.T2      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.475      ;
-; 0.376 ; proc:run|Tstep_Q.T1      ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.528      ;
-; 0.389 ; proc:run|regn:start|Q[8] ; proc:run|Tstep_Q.T3      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.541      ;
-; 0.394 ; proc:run|regn:start|Q[8] ; proc:run|Tstep_Q.T2      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.546      ;
-; 0.404 ; proc:run|regn:start|Q[7] ; proc:run|Tstep_Q.T3      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.556      ;
-; 0.470 ; proc:run|Tstep_Q.T1      ; proc:run|Tstep_Q.T2      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.622      ;
-; 0.495 ; proc:run|regn:reg_3|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.647      ;
-; 0.498 ; proc:run|regn:reg_3|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.650      ;
-; 0.512 ; proc:run|regn:reg_3|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.664      ;
-; 0.514 ; proc:run|regn:reg_3|Q[3] ; proc:run|regn:reg_A|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.666      ;
-; 0.520 ; proc:run|regn:reg_4|Q[7] ; proc:run|regn:reg_4|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.672      ;
-; 0.522 ; proc:run|regn:reg_A|Q[6] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 0.679      ;
-; 0.527 ; proc:run|regn:reg_5|Q[8] ; proc:run|regn:reg_4|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.028     ; 0.651      ;
-; 0.547 ; proc:run|regn:reg_6|Q[7] ; proc:run|regn:reg_4|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.028     ; 0.671      ;
-; 0.554 ; proc:run|regn:reg_A|Q[7] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.020      ; 0.726      ;
-; 0.564 ; proc:run|regn:reg_A|Q[8] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.020      ; 0.736      ;
-; 0.566 ; proc:run|Tstep_Q.T0      ; proc:run|Tstep_Q.T1      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.718      ;
-; 0.566 ; proc:run|regn:reg_A|Q[2] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.718      ;
-; 0.569 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.020      ; 0.741      ;
-; 0.574 ; proc:run|regn:reg_4|Q[2] ; proc:run|regn:reg_A|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.010      ; 0.736      ;
-; 0.576 ; proc:run|regn:reg_4|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.012      ; 0.740      ;
-; 0.597 ; proc:run|regn:reg_7|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.749      ;
-; 0.597 ; proc:run|regn:reg_4|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 0.754      ;
-; 0.605 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.134      ; 0.891      ;
-; 0.608 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.095      ; 0.855      ;
-; 0.608 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.095      ; 0.855      ;
-; 0.608 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.095      ; 0.855      ;
-; 0.608 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.095      ; 0.855      ;
-; 0.608 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.095      ; 0.855      ;
-; 0.617 ; proc:run|regn:reg_6|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.016     ; 0.753      ;
-; 0.617 ; proc:run|regn:reg_4|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.030      ; 0.799      ;
-; 0.635 ; proc:run|regn:reg_4|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.003      ; 0.790      ;
-; 0.640 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.134      ; 0.926      ;
-; 0.652 ; proc:run|regn:reg_4|Q[3] ; proc:run|regn:reg_A|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 0.809      ;
-; 0.672 ; proc:run|regn:reg_7|Q[8] ; proc:run|regn:reg_4|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.824      ;
-; 0.675 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.134      ; 0.961      ;
-; 0.692 ; proc:run|regn:reg_A|Q[7] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.020      ; 0.864      ;
-; 0.704 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.856      ;
-; 0.704 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.856      ;
-; 0.704 ; proc:run|regn:reg_A|Q[2] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.856      ;
-; 0.709 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.020      ; 0.881      ;
-; 0.710 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.134      ; 0.996      ;
-; 0.715 ; proc:run|regn:reg_A|Q[6] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 0.872      ;
-; 0.717 ; proc:run|regn:reg_0|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.004      ; 0.873      ;
-; 0.723 ; proc:run|regn:reg_6|Q[3] ; proc:run|regn:reg_A|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.016     ; 0.859      ;
-; 0.727 ; proc:run|regn:reg_5|Q[2] ; proc:run|regn:reg_A|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.011     ; 0.868      ;
-; 0.729 ; proc:run|regn:reg_5|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.016     ; 0.865      ;
-; 0.735 ; proc:run|regn:reg_2|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 0.892      ;
-; 0.739 ; proc:run|regn:reg_A|Q[2] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.891      ;
-; 0.739 ; proc:run|regn:reg_4|Q[8] ; proc:run|regn:reg_4|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.891      ;
-; 0.741 ; proc:run|regn:reg_5|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.016     ; 0.877      ;
-; 0.744 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.020      ; 0.916      ;
-; 0.745 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.134      ; 1.031      ;
-; 0.746 ; proc:run|regn:reg_6|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.018     ; 0.880      ;
-; 0.750 ; proc:run|regn:reg_A|Q[6] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 0.907      ;
-; 0.752 ; proc:run|regn:reg_3|Q[5] ; proc:run|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.904      ;
-; 0.753 ; proc:run|regn:reg_4|Q[0] ; proc:run|regn:reg_1|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.007     ; 0.898      ;
-; 0.768 ; proc:run|regn:reg_A|Q[1] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 0.927      ;
-; 0.771 ; proc:run|regn:reg_3|Q[6] ; proc:run|regn:reg_1|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 0.918      ;
-; 0.771 ; proc:run|regn:reg_3|Q[6] ; proc:run|regn:reg_2|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 0.918      ;
-; 0.774 ; proc:run|regn:reg_A|Q[2] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.926      ;
-; 0.776 ; proc:run|regn:reg_5|Q[8] ; proc:run|regn:reg_7|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.028     ; 0.900      ;
-; 0.777 ; proc:run|regn:reg_7|Q[7] ; proc:run|regn:reg_4|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.929      ;
-; 0.779 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.020      ; 0.951      ;
-; 0.780 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.134      ; 1.066      ;
-; 0.786 ; proc:run|Tstep_Q.T0      ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.938      ;
-; 0.808 ; proc:run|regn:reg_6|Q[8] ; proc:run|regn:reg_4|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.028     ; 0.932      ;
-; 0.809 ; proc:run|regn:reg_A|Q[2] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.961      ;
-; 0.814 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.020      ; 0.986      ;
-; 0.815 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.134      ; 1.101      ;
-; 0.819 ; proc:run|regn:reg_A|Q[3] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 0.976      ;
-; 0.826 ; proc:run|regn:reg_7|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.012      ; 0.990      ;
-; 0.835 ; proc:run|regn:reg_A|Q[4] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 0.992      ;
-; 0.847 ; proc:run|regn:reg_3|Q[5] ; proc:run|regn:reg_0|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.004     ; 0.995      ;
-; 0.848 ; proc:run|regn:reg_3|Q[6] ; proc:run|regn:reg_3|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.000      ;
-; 0.848 ; proc:run|regn:reg_A|Q[5] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.005      ;
-; 0.849 ; proc:run|regn:reg_4|Q[6] ; proc:run|regn:reg_1|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 1.008      ;
-; 0.849 ; proc:run|regn:reg_4|Q[6] ; proc:run|regn:reg_2|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.007      ; 1.008      ;
-; 0.849 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.020      ; 1.021      ;
-; 0.850 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_A|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.114      ; 1.116      ;
-; 0.850 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_A|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.114      ; 1.116      ;
-; 0.850 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_A|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.114      ; 1.116      ;
-; 0.850 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.039      ; 1.041      ;
-; 0.852 ; proc:run|regn:reg_3|Q[5] ; proc:run|regn:reg_5|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 0.999      ;
-; 0.852 ; proc:run|regn:reg_7|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.002      ; 1.006      ;
-; 0.853 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.039      ; 1.044      ;
-; 0.856 ; proc:run|regn:reg_3|Q[5] ; proc:run|regn:reg_1|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 1.003      ;
-; 0.858 ; proc:run|regn:reg_3|Q[5] ; proc:run|regn:reg_2|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 1.005      ;
-; 0.858 ; proc:run|regn:reg_5|Q[7] ; proc:run|regn:reg_4|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.028     ; 0.982      ;
-; 0.860 ; proc:run|regn:start|Q[7] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.127      ; 1.139      ;
-; 0.862 ; proc:run|regn:start|Q[6] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.039      ; 1.053      ;
-; 0.863 ; proc:run|regn:reg_3|Q[6] ; proc:run|regn:reg_0|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.004     ; 1.011      ;
-; 0.874 ; proc:run|regn:reg_6|Q[5] ; proc:run|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.016     ; 1.010      ;
-; 0.874 ; proc:run|regn:reg_4|Q[5] ; proc:run|regn:reg_3|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.030      ; 1.056      ;
-; 0.879 ; proc:run|regn:reg_3|Q[3] ; proc:run|regn:reg_5|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 1.026      ;
-; 0.880 ; proc:run|regn:start|Q[4] ; proc:run|regn:reg_4|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.008     ; 1.024      ;
-; 0.883 ; proc:run|regn:reg_3|Q[4] ; proc:run|regn:reg_1|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.005     ; 1.030      ;
+; 0.315 ; proc:run|Tstep_Q.T2      ; proc:run|Tstep_Q.T3      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.014      ; 0.481      ;
+; 0.371 ; proc:run|Tstep_Q.T3      ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.523      ;
+; 0.454 ; proc:run|regn:start|Q[8] ; proc:run|Tstep_Q.T3      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.013      ; 0.619      ;
+; 0.487 ; proc:run|regn:reg_A|Q[4] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.039     ; 0.600      ;
+; 0.493 ; proc:run|regn:start|Q[7] ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.013      ; 0.658      ;
+; 0.544 ; proc:run|regn:start|Q[8] ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.013      ; 0.709      ;
+; 0.548 ; proc:run|regn:start|Q[7] ; proc:run|Tstep_Q.T3      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.013      ; 0.713      ;
+; 0.552 ; proc:run|regn:reg_5|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.705      ;
+; 0.566 ; proc:run|regn:reg_2|Q[8] ; proc:run|regn:reg_A|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.012      ; 0.730      ;
+; 0.580 ; proc:run|regn:reg_A|Q[6] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.039     ; 0.693      ;
+; 0.584 ; proc:run|Tstep_Q.T0      ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.736      ;
+; 0.586 ; proc:run|regn:reg_2|Q[7] ; proc:run|regn:reg_A|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.012      ; 0.750      ;
+; 0.590 ; proc:run|regn:reg_A|Q[5] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.039     ; 0.703      ;
+; 0.593 ; proc:run|Tstep_Q.T1      ; proc:run|Tstep_Q.T0      ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.014      ; 0.759      ;
+; 0.594 ; proc:run|regn:reg_2|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.017      ; 0.763      ;
+; 0.598 ; proc:run|regn:reg_A|Q[1] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.027     ; 0.723      ;
+; 0.627 ; proc:run|regn:reg_A|Q[4] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.039     ; 0.740      ;
+; 0.636 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.044     ; 0.744      ;
+; 0.647 ; proc:run|regn:reg_7|Q[8] ; proc:run|regn:reg_A|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.798      ;
+; 0.659 ; proc:run|regn:reg_7|Q[3] ; proc:run|regn:reg_A|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.811      ;
+; 0.659 ; proc:run|regn:reg_5|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.812      ;
+; 0.662 ; proc:run|regn:reg_A|Q[4] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.039     ; 0.775      ;
+; 0.662 ; proc:run|regn:reg_7|Q[7] ; proc:run|regn:reg_A|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.813      ;
+; 0.663 ; proc:run|regn:reg_3|Q[0] ; proc:run|regn:reg_7|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.002     ; 0.813      ;
+; 0.663 ; proc:run|regn:reg_7|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.815      ;
+; 0.667 ; proc:run|regn:reg_7|Q[2] ; proc:run|regn:reg_A|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 0.819      ;
+; 0.667 ; proc:run|regn:reg_3|Q[3] ; proc:run|regn:reg_A|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.004      ; 0.823      ;
+; 0.672 ; proc:run|regn:reg_4|Q[8] ; proc:run|regn:reg_A|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.825      ;
+; 0.674 ; proc:run|regn:reg_5|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.002      ; 0.828      ;
+; 0.678 ; proc:run|regn:start|Q[7] ; proc:run|Tstep_Q.T2      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.829      ;
+; 0.678 ; proc:run|regn:reg_4|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.006      ; 0.836      ;
+; 0.679 ; proc:run|regn:reg_0|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.006      ; 0.837      ;
+; 0.679 ; proc:run|regn:reg_0|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.006      ; 0.837      ;
+; 0.682 ; proc:run|regn:reg_6|Q[7] ; proc:run|regn:reg_A|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.835      ;
+; 0.701 ; proc:run|regn:reg_A|Q[8] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.013     ; 0.840      ;
+; 0.709 ; proc:run|Tstep_Q.T0      ; proc:run|Tstep_Q.T1      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.014     ; 0.847      ;
+; 0.712 ; proc:run|regn:reg_3|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.016      ; 0.880      ;
+; 0.717 ; proc:run|regn:reg_2|Q[2] ; proc:run|regn:reg_A|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 0.874      ;
+; 0.719 ; proc:run|regn:reg_2|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 0.876      ;
+; 0.720 ; proc:run|Tstep_Q.T3      ; proc:run|Tstep_Q.T2      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.014     ; 0.858      ;
+; 0.723 ; proc:run|regn:reg_4|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.006     ; 0.869      ;
+; 0.725 ; proc:run|regn:start|Q[8] ; proc:run|Tstep_Q.T2      ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.001     ; 0.876      ;
+; 0.730 ; proc:run|regn:reg_A|Q[5] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.039     ; 0.843      ;
+; 0.738 ; proc:run|regn:reg_A|Q[1] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.027     ; 0.863      ;
+; 0.743 ; proc:run|regn:reg_7|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.025      ; 0.920      ;
+; 0.744 ; proc:run|regn:reg_5|Q[3] ; proc:run|regn:reg_A|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.002      ; 0.898      ;
+; 0.747 ; proc:run|regn:reg_5|Q[2] ; proc:run|regn:reg_A|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.002      ; 0.901      ;
+; 0.749 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.091      ; 0.992      ;
+; 0.751 ; proc:run|regn:reg_7|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.025      ; 0.928      ;
+; 0.756 ; proc:run|regn:reg_A|Q[4] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.039     ; 0.869      ;
+; 0.766 ; proc:run|regn:reg_2|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.017      ; 0.935      ;
+; 0.767 ; proc:run|regn:reg_2|Q[5] ; proc:run|regn:reg_5|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.016      ; 0.935      ;
+; 0.773 ; proc:run|regn:reg_A|Q[1] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.027     ; 0.898      ;
+; 0.774 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.044     ; 0.882      ;
+; 0.774 ; proc:run|regn:reg_A|Q[6] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.039     ; 0.887      ;
+; 0.783 ; proc:run|regn:reg_0|Q[7] ; proc:run|regn:reg_A|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.020     ; 0.915      ;
+; 0.784 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.091      ; 1.027      ;
+; 0.786 ; proc:run|regn:reg_0|Q[3] ; proc:run|regn:reg_A|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.006     ; 0.932      ;
+; 0.788 ; proc:run|regn:reg_4|Q[2] ; proc:run|regn:reg_A|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.006     ; 0.934      ;
+; 0.791 ; proc:run|regn:reg_A|Q[4] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.039     ; 0.904      ;
+; 0.800 ; proc:run|regn:reg_A|Q[7] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.013     ; 0.939      ;
+; 0.805 ; proc:run|regn:reg_3|Q[8] ; proc:run|regn:reg_A|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.011      ; 0.968      ;
+; 0.808 ; proc:run|regn:reg_A|Q[1] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.027     ; 0.933      ;
+; 0.809 ; proc:run|regn:reg_0|Q[0] ; proc:run|regn:reg_7|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.033     ; 0.928      ;
+; 0.809 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.044     ; 0.917      ;
+; 0.809 ; proc:run|regn:reg_A|Q[6] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.039     ; 0.922      ;
+; 0.814 ; proc:run|regn:reg_5|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.001      ; 0.967      ;
+; 0.819 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.091      ; 1.062      ;
+; 0.820 ; proc:run|regn:reg_2|Q[8] ; proc:run|regn:reg_7|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.013      ; 0.985      ;
+; 0.824 ; proc:run|regn:reg_A|Q[5] ; proc:run|regn:reg_G|Q[7] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.039     ; 0.937      ;
+; 0.831 ; proc:run|regn:reg_4|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.006      ; 0.989      ;
+; 0.836 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_5|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.115      ; 1.103      ;
+; 0.836 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_5|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.115      ; 1.103      ;
+; 0.836 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_5|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.115      ; 1.103      ;
+; 0.836 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_5|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.115      ; 1.103      ;
+; 0.837 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_6|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.115      ; 1.104      ;
+; 0.837 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_6|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.115      ; 1.104      ;
+; 0.837 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_6|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.115      ; 1.104      ;
+; 0.837 ; proc:run|regn:start|Q[5] ; proc:run|regn:reg_6|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.115      ; 1.104      ;
+; 0.840 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.009     ; 0.983      ;
+; 0.840 ; proc:run|Tstep_Q.T0      ; proc:run|regn:start|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.009     ; 0.983      ;
+; 0.842 ; proc:run|regn:reg_3|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.016      ; 1.010      ;
+; 0.843 ; proc:run|regn:reg_A|Q[1] ; proc:run|regn:reg_G|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.027     ; 0.968      ;
+; 0.844 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.044     ; 0.952      ;
+; 0.852 ; proc:run|regn:reg_0|Q[5] ; proc:run|regn:reg_5|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.009      ;
+; 0.854 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[3] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.091      ; 1.097      ;
+; 0.857 ; proc:run|regn:reg_1|Q[5] ; proc:run|regn:reg_A|Q[5] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.017      ; 1.026      ;
+; 0.858 ; proc:run|regn:reg_7|Q[0] ; proc:run|regn:reg_7|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.010      ;
+; 0.859 ; proc:run|regn:reg_A|Q[5] ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.039     ; 0.972      ;
+; 0.860 ; proc:run|regn:reg_G|Q[4] ; proc:run|regn:reg_A|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.039      ; 1.051      ;
+; 0.866 ; proc:run|regn:reg_A|Q[2] ; proc:run|regn:reg_G|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.027     ; 0.991      ;
+; 0.869 ; proc:run|regn:reg_1|Q[2] ; proc:run|regn:reg_A|Q[2] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.026      ;
+; 0.875 ; proc:run|Tstep_Q.T2      ; proc:run|regn:reg_G|Q[8] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.091      ; 1.118      ;
+; 0.877 ; proc:run|regn:reg_1|Q[1] ; proc:run|regn:reg_A|Q[1] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.005      ; 1.034      ;
+; 0.878 ; proc:run|regn:reg_A|Q[1] ; proc:run|regn:reg_G|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.027     ; 1.003      ;
+; 0.879 ; proc:run|regn:reg_A|Q[0] ; proc:run|regn:reg_G|Q[4] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.044     ; 0.987      ;
+; 0.880 ; proc:run|regn:reg_G|Q[0] ; proc:run|regn:reg_7|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.000      ; 1.032      ;
+; 0.884 ; proc:run|regn:reg_1|Q[6] ; proc:run|regn:reg_A|Q[6] ; KEY[1]       ; KEY[1]      ; 0.000        ; 0.017      ; 1.053      ;
+; 0.885 ; proc:run|regn:reg_4|Q[0] ; proc:run|regn:reg_7|Q[0] ; KEY[1]       ; KEY[1]      ; 0.000        ; -0.033     ; 1.004      ;
 +-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -964,17 +965,17 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; SW[*]     ; KEY[1]     ; 1.774 ; 1.774 ; Rise       ; KEY[1]          ;
-;  SW[0]    ; KEY[1]     ; 1.396 ; 1.396 ; Rise       ; KEY[1]          ;
-;  SW[1]    ; KEY[1]     ; 1.263 ; 1.263 ; Rise       ; KEY[1]          ;
-;  SW[2]    ; KEY[1]     ; 1.504 ; 1.504 ; Rise       ; KEY[1]          ;
-;  SW[3]    ; KEY[1]     ; 1.435 ; 1.435 ; Rise       ; KEY[1]          ;
-;  SW[4]    ; KEY[1]     ; 1.774 ; 1.774 ; Rise       ; KEY[1]          ;
-;  SW[5]    ; KEY[1]     ; 1.109 ; 1.109 ; Rise       ; KEY[1]          ;
-;  SW[6]    ; KEY[1]     ; 1.175 ; 1.175 ; Rise       ; KEY[1]          ;
-;  SW[7]    ; KEY[1]     ; 1.169 ; 1.169 ; Rise       ; KEY[1]          ;
-;  SW[8]    ; KEY[1]     ; 1.045 ; 1.045 ; Rise       ; KEY[1]          ;
-;  SW[9]    ; KEY[1]     ; 0.574 ; 0.574 ; Rise       ; KEY[1]          ;
+; SW[*]     ; KEY[1]     ; 1.067 ; 1.067 ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 0.839 ; 0.839 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 0.786 ; 0.786 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 0.928 ; 0.928 ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 0.927 ; 0.927 ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 0.992 ; 0.992 ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; 0.958 ; 0.958 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 0.764 ; 0.764 ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; 1.067 ; 1.067 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; 0.917 ; 0.917 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; 0.575 ; 0.575 ; Rise       ; KEY[1]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -983,17 +984,17 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; SW[*]     ; KEY[1]     ; 0.238  ; 0.238  ; Rise       ; KEY[1]          ;
-;  SW[0]    ; KEY[1]     ; -0.011 ; -0.011 ; Rise       ; KEY[1]          ;
-;  SW[1]    ; KEY[1]     ; 0.238  ; 0.238  ; Rise       ; KEY[1]          ;
-;  SW[2]    ; KEY[1]     ; 0.217  ; 0.217  ; Rise       ; KEY[1]          ;
-;  SW[3]    ; KEY[1]     ; -0.283 ; -0.283 ; Rise       ; KEY[1]          ;
-;  SW[4]    ; KEY[1]     ; -0.109 ; -0.109 ; Rise       ; KEY[1]          ;
-;  SW[5]    ; KEY[1]     ; -0.123 ; -0.123 ; Rise       ; KEY[1]          ;
-;  SW[6]    ; KEY[1]     ; 0.060  ; 0.060  ; Rise       ; KEY[1]          ;
-;  SW[7]    ; KEY[1]     ; -0.182 ; -0.182 ; Rise       ; KEY[1]          ;
-;  SW[8]    ; KEY[1]     ; -0.243 ; -0.243 ; Rise       ; KEY[1]          ;
-;  SW[9]    ; KEY[1]     ; -0.251 ; -0.251 ; Rise       ; KEY[1]          ;
+; SW[*]     ; KEY[1]     ; 0.309  ; 0.309  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 0.186  ; 0.186  ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 0.309  ; 0.309  ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 0.260  ; 0.260  ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 0.096  ; 0.096  ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 0.013  ; 0.013  ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; 0.008  ; 0.008  ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 0.151  ; 0.151  ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; -0.119 ; -0.119 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; -0.162 ; -0.162 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; -0.305 ; -0.305 ; Rise       ; KEY[1]          ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -1002,17 +1003,17 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDR[*]   ; KEY[1]     ; 6.373 ; 6.373 ; Rise       ; KEY[1]          ;
-;  LEDR[0]  ; KEY[1]     ; 6.098 ; 6.098 ; Rise       ; KEY[1]          ;
-;  LEDR[1]  ; KEY[1]     ; 5.978 ; 5.978 ; Rise       ; KEY[1]          ;
-;  LEDR[2]  ; KEY[1]     ; 6.198 ; 6.198 ; Rise       ; KEY[1]          ;
-;  LEDR[3]  ; KEY[1]     ; 6.363 ; 6.363 ; Rise       ; KEY[1]          ;
-;  LEDR[4]  ; KEY[1]     ; 6.264 ; 6.264 ; Rise       ; KEY[1]          ;
-;  LEDR[5]  ; KEY[1]     ; 6.186 ; 6.186 ; Rise       ; KEY[1]          ;
-;  LEDR[6]  ; KEY[1]     ; 6.151 ; 6.151 ; Rise       ; KEY[1]          ;
-;  LEDR[7]  ; KEY[1]     ; 6.373 ; 6.373 ; Rise       ; KEY[1]          ;
-;  LEDR[8]  ; KEY[1]     ; 5.867 ; 5.867 ; Rise       ; KEY[1]          ;
-;  LEDR[9]  ; KEY[1]     ; 3.674 ; 3.674 ; Rise       ; KEY[1]          ;
+; LEDR[*]   ; KEY[1]     ; 6.279 ; 6.279 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 6.279 ; 6.279 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 6.073 ; 6.073 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 6.149 ; 6.149 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 6.163 ; 6.163 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 6.164 ; 6.164 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 6.201 ; 6.201 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 6.045 ; 6.045 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 6.160 ; 6.160 ; Rise       ; KEY[1]          ;
+;  LEDR[8]  ; KEY[1]     ; 6.083 ; 6.083 ; Rise       ; KEY[1]          ;
+;  LEDR[9]  ; KEY[1]     ; 4.206 ; 4.206 ; Rise       ; KEY[1]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -1021,17 +1022,17 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDR[*]   ; KEY[1]     ; 3.424 ; 3.424 ; Rise       ; KEY[1]          ;
-;  LEDR[0]  ; KEY[1]     ; 3.994 ; 3.994 ; Rise       ; KEY[1]          ;
-;  LEDR[1]  ; KEY[1]     ; 3.978 ; 3.978 ; Rise       ; KEY[1]          ;
-;  LEDR[2]  ; KEY[1]     ; 3.957 ; 3.957 ; Rise       ; KEY[1]          ;
-;  LEDR[3]  ; KEY[1]     ; 4.054 ; 4.054 ; Rise       ; KEY[1]          ;
-;  LEDR[4]  ; KEY[1]     ; 4.000 ; 4.000 ; Rise       ; KEY[1]          ;
-;  LEDR[5]  ; KEY[1]     ; 4.003 ; 4.003 ; Rise       ; KEY[1]          ;
-;  LEDR[6]  ; KEY[1]     ; 4.004 ; 4.004 ; Rise       ; KEY[1]          ;
-;  LEDR[7]  ; KEY[1]     ; 4.234 ; 4.234 ; Rise       ; KEY[1]          ;
-;  LEDR[8]  ; KEY[1]     ; 3.737 ; 3.737 ; Rise       ; KEY[1]          ;
-;  LEDR[9]  ; KEY[1]     ; 3.424 ; 3.424 ; Rise       ; KEY[1]          ;
+; LEDR[*]   ; KEY[1]     ; 3.944 ; 3.944 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 4.312 ; 4.312 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 4.191 ; 4.191 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 4.268 ; 4.268 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 4.276 ; 4.276 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 4.201 ; 4.201 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 4.284 ; 4.284 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 4.189 ; 4.189 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 4.205 ; 4.205 ; Rise       ; KEY[1]          ;
+;  LEDR[8]  ; KEY[1]     ; 4.024 ; 4.024 ; Rise       ; KEY[1]          ;
+;  LEDR[9]  ; KEY[1]     ; 3.944 ; 3.944 ; Rise       ; KEY[1]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -1040,15 +1041,15 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDR[0]     ; 3.708 ;    ;    ; 3.708 ;
-; SW[1]      ; LEDR[1]     ; 3.461 ;    ;    ; 3.461 ;
-; SW[2]      ; LEDR[2]     ; 3.937 ;    ;    ; 3.937 ;
-; SW[3]      ; LEDR[3]     ; 3.976 ;    ;    ; 3.976 ;
-; SW[4]      ; LEDR[4]     ; 4.318 ;    ;    ; 4.318 ;
-; SW[5]      ; LEDR[5]     ; 3.647 ;    ;    ; 3.647 ;
-; SW[6]      ; LEDR[6]     ; 3.784 ;    ;    ; 3.784 ;
-; SW[7]      ; LEDR[7]     ; 3.896 ;    ;    ; 3.896 ;
-; SW[8]      ; LEDR[8]     ; 3.492 ;    ;    ; 3.492 ;
+; SW[0]      ; LEDR[0]     ; 3.463 ;    ;    ; 3.463 ;
+; SW[1]      ; LEDR[1]     ; 3.219 ;    ;    ; 3.219 ;
+; SW[2]      ; LEDR[2]     ; 3.460 ;    ;    ; 3.460 ;
+; SW[3]      ; LEDR[3]     ; 3.521 ;    ;    ; 3.521 ;
+; SW[4]      ; LEDR[4]     ; 3.636 ;    ;    ; 3.636 ;
+; SW[5]      ; LEDR[5]     ; 3.682 ;    ;    ; 3.682 ;
+; SW[6]      ; LEDR[6]     ; 3.379 ;    ;    ; 3.379 ;
+; SW[7]      ; LEDR[7]     ; 3.738 ;    ;    ; 3.738 ;
+; SW[8]      ; LEDR[8]     ; 3.620 ;    ;    ; 3.620 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -1057,15 +1058,15 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDR[0]     ; 3.708 ;    ;    ; 3.708 ;
-; SW[1]      ; LEDR[1]     ; 3.461 ;    ;    ; 3.461 ;
-; SW[2]      ; LEDR[2]     ; 3.937 ;    ;    ; 3.937 ;
-; SW[3]      ; LEDR[3]     ; 3.976 ;    ;    ; 3.976 ;
-; SW[4]      ; LEDR[4]     ; 4.318 ;    ;    ; 4.318 ;
-; SW[5]      ; LEDR[5]     ; 3.647 ;    ;    ; 3.647 ;
-; SW[6]      ; LEDR[6]     ; 3.784 ;    ;    ; 3.784 ;
-; SW[7]      ; LEDR[7]     ; 3.896 ;    ;    ; 3.896 ;
-; SW[8]      ; LEDR[8]     ; 3.492 ;    ;    ; 3.492 ;
+; SW[0]      ; LEDR[0]     ; 3.463 ;    ;    ; 3.463 ;
+; SW[1]      ; LEDR[1]     ; 3.219 ;    ;    ; 3.219 ;
+; SW[2]      ; LEDR[2]     ; 3.460 ;    ;    ; 3.460 ;
+; SW[3]      ; LEDR[3]     ; 3.521 ;    ;    ; 3.521 ;
+; SW[4]      ; LEDR[4]     ; 3.636 ;    ;    ; 3.636 ;
+; SW[5]      ; LEDR[5]     ; 3.682 ;    ;    ; 3.682 ;
+; SW[6]      ; LEDR[6]     ; 3.379 ;    ;    ; 3.379 ;
+; SW[7]      ; LEDR[7]     ; 3.738 ;    ;    ; 3.738 ;
+; SW[8]      ; LEDR[8]     ; 3.620 ;    ;    ; 3.620 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -1074,10 +1075,10 @@ No paths to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -9.287   ; 0.215 ; N/A      ; N/A     ; -1.469              ;
-;  KEY[1]          ; -9.287   ; 0.215 ; N/A      ; N/A     ; -1.469              ;
-; Design-wide TNS  ; -717.575 ; 0.0   ; 0.0      ; 0.0     ; -127.335            ;
-;  KEY[1]          ; -717.575 ; 0.000 ; N/A      ; N/A     ; -127.335            ;
+; Worst-case Slack ; -8.994   ; 0.215 ; N/A      ; N/A     ; -1.469              ;
+;  KEY[1]          ; -8.994   ; 0.215 ; N/A      ; N/A     ; -1.469              ;
+; Design-wide TNS  ; -703.218 ; 0.0   ; 0.0      ; 0.0     ; -127.335            ;
+;  KEY[1]          ; -703.218 ; 0.000 ; N/A      ; N/A     ; -127.335            ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -1086,17 +1087,17 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; SW[*]     ; KEY[1]     ; 4.787 ; 4.787 ; Rise       ; KEY[1]          ;
-;  SW[0]    ; KEY[1]     ; 4.058 ; 4.058 ; Rise       ; KEY[1]          ;
-;  SW[1]    ; KEY[1]     ; 3.818 ; 3.818 ; Rise       ; KEY[1]          ;
-;  SW[2]    ; KEY[1]     ; 4.427 ; 4.427 ; Rise       ; KEY[1]          ;
-;  SW[3]    ; KEY[1]     ; 4.015 ; 4.015 ; Rise       ; KEY[1]          ;
-;  SW[4]    ; KEY[1]     ; 4.787 ; 4.787 ; Rise       ; KEY[1]          ;
-;  SW[5]    ; KEY[1]     ; 3.412 ; 3.412 ; Rise       ; KEY[1]          ;
-;  SW[6]    ; KEY[1]     ; 3.475 ; 3.475 ; Rise       ; KEY[1]          ;
-;  SW[7]    ; KEY[1]     ; 3.432 ; 3.432 ; Rise       ; KEY[1]          ;
-;  SW[8]    ; KEY[1]     ; 3.023 ; 3.023 ; Rise       ; KEY[1]          ;
-;  SW[9]    ; KEY[1]     ; 1.621 ; 1.621 ; Rise       ; KEY[1]          ;
+; SW[*]     ; KEY[1]     ; 3.053 ; 3.053 ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 2.518 ; 2.518 ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 2.418 ; 2.418 ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 2.910 ; 2.910 ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 2.822 ; 2.822 ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 2.896 ; 2.896 ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; 2.954 ; 2.954 ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 2.479 ; 2.479 ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; 3.053 ; 3.053 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; 2.673 ; 2.673 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; 1.453 ; 1.453 ; Rise       ; KEY[1]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -1105,17 +1106,17 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; SW[*]     ; KEY[1]     ; 0.315  ; 0.315  ; Rise       ; KEY[1]          ;
-;  SW[0]    ; KEY[1]     ; -0.011 ; -0.011 ; Rise       ; KEY[1]          ;
-;  SW[1]    ; KEY[1]     ; 0.299  ; 0.299  ; Rise       ; KEY[1]          ;
-;  SW[2]    ; KEY[1]     ; 0.315  ; 0.315  ; Rise       ; KEY[1]          ;
-;  SW[3]    ; KEY[1]     ; -0.283 ; -0.283 ; Rise       ; KEY[1]          ;
-;  SW[4]    ; KEY[1]     ; -0.109 ; -0.109 ; Rise       ; KEY[1]          ;
-;  SW[5]    ; KEY[1]     ; -0.123 ; -0.123 ; Rise       ; KEY[1]          ;
-;  SW[6]    ; KEY[1]     ; 0.060  ; 0.060  ; Rise       ; KEY[1]          ;
-;  SW[7]    ; KEY[1]     ; -0.182 ; -0.182 ; Rise       ; KEY[1]          ;
-;  SW[8]    ; KEY[1]     ; -0.243 ; -0.243 ; Rise       ; KEY[1]          ;
-;  SW[9]    ; KEY[1]     ; -0.251 ; -0.251 ; Rise       ; KEY[1]          ;
+; SW[*]     ; KEY[1]     ; 0.382  ; 0.382  ; Rise       ; KEY[1]          ;
+;  SW[0]    ; KEY[1]     ; 0.186  ; 0.186  ; Rise       ; KEY[1]          ;
+;  SW[1]    ; KEY[1]     ; 0.382  ; 0.382  ; Rise       ; KEY[1]          ;
+;  SW[2]    ; KEY[1]     ; 0.350  ; 0.350  ; Rise       ; KEY[1]          ;
+;  SW[3]    ; KEY[1]     ; 0.096  ; 0.096  ; Rise       ; KEY[1]          ;
+;  SW[4]    ; KEY[1]     ; 0.013  ; 0.013  ; Rise       ; KEY[1]          ;
+;  SW[5]    ; KEY[1]     ; 0.008  ; 0.008  ; Rise       ; KEY[1]          ;
+;  SW[6]    ; KEY[1]     ; 0.151  ; 0.151  ; Rise       ; KEY[1]          ;
+;  SW[7]    ; KEY[1]     ; -0.119 ; -0.119 ; Rise       ; KEY[1]          ;
+;  SW[8]    ; KEY[1]     ; -0.162 ; -0.162 ; Rise       ; KEY[1]          ;
+;  SW[9]    ; KEY[1]     ; -0.305 ; -0.305 ; Rise       ; KEY[1]          ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -1124,17 +1125,17 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; LEDR[*]   ; KEY[1]     ; 15.119 ; 15.119 ; Rise       ; KEY[1]          ;
-;  LEDR[0]  ; KEY[1]     ; 14.441 ; 14.441 ; Rise       ; KEY[1]          ;
-;  LEDR[1]  ; KEY[1]     ; 14.186 ; 14.186 ; Rise       ; KEY[1]          ;
-;  LEDR[2]  ; KEY[1]     ; 14.818 ; 14.818 ; Rise       ; KEY[1]          ;
-;  LEDR[3]  ; KEY[1]     ; 15.119 ; 15.119 ; Rise       ; KEY[1]          ;
-;  LEDR[4]  ; KEY[1]     ; 14.842 ; 14.842 ; Rise       ; KEY[1]          ;
-;  LEDR[5]  ; KEY[1]     ; 14.674 ; 14.674 ; Rise       ; KEY[1]          ;
-;  LEDR[6]  ; KEY[1]     ; 14.655 ; 14.655 ; Rise       ; KEY[1]          ;
-;  LEDR[7]  ; KEY[1]     ; 15.072 ; 15.072 ; Rise       ; KEY[1]          ;
-;  LEDR[8]  ; KEY[1]     ; 13.947 ; 13.947 ; Rise       ; KEY[1]          ;
-;  LEDR[9]  ; KEY[1]     ; 7.952  ; 7.952  ; Rise       ; KEY[1]          ;
+; LEDR[*]   ; KEY[1]     ; 15.098 ; 15.098 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 15.098 ; 15.098 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 14.528 ; 14.528 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 14.764 ; 14.764 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 14.768 ; 14.768 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 14.679 ; 14.679 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 14.894 ; 14.894 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 14.503 ; 14.503 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 14.608 ; 14.608 ; Rise       ; KEY[1]          ;
+;  LEDR[8]  ; KEY[1]     ; 14.579 ; 14.579 ; Rise       ; KEY[1]          ;
+;  LEDR[9]  ; KEY[1]     ; 9.293  ; 9.293  ; Rise       ; KEY[1]          ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -1143,17 +1144,17 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; LEDR[*]   ; KEY[1]     ; 3.424 ; 3.424 ; Rise       ; KEY[1]          ;
-;  LEDR[0]  ; KEY[1]     ; 3.994 ; 3.994 ; Rise       ; KEY[1]          ;
-;  LEDR[1]  ; KEY[1]     ; 3.978 ; 3.978 ; Rise       ; KEY[1]          ;
-;  LEDR[2]  ; KEY[1]     ; 3.957 ; 3.957 ; Rise       ; KEY[1]          ;
-;  LEDR[3]  ; KEY[1]     ; 4.054 ; 4.054 ; Rise       ; KEY[1]          ;
-;  LEDR[4]  ; KEY[1]     ; 4.000 ; 4.000 ; Rise       ; KEY[1]          ;
-;  LEDR[5]  ; KEY[1]     ; 4.003 ; 4.003 ; Rise       ; KEY[1]          ;
-;  LEDR[6]  ; KEY[1]     ; 4.004 ; 4.004 ; Rise       ; KEY[1]          ;
-;  LEDR[7]  ; KEY[1]     ; 4.234 ; 4.234 ; Rise       ; KEY[1]          ;
-;  LEDR[8]  ; KEY[1]     ; 3.737 ; 3.737 ; Rise       ; KEY[1]          ;
-;  LEDR[9]  ; KEY[1]     ; 3.424 ; 3.424 ; Rise       ; KEY[1]          ;
+; LEDR[*]   ; KEY[1]     ; 3.944 ; 3.944 ; Rise       ; KEY[1]          ;
+;  LEDR[0]  ; KEY[1]     ; 4.312 ; 4.312 ; Rise       ; KEY[1]          ;
+;  LEDR[1]  ; KEY[1]     ; 4.191 ; 4.191 ; Rise       ; KEY[1]          ;
+;  LEDR[2]  ; KEY[1]     ; 4.268 ; 4.268 ; Rise       ; KEY[1]          ;
+;  LEDR[3]  ; KEY[1]     ; 4.276 ; 4.276 ; Rise       ; KEY[1]          ;
+;  LEDR[4]  ; KEY[1]     ; 4.201 ; 4.201 ; Rise       ; KEY[1]          ;
+;  LEDR[5]  ; KEY[1]     ; 4.284 ; 4.284 ; Rise       ; KEY[1]          ;
+;  LEDR[6]  ; KEY[1]     ; 4.189 ; 4.189 ; Rise       ; KEY[1]          ;
+;  LEDR[7]  ; KEY[1]     ; 4.205 ; 4.205 ; Rise       ; KEY[1]          ;
+;  LEDR[8]  ; KEY[1]     ; 4.024 ; 4.024 ; Rise       ; KEY[1]          ;
+;  LEDR[9]  ; KEY[1]     ; 3.944 ; 3.944 ; Rise       ; KEY[1]          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -1162,15 +1163,15 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDR[0]     ; 8.320 ;    ;    ; 8.320 ;
-; SW[1]      ; LEDR[1]     ; 7.810 ;    ;    ; 7.810 ;
-; SW[2]      ; LEDR[2]     ; 9.019 ;    ;    ; 9.019 ;
-; SW[3]      ; LEDR[3]     ; 8.847 ;    ;    ; 8.847 ;
-; SW[4]      ; LEDR[4]     ; 9.503 ;    ;    ; 9.503 ;
-; SW[5]      ; LEDR[5]     ; 8.227 ;    ;    ; 8.227 ;
-; SW[6]      ; LEDR[6]     ; 8.458 ;    ;    ; 8.458 ;
-; SW[7]      ; LEDR[7]     ; 8.528 ;    ;    ; 8.528 ;
-; SW[8]      ; LEDR[8]     ; 7.693 ;    ;    ; 7.693 ;
+; SW[0]      ; LEDR[0]     ; 7.622 ;    ;    ; 7.622 ;
+; SW[1]      ; LEDR[1]     ; 7.075 ;    ;    ; 7.075 ;
+; SW[2]      ; LEDR[2]     ; 7.805 ;    ;    ; 7.805 ;
+; SW[3]      ; LEDR[3]     ; 7.844 ;    ;    ; 7.844 ;
+; SW[4]      ; LEDR[4]     ; 7.905 ;    ;    ; 7.905 ;
+; SW[5]      ; LEDR[5]     ; 8.267 ;    ;    ; 8.267 ;
+; SW[6]      ; LEDR[6]     ; 7.494 ;    ;    ; 7.494 ;
+; SW[7]      ; LEDR[7]     ; 8.042 ;    ;    ; 8.042 ;
+; SW[8]      ; LEDR[8]     ; 8.061 ;    ;    ; 8.061 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -1179,15 +1180,15 @@ No paths to report.
 +------------+-------------+-------+----+----+-------+
 ; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
 +------------+-------------+-------+----+----+-------+
-; SW[0]      ; LEDR[0]     ; 3.708 ;    ;    ; 3.708 ;
-; SW[1]      ; LEDR[1]     ; 3.461 ;    ;    ; 3.461 ;
-; SW[2]      ; LEDR[2]     ; 3.937 ;    ;    ; 3.937 ;
-; SW[3]      ; LEDR[3]     ; 3.976 ;    ;    ; 3.976 ;
-; SW[4]      ; LEDR[4]     ; 4.318 ;    ;    ; 4.318 ;
-; SW[5]      ; LEDR[5]     ; 3.647 ;    ;    ; 3.647 ;
-; SW[6]      ; LEDR[6]     ; 3.784 ;    ;    ; 3.784 ;
-; SW[7]      ; LEDR[7]     ; 3.896 ;    ;    ; 3.896 ;
-; SW[8]      ; LEDR[8]     ; 3.492 ;    ;    ; 3.492 ;
+; SW[0]      ; LEDR[0]     ; 3.463 ;    ;    ; 3.463 ;
+; SW[1]      ; LEDR[1]     ; 3.219 ;    ;    ; 3.219 ;
+; SW[2]      ; LEDR[2]     ; 3.460 ;    ;    ; 3.460 ;
+; SW[3]      ; LEDR[3]     ; 3.521 ;    ;    ; 3.521 ;
+; SW[4]      ; LEDR[4]     ; 3.636 ;    ;    ; 3.636 ;
+; SW[5]      ; LEDR[5]     ; 3.682 ;    ;    ; 3.682 ;
+; SW[6]      ; LEDR[6]     ; 3.379 ;    ;    ; 3.379 ;
+; SW[7]      ; LEDR[7]     ; 3.738 ;    ;    ; 3.738 ;
+; SW[8]      ; LEDR[8]     ; 3.620 ;    ;    ; 3.620 ;
 +------------+-------------+-------+----+----+-------+
 
 
@@ -1196,7 +1197,7 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; KEY[1]     ; KEY[1]   ; 212650   ; 0        ; 0        ; 0        ;
+; KEY[1]     ; KEY[1]   ; 266830   ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1206,7 +1207,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; KEY[1]     ; KEY[1]   ; 212650   ; 0        ; 0        ; 0        ;
+; KEY[1]     ; KEY[1]   ; 266830   ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1242,8 +1243,8 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +------------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Sun Sep 30 01:18:37 2018
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Oct 03 16:43:13 2018
 Info: Command: quartus_sta part1 -c part1
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1256,10 +1257,10 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -9.287
+Info (332146): Worst-case setup slack is -8.994
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -9.287      -717.575 KEY[1] 
+    Info (332119):    -8.994      -703.218 KEY[1] 
 Info (332146): Worst-case hold slack is 0.445
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1273,10 +1274,10 @@ Info (332146): Worst-case minimum pulse width slack is -1.469
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -2.822
+Info (332146): Worst-case setup slack is -2.655
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -2.822      -205.885 KEY[1] 
+    Info (332119):    -2.655      -194.345 KEY[1] 
 Info (332146): Worst-case hold slack is 0.215
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1291,9 +1292,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4614 megabytes
-    Info: Processing ended: Sun Sep 30 01:18:46 2018
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 443 megabytes
+    Info: Processing ended: Wed Oct 03 16:43:24 2018
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:03
 
 

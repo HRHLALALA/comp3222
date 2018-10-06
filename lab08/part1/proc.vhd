@@ -93,11 +93,11 @@ BEGIN
 			WHEN T2 => -- define signals in time step T2
 				CASE I IS
 					WHEN "010" => ---add
-						Rout <= Xreg;
+						Rout <= Yreg;
 						AddSub <= '0';
 						Gin <= '1';
 					WHEN "011" => ---subs
-						Rout <= Xreg;
+						Rout <= Yreg;
 						AddSub <= '1';
 						Gin <= '1';
 					WHEN OTHERS => 

@@ -5,7 +5,8 @@ use IEEE.std_logic_1164.all;
 entity part2 is
     port (
         KEY: in std_logic_vector(2 downto 0);
-        LEDR: out std_logic_vector(9 downto 0)
+        LEDR: out std_logic_vector(9 downto 0);
+		  Debug: buffer std_LOGIC_VECTOR(8 downto 0)
     );
 end part2;
 
@@ -30,17 +31,15 @@ architecture arch of part2 is
 begin
 	process(KEY(1))
 	begin
-		if key(1)'event and key(1) = '1' then
-			if key(0) = '0' then
+		if key(0) = '0' then
 				count <= "00000";
-			else
+		elsif key(1)'event and key(1) = '1' then
 				count <= count+1;
-			end if;
 		end if;
 	end process;
 	init: address<=std_LOGIC_VECTOR(count);
 	mem:  memory port map(address,key(1),input);
-	
+	debug_proces: debug<=input;
 	processor: proc port map(Input,KEY(0),key(2),'1',ledr(9),ledr(8 downto 0));
 	
 end arch;

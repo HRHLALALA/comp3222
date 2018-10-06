@@ -1,0 +1,20 @@
+Quartus II Archive log --	Z:/comp3222/lab08/part1/output_files/part1.qarlog
+
+Archive:	Z:/comp3222/lab08/part1/output_files/part1.qar
+Date:		Wed Oct 03 15:11:56 2018
+Quartus II 64-Bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+Z:/comp3222/lab08/part1/Waveform.vwf
+Z:/comp3222/lab08/part1/db/part1.sim.vwf
+Z:/comp3222/lab08/part1/dec&regn.vhd
+Z:/comp3222/lab08/part1/incremental_db/compiled_partitions/part1.db_info
+Z:/comp3222/lab08/part1/part1.qpf
+Z:/comp3222/lab08/part1/part1.qsf
+Z:/comp3222/lab08/part1/part1.vhd
+Z:/comp3222/lab08/part1/proc.vhd
+c:/altera/13.0sp1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 9 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

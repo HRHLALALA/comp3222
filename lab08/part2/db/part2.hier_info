@@ -1,10 +1,10 @@
 |part2
 KEY[0] => proc:processor.Resetn
-KEY[0] => count.OUTPUTSELECT
-KEY[0] => count.OUTPUTSELECT
-KEY[0] => count.OUTPUTSELECT
-KEY[0] => count.OUTPUTSELECT
-KEY[0] => count.OUTPUTSELECT
+KEY[0] => count[0].ACLR
+KEY[0] => count[1].ACLR
+KEY[0] => count[2].ACLR
+KEY[0] => count[3].ACLR
+KEY[0] => count[4].ACLR
 KEY[1] => memory:mem.clock
 KEY[1] => count[0].CLK
 KEY[1] => count[1].CLK
@@ -22,6 +22,15 @@ LEDR[6] <= proc:processor.BusWires[6]
 LEDR[7] <= proc:processor.BusWires[7]
 LEDR[8] <= proc:processor.BusWires[8]
 LEDR[9] <= proc:processor.Done
+Debug[0] << memory:mem.q[0]
+Debug[1] << memory:mem.q[1]
+Debug[2] << memory:mem.q[2]
+Debug[3] << memory:mem.q[3]
+Debug[4] << memory:mem.q[4]
+Debug[5] << memory:mem.q[5]
+Debug[6] << memory:mem.q[6]
+Debug[7] << memory:mem.q[7]
+Debug[8] << memory:mem.q[8]
 
 
 |part2|memory:mem
