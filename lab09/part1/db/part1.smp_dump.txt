@@ -1,0 +1,6 @@
+
+State Machine - |counter|curr
+Name curr.T3 curr.T2 curr.T1 
+curr.T1 0 0 0 
+curr.T2 0 1 1 
+curr.T3 1 0 1 

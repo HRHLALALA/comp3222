@@ -10,5 +10,6 @@ end part1;
 
 architecture str of part1 is
 begin
+end str;
 	
 	

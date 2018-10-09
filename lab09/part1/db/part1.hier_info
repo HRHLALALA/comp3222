@@ -1,0 +1,37 @@
+|counter
+Din[0] => a[1].DATAIN
+Din[1] => a[2].DATAIN
+Din[2] => a[3].DATAIN
+Din[3] => a[4].DATAIN
+Din[4] => a[5].DATAIN
+Din[5] => a[6].DATAIN
+Din[6] => a[7].DATAIN
+Din[7] => ~NO_FANOUT~
+Din[8] => curr.DATAB
+Din[8] => Selector1.IN2
+Din[8] => result[0]~reg0.ACLR
+Din[8] => result[1]~reg0.ACLR
+Din[8] => result[2]~reg0.ACLR
+Din[8] => result[3]~reg0.ACLR
+Din[8] => Selector0.IN1
+Din[8] => curr~4.DATAIN
+clk => a[0].CLK
+clk => a[1].CLK
+clk => a[2].CLK
+clk => a[3].CLK
+clk => a[4].CLK
+clk => a[5].CLK
+clk => a[6].CLK
+clk => a[7].CLK
+clk => result[0]~reg0.CLK
+clk => result[1]~reg0.CLK
+clk => result[2]~reg0.CLK
+clk => result[3]~reg0.CLK
+clk => curr~2.DATAIN
+result[0] << result[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[1] << result[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[2] << result[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[3] << result[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+done <= done.DB_MAX_OUTPUT_PORT_TYPE
+
+
