@@ -1,6 +1,6 @@
 Analysis & Synthesis report for part1
-Tue Oct 09 16:45:14 2018
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Oct 10 02:32:22 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -13,12 +13,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |counter|curr
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. State Machine - |part1|counter:coun|curr
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -41,24 +40,24 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 09 16:45:13 2018           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; part1                                           ;
-; Top-level Entity Name              ; counter                                         ;
-; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 0                                               ;
-;     Total combinational functions  ; 0                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 15                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++------------------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Oct 10 02:32:22 2018            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; part1                                            ;
+; Top-level Entity Name              ; part1                                            ;
+; Family                             ; Cyclone II                                       ;
+; Total logic elements               ; 27                                               ;
+;     Total combinational functions  ; 27                                               ;
+;     Dedicated logic registers      ; 21                                               ;
+; Total registers                    ; 21                                               ;
+; Total pins                         ; 29                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
++------------------------------------+--------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -67,7 +66,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F484C7       ;                    ;
-; Top-level entity name                                                      ; counter            ; part1              ;
+; Top-level entity name                                                      ; part1              ; part1              ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -163,38 +162,44 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                               ;
-+----------------------------------+-----------------+-----------------+-------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path        ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------+---------+
-; counter.vhd                      ; yes             ; User VHDL File  ; Z:/comp3222/lab09/part1/counter.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; part1.vhd                        ; yes             ; User VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab09/part1/part1.vhd   ;         ;
+; counter.vhd                      ; yes             ; User VHDL File  ; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab09/part1/counter.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 15    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-+---------------------------------------------+-------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 27       ;
+;                                             ;          ;
+; Total combinational functions               ; 27       ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 5        ;
+;     -- 3 input functions                    ; 8        ;
+;     -- <=2 input functions                  ; 14       ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 19       ;
+;     -- arithmetic mode                      ; 8        ;
+;                                             ;          ;
+; Total registers                             ; 21       ;
+;     -- Dedicated logic registers            ; 21       ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 29       ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 21       ;
+; Total fan-out                               ; 157      ;
+; Average fan-out                             ; 2.04     ;
++---------------------------------------------+----------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -202,49 +207,22 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |counter                   ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |counter            ; work         ;
+; |part1                     ; 27 (0)            ; 21 (0)       ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |part1              ; work         ;
+;    |counter:coun|          ; 27 (27)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |part1|counter:coun ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+---------------------------------------+
-; State Machine - |counter|curr         ;
-+---------+---------+---------+---------+
-; Name    ; curr.T3 ; curr.T2 ; curr.T1 ;
-+---------+---------+---------+---------+
-; curr.T1 ; 0       ; 0       ; 0       ;
-; curr.T2 ; 0       ; 1       ; 1       ;
-; curr.T3 ; 1       ; 0       ; 1       ;
-+---------+---------+---------+---------+
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; a[0]                                   ; Stuck at GND due to stuck port data_in ;
-; a[1..7]                                ; Lost fanout                            ;
-; result[3]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; result[2]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; result[1]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; result[0]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; curr.T1                                ; Lost fanout                            ;
-; curr.T2                                ; Lost fanout                            ;
-; curr.T3                                ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 15 ;                                        ;
-+----------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                ;
-+---------------+---------------------------+----------------------------------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register                         ;
-+---------------+---------------------------+----------------------------------------------------------------+
-; a[0]          ; Stuck at GND              ; result[3]~reg0, result[2]~reg0, result[1]~reg0, result[0]~reg0 ;
-;               ; due to stuck port data_in ;                                                                ;
-+---------------+---------------------------+----------------------------------------------------------------+
++------------------------------------------+
+; State Machine - |part1|counter:coun|curr ;
++---------+---------+---------+------------+
+; Name    ; curr.T3 ; curr.T2 ; curr.T1    ;
++---------+---------+---------+------------+
+; curr.T1 ; 0       ; 0       ; 0          ;
+; curr.T2 ; 0       ; 1       ; 1          ;
+; curr.T3 ; 1       ; 0       ; 1          ;
++---------+---------+---------+------------+
 
 
 +------------------------------------------------------+
@@ -252,14 +230,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 21    ;
+; Number of registers using Synchronous Clear  ; 9     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 9     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |part1|counter:coun|a[1]      ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |part1|counter:coun|result[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 
 
 +-------------------------------+
@@ -276,8 +264,8 @@ Encoding Type:  One-Hot
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Oct 09 16:45:00 2018
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Oct 10 02:32:12 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part1 -c part1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file part1.vhd
@@ -286,34 +274,29 @@ Info (12021): Found 2 design units, including 1 entities, in source file part1.v
 Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
     Info (12022): Found design unit 1: counter-str
     Info (12023): Found entity 1: counter
-Info (12127): Elaborating entity "counter" for the top level hierarchy
+Info (12127): Elaborating entity "part1" for the top level hierarchy
+Info (12128): Elaborating entity "counter" for hierarchy "counter:coun"
+Warning (10541): VHDL Signal Declaration warning at counter.vhd(9): used implicit default value for signal "debug" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "result[0]" is stuck at GND
-    Warning (13410): Pin "result[1]" is stuck at GND
-    Warning (13410): Pin "result[2]" is stuck at GND
-    Warning (13410): Pin "result[3]" is stuck at GND
-    Warning (13410): Pin "done" is stuck at GND
-Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "ledg[1]" is stuck at GND
+    Warning (13410): Pin "ledg[2]" is stuck at GND
+    Warning (13410): Pin "ledg[3]" is stuck at GND
+    Warning (13410): Pin "ledg[4]" is stuck at GND
+    Warning (13410): Pin "ledg[5]" is stuck at GND
+    Warning (13410): Pin "ledg[6]" is stuck at GND
+    Warning (13410): Pin "ledg[7]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Din[0]"
-    Warning (15610): No output dependent on input pin "Din[1]"
-    Warning (15610): No output dependent on input pin "Din[2]"
-    Warning (15610): No output dependent on input pin "Din[3]"
-    Warning (15610): No output dependent on input pin "Din[4]"
-    Warning (15610): No output dependent on input pin "Din[5]"
-    Warning (15610): No output dependent on input pin "Din[6]"
-    Warning (15610): No output dependent on input pin "Din[7]"
-    Warning (15610): No output dependent on input pin "Din[8]"
-    Warning (15610): No output dependent on input pin "clk"
-Info (21057): Implemented 15 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 5 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 484 megabytes
-    Info: Processing ended: Tue Oct 09 16:45:14 2018
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:05
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "key[1]"
+Info (21057): Implemented 56 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 27 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4690 megabytes
+    Info: Processing ended: Wed Oct 10 02:32:22 2018
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:02
 
 

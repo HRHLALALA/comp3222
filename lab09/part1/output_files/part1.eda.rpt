@@ -1,6 +1,6 @@
 EDA Netlist Writer report for part1
-Tue Oct 09 16:46:04 2018
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Oct 10 02:33:01 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Oct 09 16:46:04 2018 ;
+; EDA Netlist Writer Status ; Successful - Wed Oct 10 02:33:01 2018 ;
 ; Revision Name             ; part1                                 ;
-; Top-level Entity Name     ; counter                               ;
+; Top-level Entity Name     ; part1                                 ;
 ; Family                    ; Cyclone II                            ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,16 +66,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+----------------------------------------------------------------+
-; Simulation Generated Files                                     ;
-+----------------------------------------------------------------+
-; Generated Files                                                ;
-+----------------------------------------------------------------+
-; Z:/comp3222/lab09/part1/simulation/modelsim/part1.vho          ;
-; Z:/comp3222/lab09/part1/simulation/modelsim/part1_fast.vho     ;
-; Z:/comp3222/lab09/part1/simulation/modelsim/part1_vhd.sdo      ;
-; Z:/comp3222/lab09/part1/simulation/modelsim/part1_vhd_fast.sdo ;
-+----------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                      ;
++-------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                 ;
++-------------------------------------------------------------------------------------------------+
+; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab09/part1/simulation/modelsim/part1.vho          ;
+; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab09/part1/simulation/modelsim/part1_fast.vho     ;
+; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab09/part1/simulation/modelsim/part1_vhd.sdo      ;
+; C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab09/part1/simulation/modelsim/part1_vhd_fast.sdo ;
++-------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -83,14 +83,14 @@ applicable agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Oct 09 16:45:54 2018
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Oct 10 02:32:53 2018
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off part1 -c part1
-Info (204026): Generated files "part1.vho", "part1_fast.vho", "part1_vhd.sdo" and "part1_vhd_fast.sdo" in directory "Z:/comp3222/lab09/part1/simulation/modelsim/" for EDA simulation tool
+Info (204026): Generated files "part1.vho", "part1_fast.vho", "part1_vhd.sdo" and "part1_vhd_fast.sdo" in directory "C:/Users/HRHLALALA/Documents/GitHub/comp3222/lab09/part1/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 390 megabytes
-    Info: Processing ended: Tue Oct 09 16:46:04 2018
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4552 megabytes
+    Info: Processing ended: Wed Oct 10 02:33:01 2018
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:00
 
 

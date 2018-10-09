@@ -1,5 +1,5 @@
 
-State Machine - |counter|curr
+State Machine - |part1|counter:coun|curr
 Name curr.T3 curr.T2 curr.T1 
 curr.T1 0 0 0 
 curr.T2 0 1 1 
