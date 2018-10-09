@@ -14,9 +14,9 @@
 
 // VENDOR "Altera"
 // PROGRAM "Quartus II 64-Bit"
-// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
+// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
 
-// DATE "10/03/2018 16:58:50"
+// DATE "10/06/2018 17:01:00"
 
 // 
 // Device: Altera EP2C20F484C7 Package FBGA484
@@ -258,19 +258,19 @@ wire \processor|Selector19~2_combout ;
 wire \processor|Selector19~4_combout ;
 wire \processor|Selector19~5_combout ;
 wire \processor|Selector19~6_combout ;
-wire [8:0] \processor|reg_0|Q ;
-wire [8:0] \processor|reg_1|Q ;
-wire [8:0] \processor|reg_2|Q ;
 wire [8:0] \processor|reg_3|Q ;
+wire [8:0] \processor|reg_1|Q ;
+wire [8:0] \mem|altsyncram_component|auto_generated|q_a ;
+wire [8:0] \processor|reg_G|Q ;
+wire [8:0] \processor|reg_2|Q ;
+wire [8:0] \processor|reg_6|Q ;
+wire [8:0] \processor|reg_A|Q ;
 wire [8:0] \processor|reg_4|Q ;
 wire [8:0] \processor|reg_5|Q ;
-wire [8:0] \processor|reg_6|Q ;
-wire [8:0] \processor|reg_7|Q ;
-wire [8:0] \processor|reg_A|Q ;
-wire [8:0] \processor|reg_G|Q ;
-wire [4:0] count;
-wire [8:0] \mem|altsyncram_component|auto_generated|q_a ;
+wire [8:0] \processor|reg_0|Q ;
 wire [8:0] \processor|start|Q ;
+wire [4:0] count;
+wire [8:0] \processor|reg_7|Q ;
 wire [2:0] \KEY~combout ;
 
 wire [8:0] \mem|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus ;
@@ -1823,7 +1823,7 @@ defparam \mem|altsyncram_component|auto_generated|ram_block1a0 .port_b_address_w
 defparam \mem|altsyncram_component|auto_generated|ram_block1a0 .port_b_data_width = 9;
 defparam \mem|altsyncram_component|auto_generated|ram_block1a0 .ram_block_type = "M4K";
 defparam \mem|altsyncram_component|auto_generated|ram_block1a0 .safe_write = "err_on_2clk";
-defparam \mem|altsyncram_component|auto_generated|ram_block1a0 .mem_init0 = 288'h00000000000000000000000000000000000000000000000001808140A050208040148000;
+defparam \mem|altsyncram_component|auto_generated|ram_block1a0 .mem_init0 = 288'h0000000000000000000000000000000000000000000000000180C040A050281040200A40;
 // synopsys translate_on
 
 // Location: LCCOMB_X45_Y6_N30

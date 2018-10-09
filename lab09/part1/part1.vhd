@@ -1,0 +1,14 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity part1 is
+	port(sw:in std_logic_vector(8 downto 0);
+			key: in std_logic_vector(0 downto 0);
+			ledr: out std_logic_vector(7 downto 0);
+			ledg: out std_logic_vector(0 downto 0));
+end part1;
+
+architecture str of part1 is
+begin
+	
+	
