@@ -412,10 +412,10 @@ VCCINT                       : P11       : power  :                   : 1.2V    
 VCCINT                       : P12       : power  :                   : 1.2V    :           :                
 VCCINT                       : P13       : power  :                   : 1.2V    :           :                
 NC                           : P14       :        :                   :         :           :                
-GND*                         : P15       :        :                   :         : 6         :                
+Debug[8]                     : P15       : output : 3.3-V LVTTL       :         : 6         : N              
 VCCIO6                       : P16       : power  :                   : 3.3V    : 6         :                
-Debug[6]                     : P17       : output : 3.3-V LVTTL       :         : 6         : N              
-GND*                         : P18       :        :                   :         : 6         :                
+Debug[3]                     : P17       : output : 3.3-V LVTTL       :         : 6         : N              
+Debug[1]                     : P18       : output : 3.3-V LVTTL       :         : 6         : N              
 NC                           : P19       :        :                   :         :           :                
 NC                           : P20       :        :                   :         :           :                
 NC                           : P21       :        :                   :         :           :                
@@ -462,7 +462,7 @@ GND_PLL4                     : T17       : gnd    :                   :         
 LEDR[4]                      : T18       : output : 3.3-V LVTTL       :         : 6         : Y              
 VCCIO6                       : T19       : power  :                   : 3.3V    : 6         :                
 GND                          : T20       : gnd    :                   :         :           :                
-Debug[8]                     : T21       : output : 3.3-V LVTTL       :         : 6         : N              
+Debug[4]                     : T21       : output : 3.3-V LVTTL       :         : 6         : N              
 KEY[2]                       : T22       : input  : 3.3-V LVTTL       :         : 6         : Y              
 GND*                         : U1        :        :                   :         : 1         :                
 GND*                         : U2        :        :                   :         : 1         :                
@@ -484,8 +484,8 @@ VCCD_PLL4                    : U17       : power  :                   : 1.2V    
 LEDR[7]                      : U18       : output : 3.3-V LVTTL       :         : 6         : Y              
 LEDR[2]                      : U19       : output : 3.3-V LVTTL       :         : 6         : Y              
 GND*                         : U20       :        :                   :         : 6         :                
-Debug[5]                     : U21       : output : 3.3-V LVTTL       :         : 6         : N              
-Debug[0]                     : U22       : output : 3.3-V LVTTL       :         : 6         : N              
+Debug[2]                     : U21       : output : 3.3-V LVTTL       :         : 6         : N              
+Debug[6]                     : U22       : output : 3.3-V LVTTL       :         : 6         : N              
 GND*                         : V1        :        :                   :         : 1         :                
 GND*                         : V2        :        :                   :         : 1         :                
 GND                          : V3        : gnd    :                   :         :           :                
@@ -506,8 +506,8 @@ GND                          : V17       : gnd    :                   :         
 GND_PLL4                     : V18       : gnd    :                   :         :           :                
 LEDR[5]                      : V19       : output : 3.3-V LVTTL       :         : 6         : Y              
 GND*                         : V20       :        :                   :         : 6         :                
-Debug[3]                     : V21       : output : 3.3-V LVTTL       :         : 6         : N              
-Debug[1]                     : V22       : output : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : V21       :        :                   :         : 6         :                
+Debug[7]                     : V22       : output : 3.3-V LVTTL       :         : 6         : N              
 GND*                         : W1        :        :                   :         : 1         :                
 GND*                         : W2        :        :                   :         : 1         :                
 GND*                         : W3        :        :                   :         : 1         :                
@@ -529,7 +529,7 @@ NC                           : W18       :        :                   :         
 GND                          : W19       : gnd    :                   :         :           :                
 ~LVDS91p/nCEO~               : W20       : output : 3.3-V LVTTL       :         : 6         : N              
 GND*                         : W21       :        :                   :         : 6         :                
-Debug[2]                     : W22       : output : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : W22       :        :                   :         : 6         :                
 GND*                         : Y1        :        :                   :         : 1         :                
 GND*                         : Y2        :        :                   :         : 1         :                
 GND*                         : Y3        :        :                   :         : 1         :                
@@ -550,5 +550,5 @@ GND*                         : Y17       :        :                   :         
 LEDR[6]                      : Y18       : output : 3.3-V LVTTL       :         : 6         : Y              
 LEDR[3]                      : Y19       : output : 3.3-V LVTTL       :         : 6         : Y              
 GND*                         : Y20       :        :                   :         : 6         :                
-Debug[7]                     : Y21       : output : 3.3-V LVTTL       :         : 6         : N              
-Debug[4]                     : Y22       : output : 3.3-V LVTTL       :         : 6         : N              
+Debug[0]                     : Y21       : output : 3.3-V LVTTL       :         : 6         : N              
+Debug[5]                     : Y22       : output : 3.3-V LVTTL       :         : 6         : N              
