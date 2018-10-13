@@ -1,0 +1,535 @@
+Simulator report for part2
+Sat Oct 13 22:30:50 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 188 nodes    ;
+; Simulation Coverage         ;       3.19 % ;
+; Total Number of Transitions ; 57           ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                       ;
++--------------------------------------------------------------------------------------------+---------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                     ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                  ; Timing        ;
+; Start time                                                                                 ; 0 ns                                        ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                         ;               ;
+; Vector input source                                                                        ; D:/altera/13.0sp1/output_files/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                          ; On            ;
+; Check outputs                                                                              ; Off                                         ; Off           ;
+; Report simulation coverage                                                                 ; On                                          ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                          ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                          ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                          ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                         ; Off           ;
+; Detect glitches                                                                            ; Off                                         ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                         ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                         ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                         ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                         ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                          ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                  ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                         ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                        ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++----------------------------------------------------------------------------------------------------+
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ALTSYNCRAM ;
++----------------------------------------------------------------------------------------------------+
+Please refer to fitter text-based report (*.fit.rpt) to view logical memory report content in ASCII.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       3.19 % ;
+; Total nodes checked                                 ; 188          ;
+; Total output ports checked                          ; 188          ;
+; Total output ports with complete 1/0-value coverage ; 6            ;
+; Total output ports with no 1/0-value coverage       ; 169          ;
+; Total output ports with no 1-value coverage         ; 173          ;
+; Total output ports with no 0-value coverage         ; 178          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                      ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |search|debug[2]~reg0 ; |search|debug[2]~reg0 ; regout           ;
+; |search|clk           ; |search|clk           ; out              ;
+; |search|debug[2]      ; |search|debug[2]      ; pin_out          ;
+; |search|y~3           ; |search|y~3           ; out0             ;
+; |search|y~14          ; |search|y~14          ; out0             ;
+; |search|Selector1~0   ; |search|Selector1~0   ; out0             ;
++-----------------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                 ;
++------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                            ; Output Port Name                                                                               ; Output Port Type ;
++------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
+; |search|y~0                                                                                          ; |search|y~0                                                                                    ; out              ;
+; |search|y~2                                                                                          ; |search|y~2                                                                                    ; out              ;
+; |search|min~0                                                                                        ; |search|min~0                                                                                  ; out              ;
+; |search|min~1                                                                                        ; |search|min~1                                                                                  ; out              ;
+; |search|min~2                                                                                        ; |search|min~2                                                                                  ; out              ;
+; |search|min~3                                                                                        ; |search|min~3                                                                                  ; out              ;
+; |search|min~4                                                                                        ; |search|min~4                                                                                  ; out              ;
+; |search|min~5                                                                                        ; |search|min~5                                                                                  ; out              ;
+; |search|min~6                                                                                        ; |search|min~6                                                                                  ; out              ;
+; |search|min~7                                                                                        ; |search|min~7                                                                                  ; out              ;
+; |search|min~8                                                                                        ; |search|min~8                                                                                  ; out              ;
+; |search|min~9                                                                                        ; |search|min~9                                                                                  ; out              ;
+; |search|max~0                                                                                        ; |search|max~0                                                                                  ; out              ;
+; |search|max~1                                                                                        ; |search|max~1                                                                                  ; out              ;
+; |search|max~2                                                                                        ; |search|max~2                                                                                  ; out              ;
+; |search|max~3                                                                                        ; |search|max~3                                                                                  ; out              ;
+; |search|max~4                                                                                        ; |search|max~4                                                                                  ; out              ;
+; |search|max~5                                                                                        ; |search|max~5                                                                                  ; out              ;
+; |search|max~6                                                                                        ; |search|max~6                                                                                  ; out              ;
+; |search|max~7                                                                                        ; |search|max~7                                                                                  ; out              ;
+; |search|max~8                                                                                        ; |search|max~8                                                                                  ; out              ;
+; |search|max~9                                                                                        ; |search|max~9                                                                                  ; out              ;
+; |search|min~10                                                                                       ; |search|min~10                                                                                 ; out              ;
+; |search|min~11                                                                                       ; |search|min~11                                                                                 ; out              ;
+; |search|min~12                                                                                       ; |search|min~12                                                                                 ; out              ;
+; |search|min~13                                                                                       ; |search|min~13                                                                                 ; out              ;
+; |search|max~10                                                                                       ; |search|max~10                                                                                 ; out              ;
+; |search|max~11                                                                                       ; |search|max~11                                                                                 ; out              ;
+; |search|max~12                                                                                       ; |search|max~12                                                                                 ; out              ;
+; |search|max~13                                                                                       ; |search|max~13                                                                                 ; out              ;
+; |search|max~14                                                                                       ; |search|max~14                                                                                 ; out              ;
+; |search|result~0                                                                                     ; |search|result~0                                                                               ; out              ;
+; |search|result~1                                                                                     ; |search|result~1                                                                               ; out              ;
+; |search|result[0]~reg0                                                                               ; |search|result[0]~reg0                                                                         ; regout           ;
+; |search|result~2                                                                                     ; |search|result~2                                                                               ; out              ;
+; |search|result~3                                                                                     ; |search|result~3                                                                               ; out              ;
+; |search|result~4                                                                                     ; |search|result~4                                                                               ; out              ;
+; |search|y.T1                                                                                         ; |search|y.T1                                                                                   ; regout           ;
+; |search|y.T3                                                                                         ; |search|y.T3                                                                                   ; regout           ;
+; |search|curr_min[4]                                                                                  ; |search|curr_min[4]                                                                            ; regout           ;
+; |search|curr_min[3]                                                                                  ; |search|curr_min[3]                                                                            ; regout           ;
+; |search|curr_min[2]                                                                                  ; |search|curr_min[2]                                                                            ; regout           ;
+; |search|curr_min[1]                                                                                  ; |search|curr_min[1]                                                                            ; regout           ;
+; |search|curr_mid[4]                                                                                  ; |search|curr_mid[4]                                                                            ; regout           ;
+; |search|curr_mid[3]                                                                                  ; |search|curr_mid[3]                                                                            ; regout           ;
+; |search|curr_mid[2]                                                                                  ; |search|curr_mid[2]                                                                            ; regout           ;
+; |search|curr_mid[1]                                                                                  ; |search|curr_mid[1]                                                                            ; regout           ;
+; |search|curr_mid[0]                                                                                  ; |search|curr_mid[0]                                                                            ; regout           ;
+; |search|curr_max[4]                                                                                  ; |search|curr_max[4]                                                                            ; regout           ;
+; |search|curr_max[3]                                                                                  ; |search|curr_max[3]                                                                            ; regout           ;
+; |search|curr_max[2]                                                                                  ; |search|curr_max[2]                                                                            ; regout           ;
+; |search|curr_max[1]                                                                                  ; |search|curr_max[1]                                                                            ; regout           ;
+; |search|curr_max[0]                                                                                  ; |search|curr_max[0]                                                                            ; regout           ;
+; |search|found~reg0                                                                                   ; |search|found~reg0                                                                             ; regout           ;
+; |search|debug[0]~reg0                                                                                ; |search|debug[0]~reg0                                                                          ; regout           ;
+; |search|min[4]                                                                                       ; |search|min[4]                                                                                 ; regout           ;
+; |search|min[3]                                                                                       ; |search|min[3]                                                                                 ; regout           ;
+; |search|min[2]                                                                                       ; |search|min[2]                                                                                 ; regout           ;
+; |search|min[1]                                                                                       ; |search|min[1]                                                                                 ; regout           ;
+; |search|max[4]                                                                                       ; |search|max[4]                                                                                 ; regout           ;
+; |search|max[3]                                                                                       ; |search|max[3]                                                                                 ; regout           ;
+; |search|max[2]                                                                                       ; |search|max[2]                                                                                 ; regout           ;
+; |search|max[1]                                                                                       ; |search|max[1]                                                                                 ; regout           ;
+; |search|max[0]                                                                                       ; |search|max[0]                                                                                 ; regout           ;
+; |search|result[4]~reg0                                                                               ; |search|result[4]~reg0                                                                         ; regout           ;
+; |search|result[3]~reg0                                                                               ; |search|result[3]~reg0                                                                         ; regout           ;
+; |search|result[2]~reg0                                                                               ; |search|result[2]~reg0                                                                         ; regout           ;
+; |search|result[1]~reg0                                                                               ; |search|result[1]~reg0                                                                         ; regout           ;
+; |search|A[0]                                                                                         ; |search|A[0]                                                                                   ; out              ;
+; |search|A[1]                                                                                         ; |search|A[1]                                                                                   ; out              ;
+; |search|A[2]                                                                                         ; |search|A[2]                                                                                   ; out              ;
+; |search|A[3]                                                                                         ; |search|A[3]                                                                                   ; out              ;
+; |search|A[4]                                                                                         ; |search|A[4]                                                                                   ; out              ;
+; |search|A[5]                                                                                         ; |search|A[5]                                                                                   ; out              ;
+; |search|A[6]                                                                                         ; |search|A[6]                                                                                   ; out              ;
+; |search|A[7]                                                                                         ; |search|A[7]                                                                                   ; out              ;
+; |search|start                                                                                        ; |search|start                                                                                  ; out              ;
+; |search|Restart                                                                                      ; |search|Restart                                                                                ; out              ;
+; |search|result[0]                                                                                    ; |search|result[0]                                                                              ; pin_out          ;
+; |search|result[1]                                                                                    ; |search|result[1]                                                                              ; pin_out          ;
+; |search|result[2]                                                                                    ; |search|result[2]                                                                              ; pin_out          ;
+; |search|result[3]                                                                                    ; |search|result[3]                                                                              ; pin_out          ;
+; |search|result[4]                                                                                    ; |search|result[4]                                                                              ; pin_out          ;
+; |search|debug[0]                                                                                     ; |search|debug[0]                                                                               ; pin_out          ;
+; |search|debug[3]                                                                                     ; |search|debug[3]                                                                               ; pin_out          ;
+; |search|debug[4]                                                                                     ; |search|debug[4]                                                                               ; pin_out          ;
+; |search|debug[5]                                                                                     ; |search|debug[5]                                                                               ; pin_out          ;
+; |search|debug[6]                                                                                     ; |search|debug[6]                                                                               ; pin_out          ;
+; |search|found                                                                                        ; |search|found                                                                                  ; pin_out          ;
+; |search|y~4                                                                                          ; |search|y~4                                                                                    ; out0             ;
+; |search|y.T1~0                                                                                       ; |search|y.T1~0                                                                                 ; out0             ;
+; |search|y~6                                                                                          ; |search|y~6                                                                                    ; out0             ;
+; |search|y~10                                                                                         ; |search|y~10                                                                                   ; out0             ;
+; |search|y~18                                                                                         ; |search|y~18                                                                                   ; out0             ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a0 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[0] ; portadataout0    ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a1 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[1] ; portadataout0    ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a2 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[2] ; portadataout0    ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a3 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[3] ; portadataout0    ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a4 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[4] ; portadataout0    ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a5 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[5] ; portadataout0    ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a6 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[6] ; portadataout0    ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a7 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[7] ; portadataout0    ;
+; |search|Selector0~0                                                                                  ; |search|Selector0~0                                                                            ; out              ;
+; |search|Selector1~2                                                                                  ; |search|Selector1~2                                                                            ; out0             ;
+; |search|Selector2~0                                                                                  ; |search|Selector2~0                                                                            ; out0             ;
+; |search|Selector2~1                                                                                  ; |search|Selector2~1                                                                            ; out0             ;
+; |search|Selector2~2                                                                                  ; |search|Selector2~2                                                                            ; out0             ;
+; |search|LessThan0~0                                                                                  ; |search|LessThan0~0                                                                            ; out0             ;
+; |search|LessThan0~1                                                                                  ; |search|LessThan0~1                                                                            ; out0             ;
+; |search|LessThan0~2                                                                                  ; |search|LessThan0~2                                                                            ; out0             ;
+; |search|LessThan0~3                                                                                  ; |search|LessThan0~3                                                                            ; out0             ;
+; |search|LessThan0~4                                                                                  ; |search|LessThan0~4                                                                            ; out0             ;
+; |search|LessThan0~5                                                                                  ; |search|LessThan0~5                                                                            ; out0             ;
+; |search|LessThan0~6                                                                                  ; |search|LessThan0~6                                                                            ; out0             ;
+; |search|LessThan0~7                                                                                  ; |search|LessThan0~7                                                                            ; out0             ;
+; |search|LessThan0~8                                                                                  ; |search|LessThan0~8                                                                            ; out0             ;
+; |search|LessThan0~9                                                                                  ; |search|LessThan0~9                                                                            ; out0             ;
+; |search|LessThan0~10                                                                                 ; |search|LessThan0~10                                                                           ; out0             ;
+; |search|LessThan0~11                                                                                 ; |search|LessThan0~11                                                                           ; out0             ;
+; |search|LessThan0~12                                                                                 ; |search|LessThan0~12                                                                           ; out0             ;
+; |search|LessThan0~13                                                                                 ; |search|LessThan0~13                                                                           ; out0             ;
+; |search|LessThan0~14                                                                                 ; |search|LessThan0~14                                                                           ; out0             ;
+; |search|LessThan0~15                                                                                 ; |search|LessThan0~15                                                                           ; out0             ;
+; |search|LessThan0~16                                                                                 ; |search|LessThan0~16                                                                           ; out0             ;
+; |search|LessThan0~17                                                                                 ; |search|LessThan0~17                                                                           ; out0             ;
+; |search|LessThan0~18                                                                                 ; |search|LessThan0~18                                                                           ; out0             ;
+; |search|LessThan0~19                                                                                 ; |search|LessThan0~19                                                                           ; out0             ;
+; |search|LessThan0~20                                                                                 ; |search|LessThan0~20                                                                           ; out0             ;
+; |search|LessThan0~21                                                                                 ; |search|LessThan0~21                                                                           ; out0             ;
+; |search|LessThan0~22                                                                                 ; |search|LessThan0~22                                                                           ; out0             ;
+; |search|LessThan0~23                                                                                 ; |search|LessThan0~23                                                                           ; out0             ;
+; |search|LessThan0~24                                                                                 ; |search|LessThan0~24                                                                           ; out0             ;
+; |search|LessThan0~25                                                                                 ; |search|LessThan0~25                                                                           ; out0             ;
+; |search|LessThan0~26                                                                                 ; |search|LessThan0~26                                                                           ; out0             ;
+; |search|LessThan0~27                                                                                 ; |search|LessThan0~27                                                                           ; out0             ;
+; |search|LessThan0~28                                                                                 ; |search|LessThan0~28                                                                           ; out0             ;
+; |search|Add0~0                                                                                       ; |search|Add0~0                                                                                 ; out0             ;
+; |search|Add0~1                                                                                       ; |search|Add0~1                                                                                 ; out0             ;
+; |search|Add0~2                                                                                       ; |search|Add0~2                                                                                 ; out0             ;
+; |search|Add0~3                                                                                       ; |search|Add0~3                                                                                 ; out0             ;
+; |search|Add0~4                                                                                       ; |search|Add0~4                                                                                 ; out0             ;
+; |search|Add0~5                                                                                       ; |search|Add0~5                                                                                 ; out0             ;
+; |search|Add0~6                                                                                       ; |search|Add0~6                                                                                 ; out0             ;
+; |search|Add1~0                                                                                       ; |search|Add1~0                                                                                 ; out0             ;
+; |search|Add1~1                                                                                       ; |search|Add1~1                                                                                 ; out0             ;
+; |search|Add1~2                                                                                       ; |search|Add1~2                                                                                 ; out0             ;
+; |search|Add1~3                                                                                       ; |search|Add1~3                                                                                 ; out0             ;
+; |search|Add1~4                                                                                       ; |search|Add1~4                                                                                 ; out0             ;
+; |search|Add1~5                                                                                       ; |search|Add1~5                                                                                 ; out0             ;
+; |search|Add1~6                                                                                       ; |search|Add1~6                                                                                 ; out0             ;
+; |search|Add1~7                                                                                       ; |search|Add1~7                                                                                 ; out0             ;
+; |search|Add1~8                                                                                       ; |search|Add1~8                                                                                 ; out0             ;
+; |search|Add1~9                                                                                       ; |search|Add1~9                                                                                 ; out0             ;
+; |search|Add1~10                                                                                      ; |search|Add1~10                                                                                ; out0             ;
+; |search|Add1~11                                                                                      ; |search|Add1~11                                                                                ; out0             ;
+; |search|Add1~12                                                                                      ; |search|Add1~12                                                                                ; out0             ;
+; |search|Add1~13                                                                                      ; |search|Add1~13                                                                                ; out0             ;
+; |search|Add1~14                                                                                      ; |search|Add1~14                                                                                ; out0             ;
+; |search|Add1~15                                                                                      ; |search|Add1~15                                                                                ; out0             ;
+; |search|Add1~16                                                                                      ; |search|Add1~16                                                                                ; out0             ;
+; |search|Add1~17                                                                                      ; |search|Add1~17                                                                                ; out0             ;
+; |search|Add1~18                                                                                      ; |search|Add1~18                                                                                ; out0             ;
+; |search|Add1~19                                                                                      ; |search|Add1~19                                                                                ; out0             ;
+; |search|Add1~20                                                                                      ; |search|Add1~20                                                                                ; out0             ;
+; |search|Equal0~0                                                                                     ; |search|Equal0~0                                                                               ; out0             ;
+; |search|Equal0~1                                                                                     ; |search|Equal0~1                                                                               ; out0             ;
+; |search|Equal0~2                                                                                     ; |search|Equal0~2                                                                               ; out0             ;
+; |search|Equal0~3                                                                                     ; |search|Equal0~3                                                                               ; out0             ;
+; |search|Equal0~4                                                                                     ; |search|Equal0~4                                                                               ; out0             ;
+; |search|Equal0~5                                                                                     ; |search|Equal0~5                                                                               ; out0             ;
+; |search|Equal0~6                                                                                     ; |search|Equal0~6                                                                               ; out0             ;
+; |search|Equal0~7                                                                                     ; |search|Equal0~7                                                                               ; out0             ;
+; |search|Equal0~8                                                                                     ; |search|Equal0~8                                                                               ; out0             ;
++------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                 ;
++------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                            ; Output Port Name                                                                               ; Output Port Type ;
++------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
+; |search|y~1                                                                                          ; |search|y~1                                                                                    ; out              ;
+; |search|y~2                                                                                          ; |search|y~2                                                                                    ; out              ;
+; |search|min~0                                                                                        ; |search|min~0                                                                                  ; out              ;
+; |search|min~1                                                                                        ; |search|min~1                                                                                  ; out              ;
+; |search|min~2                                                                                        ; |search|min~2                                                                                  ; out              ;
+; |search|min~3                                                                                        ; |search|min~3                                                                                  ; out              ;
+; |search|min~4                                                                                        ; |search|min~4                                                                                  ; out              ;
+; |search|min~5                                                                                        ; |search|min~5                                                                                  ; out              ;
+; |search|min~6                                                                                        ; |search|min~6                                                                                  ; out              ;
+; |search|min~7                                                                                        ; |search|min~7                                                                                  ; out              ;
+; |search|min~8                                                                                        ; |search|min~8                                                                                  ; out              ;
+; |search|min~9                                                                                        ; |search|min~9                                                                                  ; out              ;
+; |search|max~0                                                                                        ; |search|max~0                                                                                  ; out              ;
+; |search|max~1                                                                                        ; |search|max~1                                                                                  ; out              ;
+; |search|max~2                                                                                        ; |search|max~2                                                                                  ; out              ;
+; |search|max~3                                                                                        ; |search|max~3                                                                                  ; out              ;
+; |search|max~4                                                                                        ; |search|max~4                                                                                  ; out              ;
+; |search|max~5                                                                                        ; |search|max~5                                                                                  ; out              ;
+; |search|max~6                                                                                        ; |search|max~6                                                                                  ; out              ;
+; |search|max~7                                                                                        ; |search|max~7                                                                                  ; out              ;
+; |search|max~8                                                                                        ; |search|max~8                                                                                  ; out              ;
+; |search|max~9                                                                                        ; |search|max~9                                                                                  ; out              ;
+; |search|min~10                                                                                       ; |search|min~10                                                                                 ; out              ;
+; |search|min~11                                                                                       ; |search|min~11                                                                                 ; out              ;
+; |search|min~12                                                                                       ; |search|min~12                                                                                 ; out              ;
+; |search|min~13                                                                                       ; |search|min~13                                                                                 ; out              ;
+; |search|min~14                                                                                       ; |search|min~14                                                                                 ; out              ;
+; |search|max~10                                                                                       ; |search|max~10                                                                                 ; out              ;
+; |search|max~11                                                                                       ; |search|max~11                                                                                 ; out              ;
+; |search|max~12                                                                                       ; |search|max~12                                                                                 ; out              ;
+; |search|max~13                                                                                       ; |search|max~13                                                                                 ; out              ;
+; |search|max~14                                                                                       ; |search|max~14                                                                                 ; out              ;
+; |search|result~0                                                                                     ; |search|result~0                                                                               ; out              ;
+; |search|result~1                                                                                     ; |search|result~1                                                                               ; out              ;
+; |search|result[0]~reg0                                                                               ; |search|result[0]~reg0                                                                         ; regout           ;
+; |search|result~2                                                                                     ; |search|result~2                                                                               ; out              ;
+; |search|result~3                                                                                     ; |search|result~3                                                                               ; out              ;
+; |search|result~4                                                                                     ; |search|result~4                                                                               ; out              ;
+; |search|y.T2                                                                                         ; |search|y.T2                                                                                   ; regout           ;
+; |search|y.T3                                                                                         ; |search|y.T3                                                                                   ; regout           ;
+; |search|curr_min[4]                                                                                  ; |search|curr_min[4]                                                                            ; regout           ;
+; |search|curr_min[3]                                                                                  ; |search|curr_min[3]                                                                            ; regout           ;
+; |search|curr_min[2]                                                                                  ; |search|curr_min[2]                                                                            ; regout           ;
+; |search|curr_min[1]                                                                                  ; |search|curr_min[1]                                                                            ; regout           ;
+; |search|curr_min[0]                                                                                  ; |search|curr_min[0]                                                                            ; regout           ;
+; |search|curr_mid[4]                                                                                  ; |search|curr_mid[4]                                                                            ; regout           ;
+; |search|curr_mid[3]                                                                                  ; |search|curr_mid[3]                                                                            ; regout           ;
+; |search|curr_mid[2]                                                                                  ; |search|curr_mid[2]                                                                            ; regout           ;
+; |search|curr_mid[1]                                                                                  ; |search|curr_mid[1]                                                                            ; regout           ;
+; |search|curr_mid[0]                                                                                  ; |search|curr_mid[0]                                                                            ; regout           ;
+; |search|curr_max[4]                                                                                  ; |search|curr_max[4]                                                                            ; regout           ;
+; |search|curr_max[3]                                                                                  ; |search|curr_max[3]                                                                            ; regout           ;
+; |search|curr_max[2]                                                                                  ; |search|curr_max[2]                                                                            ; regout           ;
+; |search|curr_max[1]                                                                                  ; |search|curr_max[1]                                                                            ; regout           ;
+; |search|curr_max[0]                                                                                  ; |search|curr_max[0]                                                                            ; regout           ;
+; |search|found~reg0                                                                                   ; |search|found~reg0                                                                             ; regout           ;
+; |search|debug[1]~reg0                                                                                ; |search|debug[1]~reg0                                                                          ; regout           ;
+; |search|debug[0]~reg0                                                                                ; |search|debug[0]~reg0                                                                          ; regout           ;
+; |search|min[4]                                                                                       ; |search|min[4]                                                                                 ; regout           ;
+; |search|min[3]                                                                                       ; |search|min[3]                                                                                 ; regout           ;
+; |search|min[2]                                                                                       ; |search|min[2]                                                                                 ; regout           ;
+; |search|min[1]                                                                                       ; |search|min[1]                                                                                 ; regout           ;
+; |search|min[0]                                                                                       ; |search|min[0]                                                                                 ; regout           ;
+; |search|max[4]                                                                                       ; |search|max[4]                                                                                 ; regout           ;
+; |search|max[3]                                                                                       ; |search|max[3]                                                                                 ; regout           ;
+; |search|max[2]                                                                                       ; |search|max[2]                                                                                 ; regout           ;
+; |search|max[1]                                                                                       ; |search|max[1]                                                                                 ; regout           ;
+; |search|max[0]                                                                                       ; |search|max[0]                                                                                 ; regout           ;
+; |search|result[4]~reg0                                                                               ; |search|result[4]~reg0                                                                         ; regout           ;
+; |search|result[3]~reg0                                                                               ; |search|result[3]~reg0                                                                         ; regout           ;
+; |search|result[2]~reg0                                                                               ; |search|result[2]~reg0                                                                         ; regout           ;
+; |search|result[1]~reg0                                                                               ; |search|result[1]~reg0                                                                         ; regout           ;
+; |search|A[0]                                                                                         ; |search|A[0]                                                                                   ; out              ;
+; |search|A[1]                                                                                         ; |search|A[1]                                                                                   ; out              ;
+; |search|A[2]                                                                                         ; |search|A[2]                                                                                   ; out              ;
+; |search|A[3]                                                                                         ; |search|A[3]                                                                                   ; out              ;
+; |search|A[4]                                                                                         ; |search|A[4]                                                                                   ; out              ;
+; |search|A[5]                                                                                         ; |search|A[5]                                                                                   ; out              ;
+; |search|A[6]                                                                                         ; |search|A[6]                                                                                   ; out              ;
+; |search|A[7]                                                                                         ; |search|A[7]                                                                                   ; out              ;
+; |search|start                                                                                        ; |search|start                                                                                  ; out              ;
+; |search|Restart                                                                                      ; |search|Restart                                                                                ; out              ;
+; |search|result[0]                                                                                    ; |search|result[0]                                                                              ; pin_out          ;
+; |search|result[1]                                                                                    ; |search|result[1]                                                                              ; pin_out          ;
+; |search|result[2]                                                                                    ; |search|result[2]                                                                              ; pin_out          ;
+; |search|result[3]                                                                                    ; |search|result[3]                                                                              ; pin_out          ;
+; |search|result[4]                                                                                    ; |search|result[4]                                                                              ; pin_out          ;
+; |search|debug[0]                                                                                     ; |search|debug[0]                                                                               ; pin_out          ;
+; |search|debug[1]                                                                                     ; |search|debug[1]                                                                               ; pin_out          ;
+; |search|debug[3]                                                                                     ; |search|debug[3]                                                                               ; pin_out          ;
+; |search|debug[4]                                                                                     ; |search|debug[4]                                                                               ; pin_out          ;
+; |search|debug[5]                                                                                     ; |search|debug[5]                                                                               ; pin_out          ;
+; |search|debug[6]                                                                                     ; |search|debug[6]                                                                               ; pin_out          ;
+; |search|found                                                                                        ; |search|found                                                                                  ; pin_out          ;
+; |search|y~4                                                                                          ; |search|y~4                                                                                    ; out0             ;
+; |search|y.T1~0                                                                                       ; |search|y.T1~0                                                                                 ; out0             ;
+; |search|y~8                                                                                          ; |search|y~8                                                                                    ; out0             ;
+; |search|y~10                                                                                         ; |search|y~10                                                                                   ; out0             ;
+; |search|y~18                                                                                         ; |search|y~18                                                                                   ; out0             ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a0 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[0] ; portadataout0    ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a1 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[1] ; portadataout0    ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a2 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[2] ; portadataout0    ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a3 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[3] ; portadataout0    ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a4 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[4] ; portadataout0    ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a5 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[5] ; portadataout0    ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a6 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[6] ; portadataout0    ;
+; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|ram_block1a7 ; |search|memory_block:mem|altsyncram:altsyncram_component|altsyncram_2cc1:auto_generated|q_a[7] ; portadataout0    ;
+; |search|Selector0~0                                                                                  ; |search|Selector0~0                                                                            ; out              ;
+; |search|Selector1~1                                                                                  ; |search|Selector1~1                                                                            ; out0             ;
+; |search|Selector2~0                                                                                  ; |search|Selector2~0                                                                            ; out0             ;
+; |search|Selector2~1                                                                                  ; |search|Selector2~1                                                                            ; out0             ;
+; |search|Selector2~2                                                                                  ; |search|Selector2~2                                                                            ; out0             ;
+; |search|LessThan0~0                                                                                  ; |search|LessThan0~0                                                                            ; out0             ;
+; |search|LessThan0~1                                                                                  ; |search|LessThan0~1                                                                            ; out0             ;
+; |search|LessThan0~2                                                                                  ; |search|LessThan0~2                                                                            ; out0             ;
+; |search|LessThan0~3                                                                                  ; |search|LessThan0~3                                                                            ; out0             ;
+; |search|LessThan0~4                                                                                  ; |search|LessThan0~4                                                                            ; out0             ;
+; |search|LessThan0~5                                                                                  ; |search|LessThan0~5                                                                            ; out0             ;
+; |search|LessThan0~6                                                                                  ; |search|LessThan0~6                                                                            ; out0             ;
+; |search|LessThan0~7                                                                                  ; |search|LessThan0~7                                                                            ; out0             ;
+; |search|LessThan0~8                                                                                  ; |search|LessThan0~8                                                                            ; out0             ;
+; |search|LessThan0~9                                                                                  ; |search|LessThan0~9                                                                            ; out0             ;
+; |search|LessThan0~10                                                                                 ; |search|LessThan0~10                                                                           ; out0             ;
+; |search|LessThan0~11                                                                                 ; |search|LessThan0~11                                                                           ; out0             ;
+; |search|LessThan0~12                                                                                 ; |search|LessThan0~12                                                                           ; out0             ;
+; |search|LessThan0~13                                                                                 ; |search|LessThan0~13                                                                           ; out0             ;
+; |search|LessThan0~14                                                                                 ; |search|LessThan0~14                                                                           ; out0             ;
+; |search|LessThan0~15                                                                                 ; |search|LessThan0~15                                                                           ; out0             ;
+; |search|LessThan0~16                                                                                 ; |search|LessThan0~16                                                                           ; out0             ;
+; |search|LessThan0~17                                                                                 ; |search|LessThan0~17                                                                           ; out0             ;
+; |search|LessThan0~18                                                                                 ; |search|LessThan0~18                                                                           ; out0             ;
+; |search|LessThan0~19                                                                                 ; |search|LessThan0~19                                                                           ; out0             ;
+; |search|LessThan0~20                                                                                 ; |search|LessThan0~20                                                                           ; out0             ;
+; |search|LessThan0~21                                                                                 ; |search|LessThan0~21                                                                           ; out0             ;
+; |search|LessThan0~22                                                                                 ; |search|LessThan0~22                                                                           ; out0             ;
+; |search|LessThan0~23                                                                                 ; |search|LessThan0~23                                                                           ; out0             ;
+; |search|LessThan0~24                                                                                 ; |search|LessThan0~24                                                                           ; out0             ;
+; |search|LessThan0~25                                                                                 ; |search|LessThan0~25                                                                           ; out0             ;
+; |search|LessThan0~26                                                                                 ; |search|LessThan0~26                                                                           ; out0             ;
+; |search|LessThan0~27                                                                                 ; |search|LessThan0~27                                                                           ; out0             ;
+; |search|LessThan0~28                                                                                 ; |search|LessThan0~28                                                                           ; out0             ;
+; |search|Add0~0                                                                                       ; |search|Add0~0                                                                                 ; out0             ;
+; |search|Add0~1                                                                                       ; |search|Add0~1                                                                                 ; out0             ;
+; |search|Add0~2                                                                                       ; |search|Add0~2                                                                                 ; out0             ;
+; |search|Add0~3                                                                                       ; |search|Add0~3                                                                                 ; out0             ;
+; |search|Add0~4                                                                                       ; |search|Add0~4                                                                                 ; out0             ;
+; |search|Add0~5                                                                                       ; |search|Add0~5                                                                                 ; out0             ;
+; |search|Add0~6                                                                                       ; |search|Add0~6                                                                                 ; out0             ;
+; |search|Add1~0                                                                                       ; |search|Add1~0                                                                                 ; out0             ;
+; |search|Add1~1                                                                                       ; |search|Add1~1                                                                                 ; out0             ;
+; |search|Add1~2                                                                                       ; |search|Add1~2                                                                                 ; out0             ;
+; |search|Add1~3                                                                                       ; |search|Add1~3                                                                                 ; out0             ;
+; |search|Add1~4                                                                                       ; |search|Add1~4                                                                                 ; out0             ;
+; |search|Add1~5                                                                                       ; |search|Add1~5                                                                                 ; out0             ;
+; |search|Add1~6                                                                                       ; |search|Add1~6                                                                                 ; out0             ;
+; |search|Add1~7                                                                                       ; |search|Add1~7                                                                                 ; out0             ;
+; |search|Add1~8                                                                                       ; |search|Add1~8                                                                                 ; out0             ;
+; |search|Add1~9                                                                                       ; |search|Add1~9                                                                                 ; out0             ;
+; |search|Add1~10                                                                                      ; |search|Add1~10                                                                                ; out0             ;
+; |search|Add1~11                                                                                      ; |search|Add1~11                                                                                ; out0             ;
+; |search|Add1~12                                                                                      ; |search|Add1~12                                                                                ; out0             ;
+; |search|Add1~13                                                                                      ; |search|Add1~13                                                                                ; out0             ;
+; |search|Add1~14                                                                                      ; |search|Add1~14                                                                                ; out0             ;
+; |search|Add1~15                                                                                      ; |search|Add1~15                                                                                ; out0             ;
+; |search|Add1~16                                                                                      ; |search|Add1~16                                                                                ; out0             ;
+; |search|Add1~17                                                                                      ; |search|Add1~17                                                                                ; out0             ;
+; |search|Add1~18                                                                                      ; |search|Add1~18                                                                                ; out0             ;
+; |search|Add1~19                                                                                      ; |search|Add1~19                                                                                ; out0             ;
+; |search|Add1~20                                                                                      ; |search|Add1~20                                                                                ; out0             ;
+; |search|Equal0~0                                                                                     ; |search|Equal0~0                                                                               ; out0             ;
+; |search|Equal0~1                                                                                     ; |search|Equal0~1                                                                               ; out0             ;
+; |search|Equal0~2                                                                                     ; |search|Equal0~2                                                                               ; out0             ;
+; |search|Equal0~3                                                                                     ; |search|Equal0~3                                                                               ; out0             ;
+; |search|Equal0~4                                                                                     ; |search|Equal0~4                                                                               ; out0             ;
+; |search|Equal0~5                                                                                     ; |search|Equal0~5                                                                               ; out0             ;
+; |search|Equal0~6                                                                                     ; |search|Equal0~6                                                                               ; out0             ;
+; |search|Equal0~7                                                                                     ; |search|Equal0~7                                                                               ; out0             ;
+; |search|Equal0~8                                                                                     ; |search|Equal0~8                                                                               ; out0             ;
++------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Sat Oct 13 22:30:41 2018
+Info: Command: quartus_sim --simulation_results_format=VWF part2 -c part2
+Info (324025): Using vector source file "D:/altera/13.0sp1/output_files/Waveform.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "data[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "data[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "data[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "data[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "data[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "data[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "data[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "data[0]" in design.
+Warning (328012): Can't find signal in vector source file for input pin "|search|Restart"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is       3.19 %
+Info (328052): Number of transitions in simulation is 57
+Info (324045): Vector file part2.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4471 megabytes
+    Info: Processing ended: Sat Oct 13 22:30:57 2018
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:01
+
+

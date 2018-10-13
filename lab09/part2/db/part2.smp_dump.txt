@@ -1,0 +1,8 @@
+
+State Machine - |part2|search:sea|y
+Name y.nop2 y.nop1 y.T3 y.T2 y.T1 
+y.T1 0 0 0 0 0 
+y.T2 0 0 0 1 1 
+y.T3 0 0 1 0 1 
+y.nop1 0 1 0 0 1 
+y.nop2 1 0 0 0 1 

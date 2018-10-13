@@ -1,0 +1,1185 @@
+TimeQuest Timing Analyzer report for part2
+Sun Oct 14 03:36:28 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock_50'
+ 12. Slow Model Hold: 'clock_50'
+ 13. Slow Model Minimum Pulse Width: 'clock_50'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clock_50'
+ 24. Fast Model Hold: 'clock_50'
+ 25. Fast Model Minimum Pulse Width: 'clock_50'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                       ;
++--------------------+--------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; part2                                                              ;
+; Device Family      ; Cyclone II                                                         ;
+; Device Name        ; EP2C20F484C7                                                       ;
+; Timing Models      ; Final                                                              ;
+; Delay Model        ; Combined                                                           ;
+; Rise/Fall Delays   ; Unavailable                                                        ;
++--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; clock_50   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock_50 } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 124.29 MHz ; 124.29 MHz      ; clock_50   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------+
+; Slow Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; clock_50 ; -3.523 ; -101.165      ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Slow Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; clock_50 ; 0.445 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; clock_50 ; -1.814 ; -94.009            ;
++----------+--------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock_50'                                                                                                                                                                                                                                                                                  ;
++--------+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                                  ; To Node                                                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.523 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 4.007      ;
+; -3.523 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 4.007      ;
+; -3.523 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 4.007      ;
+; -3.523 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 4.007      ;
+; -3.523 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 4.007      ;
+; -3.479 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.963      ;
+; -3.479 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.963      ;
+; -3.479 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.963      ;
+; -3.479 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.963      ;
+; -3.479 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.963      ;
+; -3.433 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|min[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.917      ;
+; -3.433 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|min[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.917      ;
+; -3.433 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|min[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.917      ;
+; -3.433 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|min[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.917      ;
+; -3.433 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|min[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.917      ;
+; -3.397 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|min[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.881      ;
+; -3.397 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|min[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.881      ;
+; -3.397 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|min[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.881      ;
+; -3.397 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|min[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.881      ;
+; -3.397 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|min[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.881      ;
+; -3.342 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|min[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.826      ;
+; -3.342 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|min[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.826      ;
+; -3.342 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|min[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.826      ;
+; -3.342 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|min[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.826      ;
+; -3.342 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|min[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.826      ;
+; -3.335 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.819      ;
+; -3.335 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.819      ;
+; -3.335 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.819      ;
+; -3.335 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.819      ;
+; -3.335 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.819      ;
+; -3.333 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.817      ;
+; -3.333 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.817      ;
+; -3.333 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.817      ;
+; -3.333 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.817      ;
+; -3.333 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.817      ;
+; -3.296 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.780      ;
+; -3.296 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.780      ;
+; -3.296 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.780      ;
+; -3.296 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.780      ;
+; -3.296 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.780      ;
+; -3.283 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|min[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.767      ;
+; -3.283 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|min[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.767      ;
+; -3.283 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|min[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.767      ;
+; -3.283 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|min[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.767      ;
+; -3.283 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|min[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.767      ;
+; -3.160 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.644      ;
+; -3.160 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.644      ;
+; -3.160 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.644      ;
+; -3.160 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.644      ;
+; -3.160 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.644      ;
+; -3.148 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.632      ;
+; -3.148 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.632      ;
+; -3.148 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.632      ;
+; -3.148 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.632      ;
+; -3.148 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.632      ;
+; -3.115 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|min[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.599      ;
+; -3.115 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|min[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.599      ;
+; -3.115 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|min[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.599      ;
+; -3.115 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|min[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.599      ;
+; -3.115 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|min[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.599      ;
+; -3.045 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.529      ;
+; -3.045 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.529      ;
+; -3.045 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.529      ;
+; -3.045 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.529      ;
+; -3.045 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.529      ;
+; -3.038 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|min[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.522      ;
+; -3.038 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|min[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.522      ;
+; -3.038 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|min[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.522      ;
+; -3.038 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|min[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.522      ;
+; -3.038 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|min[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.522      ;
+; -2.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|min[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.463      ;
+; -2.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|min[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.463      ;
+; -2.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|min[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.463      ;
+; -2.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|min[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.463      ;
+; -2.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|min[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.463      ;
+; -2.890 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6]                          ; search:sea|min[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.374      ;
+; -2.890 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6]                          ; search:sea|min[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.374      ;
+; -2.890 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6]                          ; search:sea|min[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.374      ;
+; -2.890 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6]                          ; search:sea|min[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.374      ;
+; -2.890 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6]                          ; search:sea|min[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.054     ; 3.374      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
+; -2.564 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4] ; clock_50     ; clock_50    ; 1.000        ; -0.023     ; 3.501      ;
++--------+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock_50'                                                                                                                                                                                                       ;
++-------+------------------------+----------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node              ; To Node                                                                                                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------+----------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; search:sea|y.T3        ; search:sea|y.T3                                                                                                            ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; search:sea|y.T1        ; search:sea|y.T1                                                                                                            ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; search:sea|debug[6]    ; search:sea|debug[6]                                                                                                        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.618 ; search:sea|y.nop1      ; search:sea|y.nop2                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.904      ;
+; 0.619 ; search:sea|max[0]      ; search:sea|curr_max[0]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.905      ;
+; 0.627 ; search:sea|y.T1        ; search:sea|y.T2                                                                                                            ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.913      ;
+; 0.629 ; search:sea|curr_mid[1] ; search:sea|result[1]                                                                                                       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.915      ;
+; 0.629 ; search:sea|curr_mid[3] ; search:sea|result[3]                                                                                                       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.915      ;
+; 0.630 ; search:sea|curr_mid[2] ; search:sea|result[2]                                                                                                       ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.916      ;
+; 0.634 ; search:sea|y.T3        ; search:sea|y.T1                                                                                                            ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.920      ;
+; 0.637 ; search:sea|max[1]      ; search:sea|curr_max[1]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.923      ;
+; 0.734 ; search:sea|y.nop2      ; search:sea|y.T2                                                                                                            ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.020      ;
+; 0.775 ; search:sea|curr_max[1] ; search:sea|max[1]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.061      ;
+; 0.790 ; search:sea|y.T2        ; search:sea|y.nop1                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.873 ; search:sea|max[3]      ; search:sea|curr_max[3]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 1.160      ;
+; 0.963 ; search:sea|max[4]      ; search:sea|curr_max[4]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 1.250      ;
+; 0.976 ; search:sea|curr_max[0] ; search:sea|max[0]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.262      ;
+; 0.999 ; search:sea|curr_min[0] ; search:sea|min[0]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.285      ;
+; 1.004 ; search:sea|min[0]      ; search:sea|curr_min[0]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.290      ;
+; 1.009 ; search:sea|curr_max[4] ; search:sea|max[4]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 1.294      ;
+; 1.010 ; search:sea|curr_max[2] ; search:sea|max[2]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 1.295      ;
+; 1.016 ; search:sea|max[2]      ; search:sea|curr_max[2]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 1.303      ;
+; 1.017 ; search:sea|curr_max[3] ; search:sea|max[3]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 1.302      ;
+; 1.022 ; search:sea|curr_mid[0] ; search:sea|max[0]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 1.307      ;
+; 1.101 ; search:sea|curr_min[4] ; search:sea|debug[6]                                                                                                        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.387      ;
+; 1.143 ; search:sea|min[2]      ; search:sea|curr_min[2]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 1.430      ;
+; 1.174 ; search:sea|curr_mid[4] ; search:sea|min[4]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 1.459      ;
+; 1.264 ; search:sea|min[1]      ; search:sea|curr_min[1]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.550      ;
+; 1.279 ; search:sea|min[3]      ; search:sea|curr_min[3]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 1.566      ;
+; 1.281 ; search:sea|min[4]      ; search:sea|curr_min[4]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 1.568      ;
+; 1.295 ; search:sea|curr_min[3] ; search:sea|min[3]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 1.580      ;
+; 1.300 ; search:sea|curr_min[4] ; search:sea|min[4]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 1.585      ;
+; 1.326 ; search:sea|curr_min[2] ; search:sea|min[2]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 1.611      ;
+; 1.475 ; search:sea|y.T3        ; search:sea|debug[6]                                                                                                        ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 1.762      ;
+; 1.480 ; search:sea|curr_mid[2] ; search:sea|min[2]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 1.764      ;
+; 1.488 ; search:sea|curr_max[4] ; search:sea|debug[6]                                                                                                        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.774      ;
+; 1.500 ; search:sea|curr_mid[4] ; search:sea|result[4]                                                                                                       ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 1.787      ;
+; 1.500 ; search:sea|curr_mid[4] ; search:sea|max[4]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 1.785      ;
+; 1.501 ; search:sea|curr_mid[1] ; search:sea|max[1]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 1.785      ;
+; 1.512 ; search:sea|curr_mid[2] ; search:sea|max[2]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 1.796      ;
+; 1.515 ; search:sea|curr_mid[0] ; search:sea|min[0]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 1.800      ;
+; 1.540 ; search:sea|curr_mid[1] ; search:sea|min[1]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 1.824      ;
+; 1.557 ; search:sea|curr_mid[0] ; search:sea|result[0]                                                                                                       ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 1.844      ;
+; 1.559 ; search:sea|curr_mid[3] ; search:sea|min[3]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 1.843      ;
+; 1.573 ; search:sea|y.T3        ; search:sea|found                                                                                                           ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 1.861      ;
+; 1.573 ; search:sea|y.T3        ; search:sea|result[0]                                                                                                       ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 1.861      ;
+; 1.573 ; search:sea|y.T3        ; search:sea|result[1]                                                                                                       ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 1.861      ;
+; 1.573 ; search:sea|y.T3        ; search:sea|result[2]                                                                                                       ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 1.861      ;
+; 1.573 ; search:sea|y.T3        ; search:sea|result[3]                                                                                                       ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 1.861      ;
+; 1.573 ; search:sea|y.T3        ; search:sea|result[4]                                                                                                       ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 1.861      ;
+; 1.592 ; search:sea|y.T2        ; search:sea|y.T3                                                                                                            ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.878      ;
+; 1.619 ; search:sea|curr_mid[4] ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ; clock_50     ; clock_50    ; -0.500       ; 0.076      ; 1.445      ;
+; 1.630 ; search:sea|max[4]      ; search:sea|curr_mid[4]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 1.917      ;
+; 1.727 ; search:sea|curr_min[3] ; search:sea|debug[6]                                                                                                        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 2.013      ;
+; 1.730 ; search:sea|max[3]      ; search:sea|curr_mid[4]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 2.017      ;
+; 1.766 ; search:sea|curr_min[0] ; search:sea|debug[6]                                                                                                        ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 2.053      ;
+; 1.842 ; search:sea|max[2]      ; search:sea|curr_mid[4]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 2.129      ;
+; 1.855 ; search:sea|curr_mid[3] ; search:sea|max[3]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 2.139      ;
+; 1.856 ; search:sea|max[1]      ; search:sea|curr_mid[0]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 2.143      ;
+; 1.898 ; search:sea|max[4]      ; search:sea|curr_mid[3]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 2.186      ;
+; 1.901 ; search:sea|min[4]      ; search:sea|curr_mid[4]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 2.188      ;
+; 1.906 ; search:sea|curr_max[3] ; search:sea|debug[6]                                                                                                        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 2.192      ;
+; 1.908 ; search:sea|max[1]      ; search:sea|curr_mid[4]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 2.195      ;
+; 1.911 ; search:sea|max[3]      ; search:sea|curr_mid[2]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 2.199      ;
+; 1.915 ; search:sea|y.T2        ; search:sea|min[4]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 2.201      ;
+; 1.915 ; search:sea|y.T2        ; search:sea|min[3]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 2.201      ;
+; 1.915 ; search:sea|y.T2        ; search:sea|min[2]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 2.201      ;
+; 1.915 ; search:sea|y.T2        ; search:sea|min[1]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 2.201      ;
+; 1.915 ; search:sea|y.T2        ; search:sea|min[0]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 2.201      ;
+; 1.950 ; search:sea|curr_mid[2] ; search:sea|min[3]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 2.234      ;
+; 1.952 ; search:sea|max[2]      ; search:sea|curr_mid[1]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 2.240      ;
+; 1.953 ; search:sea|max[0]      ; search:sea|curr_mid[4]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 2.240      ;
+; 1.959 ; search:sea|curr_min[1] ; search:sea|debug[6]                                                                                                        ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 2.246      ;
+; 1.970 ; search:sea|curr_mid[1] ; search:sea|min[2]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 2.254      ;
+; 1.977 ; search:sea|curr_mid[0] ; search:sea|min[1]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 2.262      ;
+; 1.989 ; search:sea|curr_mid[3] ; search:sea|min[4]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 2.273      ;
+; 2.030 ; search:sea|min[3]      ; search:sea|curr_mid[4]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 2.317      ;
+; 2.030 ; search:sea|curr_mid[2] ; search:sea|min[4]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 2.314      ;
+; 2.050 ; search:sea|curr_mid[1] ; search:sea|min[3]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 2.334      ;
+; 2.057 ; search:sea|curr_mid[0] ; search:sea|min[2]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 2.342      ;
+; 2.064 ; search:sea|curr_min[1] ; search:sea|min[1]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 2.350      ;
+; 2.081 ; search:sea|min[2]      ; search:sea|curr_mid[4]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 2.368      ;
+; 2.081 ; search:sea|curr_mid[2] ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ; clock_50     ; clock_50    ; -0.500       ; 0.075      ; 1.906      ;
+; 2.081 ; search:sea|curr_mid[1] ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ; clock_50     ; clock_50    ; -0.500       ; 0.075      ; 1.906      ;
+; 2.083 ; search:sea|curr_mid[3] ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ; clock_50     ; clock_50    ; -0.500       ; 0.075      ; 1.908      ;
+; 2.096 ; search:sea|y.T2        ; search:sea|max[4]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 2.382      ;
+; 2.096 ; search:sea|y.T2        ; search:sea|max[3]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 2.382      ;
+; 2.096 ; search:sea|y.T2        ; search:sea|max[2]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 2.382      ;
+; 2.096 ; search:sea|y.T2        ; search:sea|max[1]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 2.382      ;
+; 2.096 ; search:sea|y.T2        ; search:sea|max[0]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 2.382      ;
+; 2.109 ; search:sea|min[1]      ; search:sea|curr_mid[0]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 2.396      ;
+; 2.130 ; search:sea|curr_mid[1] ; search:sea|min[4]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 2.414      ;
+; 2.137 ; search:sea|curr_mid[0] ; search:sea|min[3]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 2.422      ;
+; 2.165 ; search:sea|min[1]      ; search:sea|curr_mid[4]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 2.452      ;
+; 2.168 ; search:sea|min[4]      ; search:sea|curr_mid[3]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 2.456      ;
+; 2.190 ; search:sea|min[2]      ; search:sea|curr_mid[1]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 2.478      ;
+; 2.215 ; search:sea|min[3]      ; search:sea|curr_mid[2]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 2.503      ;
+; 2.217 ; search:sea|curr_mid[0] ; search:sea|min[4]                                                                                                          ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 2.502      ;
+; 2.250 ; search:sea|curr_min[2] ; search:sea|debug[6]                                                                                                        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 2.536      ;
+; 2.254 ; search:sea|max[0]      ; search:sea|curr_mid[0]                                                                                                     ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 2.541      ;
++-------+------------------------+----------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock_50'                                                                                                                                                                     ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                                                                                                     ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------------------------------------------------------------------------------------------+
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6]                          ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6]                          ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.814 ; 0.500        ; 2.314          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.814 ; 0.500        ; 2.314          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clock_50 ; Rise       ; clock_50                                                                                                                   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_max[0]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_max[0]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_max[1]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_max[1]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_max[2]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_max[2]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_max[3]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_max[3]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_max[4]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_max[4]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_mid[0]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_mid[0]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_mid[1]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_mid[1]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_mid[2]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_mid[2]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_mid[3]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_mid[3]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_mid[4]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_mid[4]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_min[0]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_min[0]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_min[1]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_min[1]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_min[2]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_min[2]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_min[3]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_min[3]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_min[4]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_min[4]                                                                                                     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|debug[6]                                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|debug[6]                                                                                                        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|found                                                                                                           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|found                                                                                                           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|max[0]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|max[0]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|max[1]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|max[1]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|max[2]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|max[2]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|max[3]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|max[3]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|max[4]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|max[4]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|min[0]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|min[0]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|min[1]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|min[1]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|min[2]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|min[2]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|min[3]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|min[3]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|min[4]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|min[4]                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|result[0]                                                                                                       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|result[0]                                                                                                       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|result[1]                                                                                                       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|result[1]                                                                                                       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|result[2]                                                                                                       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|result[2]                                                                                                       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|result[3]                                                                                                       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|result[3]                                                                                                       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|result[4]                                                                                                       ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|result[4]                                                                                                       ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|y.T1                                                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|y.T1                                                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|y.T2                                                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|y.T2                                                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|y.T3                                                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|y.T3                                                                                                            ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|y.nop1                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|y.nop1                                                                                                          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|y.nop2                                                                                                          ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; key[*]    ; clock_50   ; 5.858 ; 5.858 ; Rise       ; clock_50        ;
+;  key[0]   ; clock_50   ; 5.858 ; 5.858 ; Rise       ; clock_50        ;
+; sw[*]     ; clock_50   ; 3.872 ; 3.872 ; Rise       ; clock_50        ;
+;  sw[0]    ; clock_50   ; 3.040 ; 3.040 ; Rise       ; clock_50        ;
+;  sw[1]    ; clock_50   ; 3.823 ; 3.823 ; Rise       ; clock_50        ;
+;  sw[2]    ; clock_50   ; 3.149 ; 3.149 ; Rise       ; clock_50        ;
+;  sw[3]    ; clock_50   ; 3.872 ; 3.872 ; Rise       ; clock_50        ;
+;  sw[4]    ; clock_50   ; 3.052 ; 3.052 ; Rise       ; clock_50        ;
+;  sw[5]    ; clock_50   ; 3.231 ; 3.231 ; Rise       ; clock_50        ;
+;  sw[6]    ; clock_50   ; 2.474 ; 2.474 ; Rise       ; clock_50        ;
+;  sw[7]    ; clock_50   ; 3.129 ; 3.129 ; Rise       ; clock_50        ;
+;  sw[8]    ; clock_50   ; 1.101 ; 1.101 ; Rise       ; clock_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; key[*]    ; clock_50   ; -5.019 ; -5.019 ; Rise       ; clock_50        ;
+;  key[0]   ; clock_50   ; -5.019 ; -5.019 ; Rise       ; clock_50        ;
+; sw[*]     ; clock_50   ; -0.850 ; -0.850 ; Rise       ; clock_50        ;
+;  sw[0]    ; clock_50   ; -1.682 ; -1.682 ; Rise       ; clock_50        ;
+;  sw[1]    ; clock_50   ; -2.227 ; -2.227 ; Rise       ; clock_50        ;
+;  sw[2]    ; clock_50   ; -1.791 ; -1.791 ; Rise       ; clock_50        ;
+;  sw[3]    ; clock_50   ; -2.362 ; -2.362 ; Rise       ; clock_50        ;
+;  sw[4]    ; clock_50   ; -1.694 ; -1.694 ; Rise       ; clock_50        ;
+;  sw[5]    ; clock_50   ; -1.873 ; -1.873 ; Rise       ; clock_50        ;
+;  sw[6]    ; clock_50   ; -1.116 ; -1.116 ; Rise       ; clock_50        ;
+;  sw[7]    ; clock_50   ; -1.657 ; -1.657 ; Rise       ; clock_50        ;
+;  sw[8]    ; clock_50   ; -0.850 ; -0.850 ; Rise       ; clock_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ledg[*]   ; clock_50   ; 7.443 ; 7.443 ; Rise       ; clock_50        ;
+;  ledg[0]  ; clock_50   ; 7.388 ; 7.388 ; Rise       ; clock_50        ;
+;  ledg[7]  ; clock_50   ; 7.443 ; 7.443 ; Rise       ; clock_50        ;
+; ledr[*]   ; clock_50   ; 7.750 ; 7.750 ; Rise       ; clock_50        ;
+;  ledr[0]  ; clock_50   ; 7.735 ; 7.735 ; Rise       ; clock_50        ;
+;  ledr[1]  ; clock_50   ; 7.750 ; 7.750 ; Rise       ; clock_50        ;
+;  ledr[2]  ; clock_50   ; 7.404 ; 7.404 ; Rise       ; clock_50        ;
+;  ledr[3]  ; clock_50   ; 7.030 ; 7.030 ; Rise       ; clock_50        ;
+;  ledr[4]  ; clock_50   ; 7.524 ; 7.524 ; Rise       ; clock_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ledg[*]   ; clock_50   ; 7.388 ; 7.388 ; Rise       ; clock_50        ;
+;  ledg[0]  ; clock_50   ; 7.388 ; 7.388 ; Rise       ; clock_50        ;
+;  ledg[7]  ; clock_50   ; 7.443 ; 7.443 ; Rise       ; clock_50        ;
+; ledr[*]   ; clock_50   ; 7.030 ; 7.030 ; Rise       ; clock_50        ;
+;  ledr[0]  ; clock_50   ; 7.735 ; 7.735 ; Rise       ; clock_50        ;
+;  ledr[1]  ; clock_50   ; 7.750 ; 7.750 ; Rise       ; clock_50        ;
+;  ledr[2]  ; clock_50   ; 7.404 ; 7.404 ; Rise       ; clock_50        ;
+;  ledr[3]  ; clock_50   ; 7.030 ; 7.030 ; Rise       ; clock_50        ;
+;  ledr[4]  ; clock_50   ; 7.524 ; 7.524 ; Rise       ; clock_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------+
+; Fast Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; clock_50 ; -1.149 ; -24.551       ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Fast Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; clock_50 ; 0.215 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; clock_50 ; -1.423 ; -75.378            ;
++----------+--------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock_50'                                                                                                                                                                                                                                                                                  ;
++--------+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                                  ; To Node                                                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.149 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.634      ;
+; -1.149 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.634      ;
+; -1.149 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.634      ;
+; -1.149 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.634      ;
+; -1.149 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.634      ;
+; -1.131 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.616      ;
+; -1.131 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.616      ;
+; -1.131 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.616      ;
+; -1.131 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.616      ;
+; -1.131 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.616      ;
+; -1.118 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|min[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.603      ;
+; -1.118 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|min[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.603      ;
+; -1.118 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|min[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.603      ;
+; -1.118 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|min[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.603      ;
+; -1.118 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ; search:sea|min[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.603      ;
+; -1.100 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|min[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.585      ;
+; -1.100 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|min[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.585      ;
+; -1.100 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|min[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.585      ;
+; -1.100 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|min[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.585      ;
+; -1.100 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|min[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.585      ;
+; -1.096 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.581      ;
+; -1.096 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.581      ;
+; -1.096 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.581      ;
+; -1.096 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.581      ;
+; -1.096 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.581      ;
+; -1.084 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.569      ;
+; -1.084 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.569      ;
+; -1.084 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.569      ;
+; -1.084 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.569      ;
+; -1.084 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.569      ;
+; -1.079 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.564      ;
+; -1.079 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.564      ;
+; -1.079 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.564      ;
+; -1.079 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.564      ;
+; -1.079 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.564      ;
+; -1.073 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|min[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.558      ;
+; -1.073 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|min[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.558      ;
+; -1.073 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|min[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.558      ;
+; -1.073 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|min[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.558      ;
+; -1.073 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ; search:sea|min[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.558      ;
+; -1.065 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|min[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.550      ;
+; -1.065 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|min[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.550      ;
+; -1.065 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|min[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.550      ;
+; -1.065 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|min[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.550      ;
+; -1.065 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ; search:sea|min[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.550      ;
+; -1.026 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.511      ;
+; -1.026 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.511      ;
+; -1.026 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.511      ;
+; -1.026 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.511      ;
+; -1.026 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.511      ;
+; -1.009 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|max[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.494      ;
+; -1.009 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|max[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.494      ;
+; -1.009 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|max[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.494      ;
+; -1.009 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|max[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.494      ;
+; -1.009 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ; search:sea|max[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.494      ;
+; -1.003 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|min[4]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.488      ;
+; -1.003 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|min[3]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.488      ;
+; -1.003 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|min[2]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.488      ;
+; -1.003 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|min[1]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.488      ;
+; -1.003 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ; search:sea|min[0]                                                                                 ; clock_50     ; clock_50    ; 0.500        ; -0.047     ; 1.488      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
+; -0.979 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0] ; clock_50     ; clock_50    ; 1.000        ; -0.018     ; 1.960      ;
++--------+----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock_50'                                                                                                   ;
++-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node              ; To Node                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; search:sea|y.T3        ; search:sea|y.T3        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; search:sea|y.T1        ; search:sea|y.T1        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; search:sea|debug[6]    ; search:sea|debug[6]    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.239 ; search:sea|y.nop1      ; search:sea|y.nop2      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.243 ; search:sea|y.T1        ; search:sea|y.T2        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.395      ;
+; 0.247 ; search:sea|y.T3        ; search:sea|y.T1        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.399      ;
+; 0.258 ; search:sea|max[0]      ; search:sea|curr_max[0] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.410      ;
+; 0.264 ; search:sea|curr_mid[1] ; search:sea|result[1]   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.416      ;
+; 0.264 ; search:sea|curr_mid[3] ; search:sea|result[3]   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.416      ;
+; 0.265 ; search:sea|curr_mid[2] ; search:sea|result[2]   ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.417      ;
+; 0.270 ; search:sea|max[1]      ; search:sea|curr_max[1] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.422      ;
+; 0.295 ; search:sea|curr_max[1] ; search:sea|max[1]      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.447      ;
+; 0.297 ; search:sea|y.nop2      ; search:sea|y.T2        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.449      ;
+; 0.326 ; search:sea|y.T2        ; search:sea|y.nop1      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.478      ;
+; 0.355 ; search:sea|max[3]      ; search:sea|curr_max[3] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.508      ;
+; 0.363 ; search:sea|curr_max[0] ; search:sea|max[0]      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.374 ; search:sea|max[4]      ; search:sea|curr_max[4] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.527      ;
+; 0.375 ; search:sea|curr_max[4] ; search:sea|max[4]      ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 0.526      ;
+; 0.376 ; search:sea|curr_max[2] ; search:sea|max[2]      ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 0.527      ;
+; 0.381 ; search:sea|curr_max[3] ; search:sea|max[3]      ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 0.532      ;
+; 0.382 ; search:sea|max[2]      ; search:sea|curr_max[2] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.535      ;
+; 0.383 ; search:sea|curr_mid[0] ; search:sea|max[0]      ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 0.534      ;
+; 0.408 ; search:sea|curr_min[4] ; search:sea|debug[6]    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.560      ;
+; 0.411 ; search:sea|curr_min[0] ; search:sea|min[0]      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.563      ;
+; 0.412 ; search:sea|min[0]      ; search:sea|curr_min[0] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.564      ;
+; 0.432 ; search:sea|min[2]      ; search:sea|curr_min[2] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.585      ;
+; 0.467 ; search:sea|curr_mid[4] ; search:sea|min[4]      ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 0.618      ;
+; 0.506 ; search:sea|min[1]      ; search:sea|curr_min[1] ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.658      ;
+; 0.517 ; search:sea|min[3]      ; search:sea|curr_min[3] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.670      ;
+; 0.518 ; search:sea|min[4]      ; search:sea|curr_min[4] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.671      ;
+; 0.526 ; search:sea|curr_min[4] ; search:sea|min[4]      ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 0.677      ;
+; 0.527 ; search:sea|curr_min[3] ; search:sea|min[3]      ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 0.678      ;
+; 0.536 ; search:sea|curr_min[2] ; search:sea|min[2]      ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 0.687      ;
+; 0.539 ; search:sea|curr_max[4] ; search:sea|debug[6]    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.691      ;
+; 0.542 ; search:sea|y.T3        ; search:sea|debug[6]    ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.695      ;
+; 0.554 ; search:sea|curr_mid[4] ; search:sea|max[4]      ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 0.705      ;
+; 0.565 ; search:sea|curr_mid[2] ; search:sea|min[2]      ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 0.715      ;
+; 0.565 ; search:sea|curr_mid[1] ; search:sea|max[1]      ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 0.715      ;
+; 0.566 ; search:sea|curr_mid[1] ; search:sea|min[1]      ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 0.716      ;
+; 0.570 ; search:sea|curr_mid[2] ; search:sea|max[2]      ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 0.720      ;
+; 0.574 ; search:sea|curr_mid[0] ; search:sea|min[0]      ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 0.725      ;
+; 0.574 ; search:sea|curr_mid[4] ; search:sea|result[4]   ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.727      ;
+; 0.592 ; search:sea|max[4]      ; search:sea|curr_mid[4] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.745      ;
+; 0.592 ; search:sea|y.T2        ; search:sea|y.T3        ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.744      ;
+; 0.599 ; search:sea|curr_mid[3] ; search:sea|min[3]      ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 0.749      ;
+; 0.607 ; search:sea|curr_mid[0] ; search:sea|result[0]   ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.760      ;
+; 0.623 ; search:sea|max[3]      ; search:sea|curr_mid[4] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.776      ;
+; 0.664 ; search:sea|max[1]      ; search:sea|curr_mid[0] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.817      ;
+; 0.664 ; search:sea|curr_min[3] ; search:sea|debug[6]    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.816      ;
+; 0.669 ; search:sea|max[2]      ; search:sea|curr_mid[4] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.822      ;
+; 0.678 ; search:sea|min[4]      ; search:sea|curr_mid[4] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.831      ;
+; 0.688 ; search:sea|y.T3        ; search:sea|found       ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 0.842      ;
+; 0.688 ; search:sea|y.T3        ; search:sea|result[0]   ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 0.842      ;
+; 0.688 ; search:sea|y.T3        ; search:sea|result[1]   ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 0.842      ;
+; 0.688 ; search:sea|y.T3        ; search:sea|result[2]   ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 0.842      ;
+; 0.688 ; search:sea|y.T3        ; search:sea|result[3]   ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 0.842      ;
+; 0.688 ; search:sea|y.T3        ; search:sea|result[4]   ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 0.842      ;
+; 0.688 ; search:sea|curr_max[3] ; search:sea|debug[6]    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.840      ;
+; 0.694 ; search:sea|max[1]      ; search:sea|curr_mid[4] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.847      ;
+; 0.701 ; search:sea|curr_min[0] ; search:sea|debug[6]    ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.854      ;
+; 0.703 ; search:sea|curr_mid[2] ; search:sea|min[3]      ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 0.853      ;
+; 0.706 ; search:sea|curr_mid[1] ; search:sea|min[2]      ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 0.856      ;
+; 0.707 ; search:sea|curr_mid[0] ; search:sea|min[1]      ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 0.858      ;
+; 0.714 ; search:sea|max[3]      ; search:sea|curr_mid[2] ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 0.868      ;
+; 0.716 ; search:sea|max[4]      ; search:sea|curr_mid[3] ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 0.870      ;
+; 0.718 ; search:sea|max[0]      ; search:sea|curr_mid[4] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.871      ;
+; 0.721 ; search:sea|curr_mid[3] ; search:sea|max[3]      ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 0.871      ;
+; 0.725 ; search:sea|max[2]      ; search:sea|curr_mid[1] ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 0.879      ;
+; 0.733 ; search:sea|min[3]      ; search:sea|curr_mid[4] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.886      ;
+; 0.736 ; search:sea|curr_min[1] ; search:sea|debug[6]    ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.889      ;
+; 0.738 ; search:sea|curr_mid[2] ; search:sea|min[4]      ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 0.888      ;
+; 0.739 ; search:sea|curr_mid[3] ; search:sea|min[4]      ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 0.889      ;
+; 0.741 ; search:sea|curr_mid[1] ; search:sea|min[3]      ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 0.891      ;
+; 0.742 ; search:sea|curr_mid[0] ; search:sea|min[2]      ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 0.893      ;
+; 0.756 ; search:sea|min[2]      ; search:sea|curr_mid[4] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.909      ;
+; 0.766 ; search:sea|min[1]      ; search:sea|curr_mid[0] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.919      ;
+; 0.776 ; search:sea|curr_mid[1] ; search:sea|min[4]      ; clock_50     ; clock_50    ; 0.000        ; -0.002     ; 0.926      ;
+; 0.777 ; search:sea|curr_mid[0] ; search:sea|min[3]      ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 0.928      ;
+; 0.793 ; search:sea|max[0]      ; search:sea|curr_mid[0] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.946      ;
+; 0.794 ; search:sea|min[1]      ; search:sea|curr_mid[4] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.947      ;
+; 0.803 ; search:sea|y.T2        ; search:sea|min[4]      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; search:sea|y.T2        ; search:sea|min[3]      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; search:sea|y.T2        ; search:sea|min[2]      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; search:sea|y.T2        ; search:sea|min[1]      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.955      ;
+; 0.803 ; search:sea|y.T2        ; search:sea|min[0]      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.955      ;
+; 0.804 ; search:sea|min[4]      ; search:sea|curr_mid[3] ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 0.958      ;
+; 0.811 ; search:sea|curr_min[2] ; search:sea|debug[6]    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.963      ;
+; 0.812 ; search:sea|curr_mid[0] ; search:sea|min[4]      ; clock_50     ; clock_50    ; 0.000        ; -0.001     ; 0.963      ;
+; 0.814 ; search:sea|min[2]      ; search:sea|curr_mid[1] ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 0.968      ;
+; 0.822 ; search:sea|curr_max[2] ; search:sea|debug[6]    ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.974      ;
+; 0.822 ; search:sea|min[3]      ; search:sea|curr_mid[2] ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 0.976      ;
+; 0.826 ; search:sea|min[0]      ; search:sea|curr_mid[4] ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 0.979      ;
+; 0.840 ; search:sea|curr_min[1] ; search:sea|min[1]      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 0.992      ;
+; 0.852 ; search:sea|curr_max[0] ; search:sea|debug[6]    ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 1.005      ;
+; 0.852 ; search:sea|max[3]      ; search:sea|curr_mid[3] ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 1.006      ;
+; 0.855 ; search:sea|max[1]      ; search:sea|curr_mid[1] ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 1.009      ;
+; 0.861 ; search:sea|curr_max[1] ; search:sea|debug[6]    ; clock_50     ; clock_50    ; 0.000        ; 0.001      ; 1.014      ;
+; 0.863 ; search:sea|max[2]      ; search:sea|curr_mid[2] ; clock_50     ; clock_50    ; 0.000        ; 0.002      ; 1.017      ;
+; 0.879 ; search:sea|y.T2        ; search:sea|max[4]      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.031      ;
+; 0.879 ; search:sea|y.T2        ; search:sea|max[3]      ; clock_50     ; clock_50    ; 0.000        ; 0.000      ; 1.031      ;
++-------+------------------------+------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock_50'                                                                                                                                                                     ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                                                                                                     ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------------------------------------------------------------------------------------------+
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[0]                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[1]                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[2]                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[3]                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[4]                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[5]                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6]                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[6]                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|q_a[7]                          ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock_50 ; Fall       ; search:sea|memory_block:mem|altsyncram:altsyncram_component|altsyncram_tac1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock_50 ; Rise       ; clock_50                                                                                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_max[0]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_max[0]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_max[1]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_max[1]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_max[2]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_max[2]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_max[3]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_max[3]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_max[4]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_max[4]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_mid[0]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_mid[0]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_mid[1]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_mid[1]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_mid[2]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_mid[2]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_mid[3]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_mid[3]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_mid[4]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_mid[4]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_min[0]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_min[0]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_min[1]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_min[1]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_min[2]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_min[2]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_min[3]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_min[3]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|curr_min[4]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|curr_min[4]                                                                                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|debug[6]                                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|debug[6]                                                                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|found                                                                                                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|found                                                                                                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|max[0]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|max[0]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|max[1]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|max[1]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|max[2]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|max[2]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|max[3]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|max[3]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|max[4]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|max[4]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|min[0]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|min[0]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|min[1]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|min[1]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|min[2]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|min[2]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|min[3]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|min[3]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|min[4]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|min[4]                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|result[0]                                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|result[0]                                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|result[1]                                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|result[1]                                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|result[2]                                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|result[2]                                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|result[3]                                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|result[3]                                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|result[4]                                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|result[4]                                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|y.T1                                                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|y.T1                                                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|y.T2                                                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|y.T2                                                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|y.T3                                                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|y.T3                                                                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|y.nop1                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_50 ; Rise       ; search:sea|y.nop1                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_50 ; Rise       ; search:sea|y.nop2                                                                                                          ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; key[*]    ; clock_50   ; 2.656  ; 2.656  ; Rise       ; clock_50        ;
+;  key[0]   ; clock_50   ; 2.656  ; 2.656  ; Rise       ; clock_50        ;
+; sw[*]     ; clock_50   ; 1.111  ; 1.111  ; Rise       ; clock_50        ;
+;  sw[0]    ; clock_50   ; 0.694  ; 0.694  ; Rise       ; clock_50        ;
+;  sw[1]    ; clock_50   ; 1.017  ; 1.017  ; Rise       ; clock_50        ;
+;  sw[2]    ; clock_50   ; 0.756  ; 0.756  ; Rise       ; clock_50        ;
+;  sw[3]    ; clock_50   ; 1.111  ; 1.111  ; Rise       ; clock_50        ;
+;  sw[4]    ; clock_50   ; 0.751  ; 0.751  ; Rise       ; clock_50        ;
+;  sw[5]    ; clock_50   ; 0.782  ; 0.782  ; Rise       ; clock_50        ;
+;  sw[6]    ; clock_50   ; 0.482  ; 0.482  ; Rise       ; clock_50        ;
+;  sw[7]    ; clock_50   ; 0.834  ; 0.834  ; Rise       ; clock_50        ;
+;  sw[8]    ; clock_50   ; -0.014 ; -0.014 ; Rise       ; clock_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; key[*]    ; clock_50   ; -2.184 ; -2.184 ; Rise       ; clock_50        ;
+;  key[0]   ; clock_50   ; -2.184 ; -2.184 ; Rise       ; clock_50        ;
+; sw[*]     ; clock_50   ; 0.145  ; 0.145  ; Rise       ; clock_50        ;
+;  sw[0]    ; clock_50   ; -0.067 ; -0.067 ; Rise       ; clock_50        ;
+;  sw[1]    ; clock_50   ; -0.313 ; -0.313 ; Rise       ; clock_50        ;
+;  sw[2]    ; clock_50   ; -0.129 ; -0.129 ; Rise       ; clock_50        ;
+;  sw[3]    ; clock_50   ; -0.436 ; -0.436 ; Rise       ; clock_50        ;
+;  sw[4]    ; clock_50   ; -0.124 ; -0.124 ; Rise       ; clock_50        ;
+;  sw[5]    ; clock_50   ; -0.132 ; -0.132 ; Rise       ; clock_50        ;
+;  sw[6]    ; clock_50   ; 0.145  ; 0.145  ; Rise       ; clock_50        ;
+;  sw[7]    ; clock_50   ; -0.162 ; -0.162 ; Rise       ; clock_50        ;
+;  sw[8]    ; clock_50   ; 0.139  ; 0.139  ; Rise       ; clock_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ledg[*]   ; clock_50   ; 3.955 ; 3.955 ; Rise       ; clock_50        ;
+;  ledg[0]  ; clock_50   ; 3.917 ; 3.917 ; Rise       ; clock_50        ;
+;  ledg[7]  ; clock_50   ; 3.955 ; 3.955 ; Rise       ; clock_50        ;
+; ledr[*]   ; clock_50   ; 4.059 ; 4.059 ; Rise       ; clock_50        ;
+;  ledr[0]  ; clock_50   ; 4.053 ; 4.053 ; Rise       ; clock_50        ;
+;  ledr[1]  ; clock_50   ; 4.059 ; 4.059 ; Rise       ; clock_50        ;
+;  ledr[2]  ; clock_50   ; 3.920 ; 3.920 ; Rise       ; clock_50        ;
+;  ledr[3]  ; clock_50   ; 3.771 ; 3.771 ; Rise       ; clock_50        ;
+;  ledr[4]  ; clock_50   ; 4.001 ; 4.001 ; Rise       ; clock_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ledg[*]   ; clock_50   ; 3.917 ; 3.917 ; Rise       ; clock_50        ;
+;  ledg[0]  ; clock_50   ; 3.917 ; 3.917 ; Rise       ; clock_50        ;
+;  ledg[7]  ; clock_50   ; 3.955 ; 3.955 ; Rise       ; clock_50        ;
+; ledr[*]   ; clock_50   ; 3.771 ; 3.771 ; Rise       ; clock_50        ;
+;  ledr[0]  ; clock_50   ; 4.053 ; 4.053 ; Rise       ; clock_50        ;
+;  ledr[1]  ; clock_50   ; 4.059 ; 4.059 ; Rise       ; clock_50        ;
+;  ledr[2]  ; clock_50   ; 3.920 ; 3.920 ; Rise       ; clock_50        ;
+;  ledr[3]  ; clock_50   ; 3.771 ; 3.771 ; Rise       ; clock_50        ;
+;  ledr[4]  ; clock_50   ; 4.001 ; 4.001 ; Rise       ; clock_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.523   ; 0.215 ; N/A      ; N/A     ; -1.814              ;
+;  clock_50        ; -3.523   ; 0.215 ; N/A      ; N/A     ; -1.814              ;
+; Design-wide TNS  ; -101.165 ; 0.0   ; 0.0      ; 0.0     ; -94.009             ;
+;  clock_50        ; -101.165 ; 0.000 ; N/A      ; N/A     ; -94.009             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; key[*]    ; clock_50   ; 5.858 ; 5.858 ; Rise       ; clock_50        ;
+;  key[0]   ; clock_50   ; 5.858 ; 5.858 ; Rise       ; clock_50        ;
+; sw[*]     ; clock_50   ; 3.872 ; 3.872 ; Rise       ; clock_50        ;
+;  sw[0]    ; clock_50   ; 3.040 ; 3.040 ; Rise       ; clock_50        ;
+;  sw[1]    ; clock_50   ; 3.823 ; 3.823 ; Rise       ; clock_50        ;
+;  sw[2]    ; clock_50   ; 3.149 ; 3.149 ; Rise       ; clock_50        ;
+;  sw[3]    ; clock_50   ; 3.872 ; 3.872 ; Rise       ; clock_50        ;
+;  sw[4]    ; clock_50   ; 3.052 ; 3.052 ; Rise       ; clock_50        ;
+;  sw[5]    ; clock_50   ; 3.231 ; 3.231 ; Rise       ; clock_50        ;
+;  sw[6]    ; clock_50   ; 2.474 ; 2.474 ; Rise       ; clock_50        ;
+;  sw[7]    ; clock_50   ; 3.129 ; 3.129 ; Rise       ; clock_50        ;
+;  sw[8]    ; clock_50   ; 1.101 ; 1.101 ; Rise       ; clock_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; key[*]    ; clock_50   ; -2.184 ; -2.184 ; Rise       ; clock_50        ;
+;  key[0]   ; clock_50   ; -2.184 ; -2.184 ; Rise       ; clock_50        ;
+; sw[*]     ; clock_50   ; 0.145  ; 0.145  ; Rise       ; clock_50        ;
+;  sw[0]    ; clock_50   ; -0.067 ; -0.067 ; Rise       ; clock_50        ;
+;  sw[1]    ; clock_50   ; -0.313 ; -0.313 ; Rise       ; clock_50        ;
+;  sw[2]    ; clock_50   ; -0.129 ; -0.129 ; Rise       ; clock_50        ;
+;  sw[3]    ; clock_50   ; -0.436 ; -0.436 ; Rise       ; clock_50        ;
+;  sw[4]    ; clock_50   ; -0.124 ; -0.124 ; Rise       ; clock_50        ;
+;  sw[5]    ; clock_50   ; -0.132 ; -0.132 ; Rise       ; clock_50        ;
+;  sw[6]    ; clock_50   ; 0.145  ; 0.145  ; Rise       ; clock_50        ;
+;  sw[7]    ; clock_50   ; -0.162 ; -0.162 ; Rise       ; clock_50        ;
+;  sw[8]    ; clock_50   ; 0.139  ; 0.139  ; Rise       ; clock_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ledg[*]   ; clock_50   ; 7.443 ; 7.443 ; Rise       ; clock_50        ;
+;  ledg[0]  ; clock_50   ; 7.388 ; 7.388 ; Rise       ; clock_50        ;
+;  ledg[7]  ; clock_50   ; 7.443 ; 7.443 ; Rise       ; clock_50        ;
+; ledr[*]   ; clock_50   ; 7.750 ; 7.750 ; Rise       ; clock_50        ;
+;  ledr[0]  ; clock_50   ; 7.735 ; 7.735 ; Rise       ; clock_50        ;
+;  ledr[1]  ; clock_50   ; 7.750 ; 7.750 ; Rise       ; clock_50        ;
+;  ledr[2]  ; clock_50   ; 7.404 ; 7.404 ; Rise       ; clock_50        ;
+;  ledr[3]  ; clock_50   ; 7.030 ; 7.030 ; Rise       ; clock_50        ;
+;  ledr[4]  ; clock_50   ; 7.524 ; 7.524 ; Rise       ; clock_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ledg[*]   ; clock_50   ; 3.917 ; 3.917 ; Rise       ; clock_50        ;
+;  ledg[0]  ; clock_50   ; 3.917 ; 3.917 ; Rise       ; clock_50        ;
+;  ledg[7]  ; clock_50   ; 3.955 ; 3.955 ; Rise       ; clock_50        ;
+; ledr[*]   ; clock_50   ; 3.771 ; 3.771 ; Rise       ; clock_50        ;
+;  ledr[0]  ; clock_50   ; 4.053 ; 4.053 ; Rise       ; clock_50        ;
+;  ledr[1]  ; clock_50   ; 4.059 ; 4.059 ; Rise       ; clock_50        ;
+;  ledr[2]  ; clock_50   ; 3.920 ; 3.920 ; Rise       ; clock_50        ;
+;  ledr[3]  ; clock_50   ; 3.771 ; 3.771 ; Rise       ; clock_50        ;
+;  ledr[4]  ; clock_50   ; 4.001 ; 4.001 ; Rise       ; clock_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock_50   ; clock_50 ; 149      ; 176      ; 5        ; 40       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock_50   ; clock_50 ; 149      ; 176      ; 5        ; 40       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 136   ; 136  ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 7     ; 7    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Sun Oct 14 03:36:20 2018
+Info: Command: quartus_sta part2 -c part2
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'part2.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock_50 clock_50
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.523
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.523      -101.165 clock_50 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 clock_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.814
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.814       -94.009 clock_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.149
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.149       -24.551 clock_50 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clock_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.423
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.423       -75.378 clock_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4598 megabytes
+    Info: Processing ended: Sun Oct 14 03:36:28 2018
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,17 @@
+ieee library;
+use ieee.std_logic_1164.all;
+
+entity search is
+	port(A: in std_logic_vector(7 downto 0);
+		 start,Restart,clk: in std_logic;
+		 result: out std_logic_vector(4 downto 0);
+		 found: out std_logic);
+end search;
+
+architecture str of search is
+
+begin
+
+
+
+end str;
