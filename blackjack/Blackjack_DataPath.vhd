@@ -1,0 +1,83 @@
+----------------------------------------------------------------------------------
+-- Company: UNSW
+-- Engineer: Jorgen Peddersen
+-- 
+-- Create Date:    16:06:48 09/26/2006 
+-- Design Name:    Blackjack Player
+-- Module Name:    Blackjack Datapath - Structural 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity Blackjack_DataPath is
+  
+  port (
+    clk                       : in  std_logic;
+    rst                       : in  std_logic;
+    cardValue                 : in  std_logic_vector(3 downto 0);
+    score                     : out std_logic_vector(4 downto 0);
+    sel                       : in  std_logic;
+    enaLoad, enaAdd, enaScore : in  std_logic;
+    cmp11, cmp16, cmp21       : out std_logic);
+
+end Blackjack_DataPath;
+
+architecture Structural of Blackjack_DataPath is
+	signal data,currentScore: std_logic_vector(4 downto 0);
+begin  -- Structural
+	process(clk,rst,enaLoad,enaAdd,enaScore,cardValue)
+	begin 
+		if rst = '0' then
+			Score <= "00000";
+			data <= (others =>'0');
+			currentScore <= (others =>'0');
+		elsif clk'event and clk = '1' then
+				currentScore<="00000";
+				if enaLoad ='1' then
+					if sel = '0' then
+						currentScore <= "10110";
+					elsif cardValue >"1011" then
+						currentScore <= "01010";
+					elsif cardValue = "0001" then
+						currentScore <=(others=>'0');
+					else
+						currentScore <= '0' & cardValue;
+					end if;
+				end if;
+				if enaAdd ='1' then
+					if currentScore="10110" then
+						data <= data - "01010";
+					else
+						data <= currentScore + data;
+					end if;
+				end if;
+				if enaScore = '1' then
+					Score <= data;
+				end if;
+		end if;
+	end process;
+	
+	
+	
+	process(currentScore)
+	begin
+		cmp11<='0';
+		cmp16<='0';
+		cmp21<='0';
+		if currentScore = "01011" then
+			cmp11 <= '1';
+		end if;
+		if data > "10000" then
+			cmp16 <='1';
+		end if;
+		if data > "10101" then
+			cmp21 <='1';
+		end if;
+	end process;					
+
+  
+
+end Structural;
