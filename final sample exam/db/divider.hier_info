@@ -1,17 +1,18 @@
 |divider
-A[0] => Ain.DATAA
-A[1] => Ain.DATAA
-A[2] => Ain.DATAA
-A[3] => Ain.DATAA
-A[4] => Ain.DATAA
-A[5] => Ain.DATAA
-A[6] => Ain.DATAA
-A[7] => Ain.DATAA
-s => curr.DATAA
-s => Selector1.IN1
+A[0] => Ain.DATAB
+A[1] => Ain.DATAB
+A[2] => Ain.DATAB
+A[3] => Ain.DATAB
+A[4] => Ain.DATAB
+A[5] => Ain.DATAB
+A[6] => Ain.DATAB
+A[7] => Ain.DATAB
+s => Selector1.IN2
+s => Selector2.IN1
 s => Selector0.IN1
-s => curr.DATAA
-rst => curr~3.DATAIN
+rst => nex.Q1.OUTPUTSELECT
+rst => nex.Q2.OUTPUTSELECT
+rst => nex.Q3.OUTPUTSELECT
 clk => Ain[0].CLK
 clk => Ain[1].CLK
 clk => Ain[2].CLK
@@ -29,7 +30,7 @@ R[4] <= Ain[4].DB_MAX_OUTPUT_PORT_TYPE
 R[5] <= Ain[5].DB_MAX_OUTPUT_PORT_TYPE
 R[6] <= Ain[6].DB_MAX_OUTPUT_PORT_TYPE
 R[7] <= Ain[7].DB_MAX_OUTPUT_PORT_TYPE
-Done <= Done.DB_MAX_OUTPUT_PORT_TYPE
-Div3 <= Div3.DB_MAX_OUTPUT_PORT_TYPE
+Done <= Done$latch.DB_MAX_OUTPUT_PORT_TYPE
+Div3 <= Div3$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 

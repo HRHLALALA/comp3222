@@ -17,7 +17,6 @@
 # Loading work.divider_vlg_vec_tst
 # Loading work.divider
 # Loading cycloneii_ver.cycloneii_lcell_comb
-# Loading cycloneii_ver.cycloneii_lcell_ff
 # Loading cycloneii_ver.cycloneii_io
 # Loading cycloneii_ver.cycloneii_mux21
 # Loading cycloneii_ver.cycloneii_dffe
@@ -25,6 +24,7 @@
 # Loading cycloneii_ver.cycloneii_clkctrl
 # Loading cycloneii_ver.cycloneii_mux41
 # Loading cycloneii_ver.cycloneii_ena_reg
+# Loading cycloneii_ver.cycloneii_lcell_ff
 # Loading work.divider_vlg_sample_tst
 # Loading work.divider_vlg_check_tst
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE

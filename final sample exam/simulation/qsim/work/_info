@@ -4,22 +4,22 @@ K3
 cModel Technology
 Z0 dZ:\comp3222\final sample exam\simulation\qsim
 vdivider
-Z1 IL[ZoXMlURD9Uljfh7m@6>3
-Z2 V`^[3<5e5H9EeU@A5F>IDn2
-Z3 dZ:\comp3222\final sample exam\simulation\qsim
-Z4 w1542197205
-Z5 8divider.vo
-Z6 Fdivider.vo
+Z1 !s100 oaPF_i?:N:heEPKG]TN6@3
+Z2 Ifl>4X5R9]N7^jK]7Cm=J01
+Z3 V`^[3<5e5H9EeU@A5F>IDn2
+Z4 dC:\Users\HRHLALALA\Documents\GitHub\comp3222\final sample exam\simulation\qsim
+Z5 w1542375908
+Z6 8divider.vo
+Z7 Fdivider.vo
 L0 31
-Z7 OV;L;10.1d;51
+Z8 OV;L;10.1d;51
 r1
 31
-Z8 !s90 -work|work|divider.vo|
-Z9 o-work work -O0
+Z9 !s90 -work|work|divider.vo|
+Z10 o-work work -O0
 !i10b 1
-Z10 !s100 1DHfSQXXzbJoI4Q[F`0]32
 !s85 0
-Z11 !s108 1542197207.205000
+Z11 !s108 1542375908.844000
 Z12 !s107 divider.vo|
 !s101 -O0
 vdivider_vlg_check_tst
@@ -27,31 +27,31 @@ vdivider_vlg_check_tst
 Z13 !s100 :[`czKf2coFV3gkC:<[_e3
 Z14 IBO=EcY<e^AX4aS2HNjHRh3
 Z15 Vd0@6O2UldV;RNDeKf14U^3
-R3
-Z16 w1542197195
+R4
+Z16 w1542375897
 Z17 8divider.vt
 Z18 Fdivider.vt
 L0 63
-R7
+R8
 r1
 !s85 0
 31
-Z19 !s108 1542197207.626000
+Z19 !s108 1542375908.952000
 Z20 !s107 divider.vt|
 Z21 !s90 -work|work|divider.vt|
 !s101 -O0
-R9
+R10
 vdivider_vlg_sample_tst
 !i10b 1
 Z22 !s100 2I::V;P>3APH]X9F@8_Rk0
 Z23 IA_a:L<0mjdom>I`EA`[oN0
 Z24 VhQ@@TL6a;;NXlBBP60l1B2
-R3
+R4
 R16
 R17
 R18
 L0 29
-R7
+R8
 r1
 !s85 0
 31
@@ -59,18 +59,18 @@ R19
 R20
 R21
 !s101 -O0
-R9
+R10
 vdivider_vlg_vec_tst
 !i10b 1
-Z25 !s100 ^QDFZlJLJAC`UR>i:f3Om2
-Z26 I@f`]B`AADT=J[BI1`;j=I1
-Z27 VY`VoiPkF^h6O1W?9ZUkcP2
-R3
+!s100 @iZXA?3dKR3P8zjBa0EV83
+IMVaF>gW=H6;z?Pml219P91
+Z25 VY`VoiPkF^h6O1W?9ZUkcP2
+R4
 R16
 R17
 R18
-Z28 L0 337
-R7
+Z26 L0 337
+R8
 r1
 !s85 0
 31
@@ -78,4 +78,4 @@ R19
 R20
 R21
 !s101 -O0
-R9
+R10
