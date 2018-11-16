@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use numeric_std.all;
+
+entity exam is
+	port(A: in std_logic_vector(7 downto 0);
+		  s: in std_logic;
+		  rst: in std_logic;
+		  clk: in std_logic;
+		  R: out std_logic_vector( 7 downto 0);
+		  Done: out std_logic;
+		  Div3: std_logic);
+end entity;
+
+architecture beh of exam is
+	type state is (Q1,Q2,Q3)
+begin 

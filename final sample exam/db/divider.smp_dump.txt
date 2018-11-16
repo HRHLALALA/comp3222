@@ -1,0 +1,6 @@
+
+State Machine - |divider|curr
+Name curr.Q3 curr.Q2 curr.Q1 
+curr.Q1 0 0 0 
+curr.Q2 0 1 1 
+curr.Q3 1 0 1 

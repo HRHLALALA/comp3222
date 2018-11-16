@@ -1,0 +1,14 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity exam is 
+	port ( sw: in std_logic_vector(9,7 downto 0);
+			 key:in std_logic_vector(3 downto 0);
+			 ledr: out std_logic_vector(7 downto 0);
+			 ledg: out std_logic_vector(7,0));
+end entity;
+
+architecture bav of exam is 
+begin 
+
+end bav;

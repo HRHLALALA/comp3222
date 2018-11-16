@@ -1,0 +1,35 @@
+|divider
+A[0] => Ain.DATAA
+A[1] => Ain.DATAA
+A[2] => Ain.DATAA
+A[3] => Ain.DATAA
+A[4] => Ain.DATAA
+A[5] => Ain.DATAA
+A[6] => Ain.DATAA
+A[7] => Ain.DATAA
+s => curr.DATAA
+s => Selector1.IN1
+s => Selector0.IN1
+s => curr.DATAA
+rst => curr~3.DATAIN
+clk => Ain[0].CLK
+clk => Ain[1].CLK
+clk => Ain[2].CLK
+clk => Ain[3].CLK
+clk => Ain[4].CLK
+clk => Ain[5].CLK
+clk => Ain[6].CLK
+clk => Ain[7].CLK
+clk => curr~1.DATAIN
+R[0] <= Ain[0].DB_MAX_OUTPUT_PORT_TYPE
+R[1] <= Ain[1].DB_MAX_OUTPUT_PORT_TYPE
+R[2] <= Ain[2].DB_MAX_OUTPUT_PORT_TYPE
+R[3] <= Ain[3].DB_MAX_OUTPUT_PORT_TYPE
+R[4] <= Ain[4].DB_MAX_OUTPUT_PORT_TYPE
+R[5] <= Ain[5].DB_MAX_OUTPUT_PORT_TYPE
+R[6] <= Ain[6].DB_MAX_OUTPUT_PORT_TYPE
+R[7] <= Ain[7].DB_MAX_OUTPUT_PORT_TYPE
+Done <= Done.DB_MAX_OUTPUT_PORT_TYPE
+Div3 <= Div3.DB_MAX_OUTPUT_PORT_TYPE
+
+
