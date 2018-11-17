@@ -53,7 +53,7 @@ begin
 		end if;
 	end process;
 	
-	process(curr,Ain)
+	process(nex,Ain)
 	begin
 		ena <= '0';
 		z <= '0';

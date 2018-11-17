@@ -3,7 +3,7 @@ $comment
 		vcd file divider.msim.vcd -direction
 $end
 $date
-	Sat Nov 17 00:45:09 2018
+	Sat Nov 17 13:45:43 2018
 $end
 $version
 	ModelSim Version 10.1d

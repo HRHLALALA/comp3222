@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Nov 16 23:31:10 2018
+Analysis & Synthesis Status : Successful - Sat Nov 17 13:57:22 2018
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : divider
 Top-level Entity Name : divider
 Family : Cyclone II
-Total logic elements : 21
-    Total combinational functions : 21
+Total logic elements : 44
+    Total combinational functions : 44
     Dedicated logic registers : 11
 Total registers : 11
 Total pins : 21
