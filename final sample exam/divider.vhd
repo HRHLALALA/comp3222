@@ -15,8 +15,8 @@ end entity;
 architecture beh of divider is
 	type state is (Q1,Q2,Q3);
 	signal curr,nex: state;
-	signal Ain,Ain1: std_logic_vector(7 downto 0);
-	signal ena,z,enSub: std_logic;
+	signal Ain,Ain1,Ain3: std_logic_vector(7 downto 0);
+	signal ena,z,enSub,less3: std_logic;
 begin 
 	process(clk,curr,z,s)
 	begin
@@ -25,7 +25,7 @@ begin
 		end if;
 	end process;
 	
-	process(curr,z,s,rst)
+	process(curr,z,s,rst,less3)
 	begin
 		if rst = '0' then
 			nex <= Q1;
@@ -33,12 +33,16 @@ begin
 			case curr is
 				when Q1 =>
 					if s = '1' then 
-						nex <= Q2;
+						if less3 = '1' then
+							nex <= Q3;
+						else
+							nex <= Q2;
+						end if;
 					else
 						nex <= Q1;
 					end if;
 				when Q2 =>
-					if z = '0' then
+					if less3 = '0' then
 						nex <= Q2;
 					else
 						nex <= Q3;
@@ -56,19 +60,14 @@ begin
 	process(nex,Ain)
 	begin
 		ena <= '0';
-		z <= '0';
 		enSub <= '0';
-		case curr is
+		done <= '0';
+		div3 <='0';
+		case nex is
 			when Q1 =>
 				enA <= '1';
-				done <= '0';
-				div3 <='0';
 			when Q2 =>
-				if Ain >= "00000011" then
-					enSub <= '1';
-				else
-					z <= '1';
-				end if;
+				enSub <= '1';
 			when Q3=>
 				if Ain = "00000000" then
 					div3 <= '1';
@@ -77,15 +76,26 @@ begin
 		end case;
 	end process;
 		
-	process(clk,ena,enSub)
+	process(clk,ena,enSub,s)
 	begin
 		if clk'event and clk = '1' then 
 			if ena = '1' then
 				Ain <= A;
 			elsif enSub = '1' then
-				Ain <= Ain - "00000011";
+				Ain <= Ain1;
 			end if;
 		end if;
 	end process;
+	
+	process(Ain)
+	begin
+		if Ain >= "00000011" then
+			less3 <= '0';
+		else
+			less3 <= '1';
+		end if;
+	end process;
+	
+	Ain1 <= Ain - "00000011";
 	R <= Ain;
 end beh;

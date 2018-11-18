@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/17/2018 13:51:39"
+// Generated on "11/19/2018 00:08:16"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    divider
 // 
@@ -330,7 +330,7 @@ if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
 	$display ("Simulation passed !");
-$stop;
+$finish;
 end 
 endmodule
 
@@ -433,6 +433,7 @@ begin
 	s = #5000 1'b1;
 	s = #2000 1'b0;
 	s = #4000 1'b1;
+	s = #3000 1'b0;
 end 
 
 divider_vlg_sample_tst tb_sample (

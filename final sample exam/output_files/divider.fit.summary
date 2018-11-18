@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sat Nov 17 13:57:48 2018
+Fitter Status : Successful - Mon Nov 19 00:06:53 2018
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : divider
 Top-level Entity Name : divider
 Family : Cyclone II
 Device : EP2C20F484C7
 Timing Models : Final
-Total logic elements : 44 / 18,752 ( < 1 % )
-    Total combinational functions : 44 / 18,752 ( < 1 % )
-    Dedicated logic registers : 11 / 18,752 ( < 1 % )
-Total registers : 11
+Total logic elements : 22 / 18,752 ( < 1 % )
+    Total combinational functions : 22 / 18,752 ( < 1 % )
+    Dedicated logic registers : 10 / 18,752 ( < 1 % )
+Total registers : 10
 Total pins : 21 / 315 ( 7 % )
 Total virtual pins : 0
 Total memory bits : 0 / 239,616 ( 0 % )

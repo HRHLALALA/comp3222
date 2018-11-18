@@ -322,17 +322,7 @@ SIGNAL("divider_vlg_vec_tst|i1|devoe")
 	PARENT = "";
 }
 
-SIGNAL("divider_vlg_vec_tst|i1|nex.Q2~0_combout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("divider_vlg_vec_tst|i1|nex.Q3~0_combout")
+SIGNAL("divider_vlg_vec_tst|i1|s~combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -372,16 +362,6 @@ SIGNAL("divider_vlg_vec_tst|i1|Ain[0]~8_combout")
 	PARENT = "";
 }
 
-SIGNAL("divider_vlg_vec_tst|i1|s~combout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
 SIGNAL("divider_vlg_vec_tst|i1|rst~combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -392,7 +372,7 @@ SIGNAL("divider_vlg_vec_tst|i1|rst~combout")
 	PARENT = "";
 }
 
-SIGNAL("divider_vlg_vec_tst|i1|nex.Q1~0_combout")
+SIGNAL("divider_vlg_vec_tst|i1|curr.Q1~regout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -402,7 +382,7 @@ SIGNAL("divider_vlg_vec_tst|i1|nex.Q1~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("divider_vlg_vec_tst|i1|curr.Q1~regout")
+SIGNAL("divider_vlg_vec_tst|i1|Selector1~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -423,6 +403,26 @@ SIGNAL("divider_vlg_vec_tst|i1|Ain[0]~9")
 }
 
 SIGNAL("divider_vlg_vec_tst|i1|Ain[1]~11_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("divider_vlg_vec_tst|i1|Ain[0]~10_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("divider_vlg_vec_tst|i1|LessThan0~4_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -502,7 +502,57 @@ SIGNAL("divider_vlg_vec_tst|i1|Ain[5]~19_combout")
 	PARENT = "";
 }
 
-SIGNAL("divider_vlg_vec_tst|i1|Selector3~0_combout")
+SIGNAL("divider_vlg_vec_tst|i1|Div3~0_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("divider_vlg_vec_tst|i1|Selector1~1_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("divider_vlg_vec_tst|i1|nex.Q2~0_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("divider_vlg_vec_tst|i1|curr.Q2~regout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("divider_vlg_vec_tst|i1|nex.Q1~0_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("divider_vlg_vec_tst|i1|Ain[3]~15_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -552,66 +602,6 @@ SIGNAL("divider_vlg_vec_tst|i1|Ain[7]~23_combout")
 	PARENT = "";
 }
 
-SIGNAL("divider_vlg_vec_tst|i1|Selector3~1_combout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("divider_vlg_vec_tst|i1|LessThan0~0_combout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("divider_vlg_vec_tst|i1|nex.Q2~1_combout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("divider_vlg_vec_tst|i1|curr.Q2~regout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("divider_vlg_vec_tst|i1|Ain[0]~10_combout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("divider_vlg_vec_tst|i1|Ain[3]~15_combout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
 SIGNAL("divider_vlg_vec_tst|i1|nex.Q3~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -622,7 +612,7 @@ SIGNAL("divider_vlg_vec_tst|i1|nex.Q3~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("divider_vlg_vec_tst|i1|curr.Q3~regout")
+SIGNAL("divider_vlg_vec_tst|i1|Div3~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -632,7 +622,7 @@ SIGNAL("divider_vlg_vec_tst|i1|curr.Q3~regout")
 	PARENT = "";
 }
 
-SIGNAL("divider_vlg_vec_tst|i1|Done$latch~combout")
+SIGNAL("divider_vlg_vec_tst|i1|LessThan0~5_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -642,7 +632,7 @@ SIGNAL("divider_vlg_vec_tst|i1|Done$latch~combout")
 	PARENT = "";
 }
 
-SIGNAL("divider_vlg_vec_tst|i1|Selector3~2_combout")
+SIGNAL("divider_vlg_vec_tst|i1|nex.Q3~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -652,7 +642,7 @@ SIGNAL("divider_vlg_vec_tst|i1|Selector3~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("divider_vlg_vec_tst|i1|Selector3~3_combout")
+SIGNAL("divider_vlg_vec_tst|i1|nex.Q3~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -662,7 +652,17 @@ SIGNAL("divider_vlg_vec_tst|i1|Selector3~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("divider_vlg_vec_tst|i1|Div3$latch~combout")
+SIGNAL("divider_vlg_vec_tst|i1|Div3~2_combout")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("divider_vlg_vec_tst|i1|Div3~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -997,7 +997,8 @@ TRANSITION_LIST("divider_vlg_vec_tst|s")
 		LEVEL 0 FOR 5.0;
 		LEVEL 1 FOR 2.0;
 		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 4.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 1.0;
 	}
 }
 
@@ -1006,10 +1007,11 @@ TRANSITION_LIST("divider_vlg_vec_tst|Div3")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 7.5;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 17.0;
+		LEVEL 0 FOR 5.5;
 		LEVEL 1 FOR 2.5;
+		LEVEL 0 FOR 16.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 1.0;
 	}
 }
 
@@ -1018,14 +1020,15 @@ TRANSITION_LIST("divider_vlg_vec_tst|Done")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 7.5;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 6.0;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 5.0;
+		LEVEL 0 FOR 5.5;
 		LEVEL 1 FOR 2.5;
+		LEVEL 0 FOR 4.5;
+		LEVEL 1 FOR 1.0;
+		LEVEL 0 FOR 4.5;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 1.0;
 	}
 }
 
@@ -1071,8 +1074,10 @@ TRANSITION_LIST("divider_vlg_vec_tst|R[3]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 9.5;
+		LEVEL 1 FOR 1.0;
+		LEVEL 0 FOR 4.0;
 		LEVEL 1 FOR 2.0;
-		LEVEL 0 FOR 16.5;
+		LEVEL 0 FOR 11.5;
 	}
 }
 
@@ -1082,10 +1087,12 @@ TRANSITION_LIST("divider_vlg_vec_tst|R[2]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 3.5;
+		LEVEL 1 FOR 1.0;
+		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 1.0;
+		LEVEL 0 FOR 1.0;
 		LEVEL 1 FOR 2.0;
-		LEVEL 0 FOR 6.0;
-		LEVEL 1 FOR 2.0;
-		LEVEL 0 FOR 14.5;
+		LEVEL 0 FOR 15.5;
 	}
 }
 
@@ -1095,11 +1102,11 @@ TRANSITION_LIST("divider_vlg_vec_tst|R[1]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 3.5;
-		LEVEL 1 FOR 3.0;
+		LEVEL 1 FOR 2.0;
 		LEVEL 0 FOR 3.0;
 		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 6.0;
+		LEVEL 0 FOR 3.0;
+		LEVEL 1 FOR 8.0;
 		LEVEL 0 FOR 5.5;
 	}
 }
@@ -1109,13 +1116,13 @@ TRANSITION_LIST("divider_vlg_vec_tst|R[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 5.5;
+		LEVEL 0 FOR 4.5;
 		LEVEL 1 FOR 1.0;
 		LEVEL 0 FOR 5.0;
 		LEVEL 1 FOR 1.0;
 		LEVEL 0 FOR 1.0;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 11.5;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 13.5;
 	}
 }
 
@@ -1237,34 +1244,20 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|devoe")
 	}
 }
 
-TRANSITION_LIST("divider_vlg_vec_tst|i1|nex.Q2~0_combout")
+TRANSITION_LIST("divider_vlg_vec_tst|i1|s~combout")
 {
 	NODE
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 0.5;
-		LEVEL 0 FOR 5.5;
-		LEVEL 1 FOR 0.5;
-		LEVEL 0 FOR 7.5;
-		LEVEL 1 FOR 0.5;
-		LEVEL 0 FOR 5.5;
-		LEVEL 1 FOR 0.5;
-		LEVEL 0 FOR 3.5;
-	}
-}
-
-TRANSITION_LIST("divider_vlg_vec_tst|i1|nex.Q3~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 7.5;
-		LEVEL 1 FOR 0.5;
-		LEVEL 0 FOR 11.5;
-		LEVEL 1 FOR 0.5;
-		LEVEL 0 FOR 5.5;
-		LEVEL 1 FOR 2.5;
+		LEVEL 1 FOR 4.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 1.0;
 	}
 }
 
@@ -1401,29 +1394,13 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[0]~8_combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 5.5;
+		LEVEL 1 FOR 4.5;
 		LEVEL 0 FOR 1.0;
 		LEVEL 1 FOR 5.0;
 		LEVEL 0 FOR 1.0;
 		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 3.0;
-		LEVEL 1 FOR 11.5;
-	}
-}
-
-TRANSITION_LIST("divider_vlg_vec_tst|i1|s~combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 4.0;
 		LEVEL 0 FOR 2.0;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 5.0;
-		LEVEL 1 FOR 2.0;
-		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 4.0;
+		LEVEL 1 FOR 13.5;
 	}
 }
 
@@ -1438,22 +1415,6 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|rst~combout")
 	}
 }
 
-TRANSITION_LIST("divider_vlg_vec_tst|i1|nex.Q1~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 4.0;
-		LEVEL 0 FOR 2.0;
-		LEVEL 1 FOR 4.5;
-		LEVEL 0 FOR 3.5;
-		LEVEL 1 FOR 2.0;
-		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 4.0;
-	}
-}
-
 TRANSITION_LIST("divider_vlg_vec_tst|i1|curr.Q1~regout")
 {
 	NODE
@@ -1462,11 +1423,29 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|curr.Q1~regout")
 		LEVEL 0 FOR 4.5;
 		LEVEL 1 FOR 4.0;
 		LEVEL 0 FOR 2.0;
-		LEVEL 1 FOR 5.0;
-		LEVEL 0 FOR 3.0;
+		LEVEL 1 FOR 4.0;
+		LEVEL 0 FOR 4.0;
 		LEVEL 1 FOR 2.0;
 		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 0.5;
+	}
+}
+
+TRANSITION_LIST("divider_vlg_vec_tst|i1|Selector1~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 2.5;
+		LEVEL 0 FOR 3.5;
 		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 4.5;
+		LEVEL 1 FOR 0.5;
+		LEVEL 0 FOR 5.5;
+		LEVEL 1 FOR 0.5;
+		LEVEL 0 FOR 3.5;
 	}
 }
 
@@ -1475,13 +1454,13 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[0]~9")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 5.5;
+		LEVEL 0 FOR 4.5;
 		LEVEL 1 FOR 1.0;
 		LEVEL 0 FOR 5.0;
 		LEVEL 1 FOR 1.0;
 		LEVEL 0 FOR 1.0;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 11.5;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 13.5;
 	}
 }
 
@@ -1491,12 +1470,42 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[1]~11_combout")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 3.5;
-		LEVEL 1 FOR 2.0;
+		LEVEL 1 FOR 1.0;
 		LEVEL 0 FOR 4.0;
 		LEVEL 1 FOR 2.0;
 		LEVEL 0 FOR 2.0;
-		LEVEL 1 FOR 9.0;
+		LEVEL 1 FOR 10.0;
 		LEVEL 0 FOR 5.5;
+	}
+}
+
+TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[0]~10_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 5.5;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 4.5;
+		LEVEL 0 FOR 1.0;
+		LEVEL 1 FOR 4.5;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 4.0;
+		LEVEL 0 FOR 3.0;
+		LEVEL 1 FOR 1.0;
+	}
+}
+
+TRANSITION_LIST("divider_vlg_vec_tst|i1|LessThan0~4_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 4.5;
+		LEVEL 1 FOR 1.0;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 1.0;
+		LEVEL 0 FOR 16.5;
 	}
 }
 
@@ -1505,11 +1514,11 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[1]~12")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 5.5;
+		LEVEL 1 FOR 4.5;
 		LEVEL 0 FOR 1.0;
 		LEVEL 1 FOR 5.0;
 		LEVEL 0 FOR 1.0;
-		LEVEL 1 FOR 15.5;
+		LEVEL 1 FOR 16.5;
 	}
 }
 
@@ -1519,10 +1528,12 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[2]~13_combout")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 3.5;
-		LEVEL 0 FOR 3.0;
-		LEVEL 1 FOR 6.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 3.0;
 		LEVEL 0 FOR 1.0;
-		LEVEL 1 FOR 14.5;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 1.0;
+		LEVEL 1 FOR 15.5;
 	}
 }
 
@@ -1532,10 +1543,12 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[2]~14")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 3.5;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 5.0;
 		LEVEL 1 FOR 2.0;
-		LEVEL 0 FOR 14.5;
+		LEVEL 0 FOR 3.0;
+		LEVEL 1 FOR 1.0;
+		LEVEL 0 FOR 1.0;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 15.5;
 	}
 }
 
@@ -1545,10 +1558,12 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[3]~16")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 3.5;
-		LEVEL 0 FOR 3.0;
+		LEVEL 0 FOR 2.0;
 		LEVEL 1 FOR 3.0;
 		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 14.5;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 11.5;
 	}
 }
 
@@ -1558,10 +1573,12 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[4]~17_combout")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 3.5;
-		LEVEL 0 FOR 3.0;
+		LEVEL 0 FOR 2.0;
 		LEVEL 1 FOR 3.0;
 		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 14.5;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 11.5;
 	}
 }
 
@@ -1571,10 +1588,12 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[4]~18")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 3.5;
-		LEVEL 1 FOR 3.0;
+		LEVEL 1 FOR 2.0;
 		LEVEL 0 FOR 3.0;
 		LEVEL 1 FOR 4.0;
-		LEVEL 0 FOR 14.5;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 11.5;
 	}
 }
 
@@ -1584,114 +1603,53 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[5]~19_combout")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 3.5;
-		LEVEL 0 FOR 3.0;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 14.5;
-	}
-}
-
-TRANSITION_LIST("divider_vlg_vec_tst|i1|Selector3~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 3.5;
 		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 11.5;
+	}
+}
+
+TRANSITION_LIST("divider_vlg_vec_tst|i1|Div3~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 1.0;
 		LEVEL 1 FOR 4.0;
 		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 14.5;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 11.5;
 	}
 }
 
-TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[5]~20")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 3.5;
-		LEVEL 0 FOR 3.0;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 14.5;
-	}
-}
-
-TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[6]~21_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 3.5;
-		LEVEL 0 FOR 3.0;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 14.5;
-	}
-}
-
-TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[6]~22")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 3.5;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 3.0;
-		LEVEL 1 FOR 4.0;
-		LEVEL 0 FOR 14.5;
-	}
-}
-
-TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[7]~23_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 3.5;
-		LEVEL 0 FOR 3.0;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 14.5;
-	}
-}
-
-TRANSITION_LIST("divider_vlg_vec_tst|i1|Selector3~1_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 28.0;
-	}
-}
-
-TRANSITION_LIST("divider_vlg_vec_tst|i1|LessThan0~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 3.5;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 3.0;
-		LEVEL 1 FOR 4.0;
-		LEVEL 0 FOR 14.5;
-	}
-}
-
-TRANSITION_LIST("divider_vlg_vec_tst|i1|nex.Q2~1_combout")
+TRANSITION_LIST("divider_vlg_vec_tst|i1|Selector1~1_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 2.5;
-		LEVEL 0 FOR 3.5;
-		LEVEL 1 FOR 3.5;
+		LEVEL 1 FOR 1.5;
 		LEVEL 0 FOR 4.5;
-		LEVEL 1 FOR 0.5;
-		LEVEL 0 FOR 5.5;
-		LEVEL 1 FOR 0.5;
-		LEVEL 0 FOR 3.5;
+		LEVEL 1 FOR 2.5;
+		LEVEL 0 FOR 15.5;
+	}
+}
+
+TRANSITION_LIST("divider_vlg_vec_tst|i1|nex.Q2~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 1.5;
+		LEVEL 0 FOR 4.5;
+		LEVEL 1 FOR 2.5;
+		LEVEL 0 FOR 15.5;
 	}
 }
 
@@ -1701,30 +1659,27 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|curr.Q2~regout")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 4.5;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 3.0;
-		LEVEL 1 FOR 4.0;
+		LEVEL 1 FOR 2.0;
 		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 5.0;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 14.5;
 	}
 }
 
-TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[0]~10_combout")
+TRANSITION_LIST("divider_vlg_vec_tst|i1|nex.Q1~0_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 6.5;
-		LEVEL 0 FOR 2.0;
-		LEVEL 1 FOR 5.0;
-		LEVEL 0 FOR 2.0;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 2.0;
+		LEVEL 0 FOR 4.0;
 		LEVEL 1 FOR 4.0;
-		LEVEL 0 FOR 3.5;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 4.5;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 1.0;
 	}
 }
 
@@ -1734,10 +1689,72 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[3]~15_combout")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 3.5;
-		LEVEL 0 FOR 3.0;
+		LEVEL 0 FOR 2.0;
 		LEVEL 1 FOR 3.0;
 		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 14.5;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 11.5;
+	}
+}
+
+TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[5]~20")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 11.5;
+	}
+}
+
+TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[6]~21_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 11.5;
+	}
+}
+
+TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[6]~22")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 3.5;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 3.0;
+		LEVEL 1 FOR 4.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 11.5;
+	}
+}
+
+TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[7]~23_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 11.5;
 	}
 }
 
@@ -1746,87 +1763,97 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|nex.Q3~1_combout")
 	NODE
 	{
 		REPEAT = 1;
+		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 4.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 4.5;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 1.0;
+	}
+}
+
+TRANSITION_LIST("divider_vlg_vec_tst|i1|Div3~1_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 28.0;
+	}
+}
+
+TRANSITION_LIST("divider_vlg_vec_tst|i1|LessThan0~5_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 3.5;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 3.0;
+		LEVEL 1 FOR 4.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 11.5;
+	}
+}
+
+TRANSITION_LIST("divider_vlg_vec_tst|i1|nex.Q3~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
 		LEVEL 0 FOR 6.5;
 		LEVEL 1 FOR 1.5;
-		LEVEL 0 FOR 5.5;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 4.0;
+		LEVEL 0 FOR 10.5;
 		LEVEL 1 FOR 1.5;
 		LEVEL 0 FOR 4.5;
-		LEVEL 1 FOR 3.5;
-	}
-}
-
-TRANSITION_LIST("divider_vlg_vec_tst|i1|curr.Q3~regout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 7.5;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 6.0;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 5.0;
 		LEVEL 1 FOR 2.5;
-	}
-}
-
-TRANSITION_LIST("divider_vlg_vec_tst|i1|Done$latch~combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 7.5;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 6.0;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 5.0;
-		LEVEL 1 FOR 2.5;
-	}
-}
-
-TRANSITION_LIST("divider_vlg_vec_tst|i1|Selector3~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 7.5;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 17.0;
-		LEVEL 1 FOR 2.5;
-	}
-}
-
-TRANSITION_LIST("divider_vlg_vec_tst|i1|Selector3~3_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 4.5;
-		LEVEL 0 FOR 3.0;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 5.0;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 2.0;
-		LEVEL 1 FOR 4.0;
 		LEVEL 0 FOR 1.0;
-		LEVEL 1 FOR 2.5;
 	}
 }
 
-TRANSITION_LIST("divider_vlg_vec_tst|i1|Div3$latch~combout")
+TRANSITION_LIST("divider_vlg_vec_tst|i1|nex.Q3~2_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 7.5;
-		LEVEL 1 FOR 1.0;
-		LEVEL 0 FOR 17.0;
+		LEVEL 0 FOR 5.5;
 		LEVEL 1 FOR 2.5;
+		LEVEL 0 FOR 4.5;
+		LEVEL 1 FOR 1.0;
+		LEVEL 0 FOR 4.5;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 1.0;
+	}
+}
+
+TRANSITION_LIST("divider_vlg_vec_tst|i1|Div3~2_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 14.0;
+		LEVEL 1 FOR 5.5;
+	}
+}
+
+TRANSITION_LIST("divider_vlg_vec_tst|i1|Div3~3_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 5.5;
+		LEVEL 1 FOR 2.5;
+		LEVEL 0 FOR 16.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 1.0;
 	}
 }
 
@@ -1872,8 +1899,10 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[3]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 9.5;
+		LEVEL 1 FOR 1.0;
+		LEVEL 0 FOR 4.0;
 		LEVEL 1 FOR 2.0;
-		LEVEL 0 FOR 16.5;
+		LEVEL 0 FOR 11.5;
 	}
 }
 
@@ -1883,10 +1912,12 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[2]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 3.5;
+		LEVEL 1 FOR 1.0;
+		LEVEL 0 FOR 4.0;
+		LEVEL 1 FOR 1.0;
+		LEVEL 0 FOR 1.0;
 		LEVEL 1 FOR 2.0;
-		LEVEL 0 FOR 6.0;
-		LEVEL 1 FOR 2.0;
-		LEVEL 0 FOR 14.5;
+		LEVEL 0 FOR 15.5;
 	}
 }
 
@@ -1896,11 +1927,11 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[1]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 3.5;
-		LEVEL 1 FOR 3.0;
+		LEVEL 1 FOR 2.0;
 		LEVEL 0 FOR 3.0;
 		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 4.0;
-		LEVEL 1 FOR 6.0;
+		LEVEL 0 FOR 3.0;
+		LEVEL 1 FOR 8.0;
 		LEVEL 0 FOR 5.5;
 	}
 }
@@ -1910,13 +1941,13 @@ TRANSITION_LIST("divider_vlg_vec_tst|i1|Ain[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 5.5;
+		LEVEL 0 FOR 4.5;
 		LEVEL 1 FOR 1.0;
 		LEVEL 0 FOR 5.0;
 		LEVEL 1 FOR 1.0;
 		LEVEL 0 FOR 1.0;
-		LEVEL 1 FOR 3.0;
-		LEVEL 0 FOR 11.5;
+		LEVEL 1 FOR 2.0;
+		LEVEL 0 FOR 13.5;
 	}
 }
 
@@ -2270,7 +2301,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|nex.Q2~0_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|s~combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 29;
@@ -2279,7 +2310,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|nex.Q3~0_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|clk~combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 30;
@@ -2288,7 +2319,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|clk~combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|clk~clkctrl_outclk";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 31;
@@ -2297,7 +2328,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|clk~clkctrl_outclk";
+	CHANNEL = "divider_vlg_vec_tst|i1|Ain[0]~8_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 32;
@@ -2306,7 +2337,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Ain[0]~8_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|rst~combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 33;
@@ -2315,7 +2346,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|s~combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|curr.Q1~regout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 34;
@@ -2324,7 +2355,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|rst~combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|Selector1~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 35;
@@ -2333,7 +2364,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|nex.Q1~0_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|Ain[0]~9";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 36;
@@ -2342,7 +2373,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|curr.Q1~regout";
+	CHANNEL = "divider_vlg_vec_tst|i1|Ain[1]~11_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 37;
@@ -2351,7 +2382,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Ain[0]~9";
+	CHANNEL = "divider_vlg_vec_tst|i1|Ain[0]~10_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 38;
@@ -2360,7 +2391,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Ain[1]~11_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|LessThan0~4_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 39;
@@ -2432,7 +2463,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Selector3~0_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|Div3~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 47;
@@ -2441,7 +2472,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Ain[5]~20";
+	CHANNEL = "divider_vlg_vec_tst|i1|Selector1~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 48;
@@ -2450,7 +2481,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Ain[6]~21_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|nex.Q2~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 49;
@@ -2459,7 +2490,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Ain[6]~22";
+	CHANNEL = "divider_vlg_vec_tst|i1|curr.Q2~regout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 50;
@@ -2468,7 +2499,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Ain[7]~23_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|nex.Q1~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 51;
@@ -2477,7 +2508,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Selector3~1_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|Ain[3]~15_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 52;
@@ -2486,7 +2517,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|LessThan0~0_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|Ain[5]~20";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 53;
@@ -2495,7 +2526,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|nex.Q2~1_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|Ain[6]~21_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 54;
@@ -2504,7 +2535,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|curr.Q2~regout";
+	CHANNEL = "divider_vlg_vec_tst|i1|Ain[6]~22";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 55;
@@ -2513,7 +2544,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Ain[0]~10_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|Ain[7]~23_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 56;
@@ -2522,7 +2553,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Ain[3]~15_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|nex.Q3~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 57;
@@ -2531,7 +2562,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|nex.Q3~1_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|Div3~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 58;
@@ -2540,7 +2571,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|curr.Q3~regout";
+	CHANNEL = "divider_vlg_vec_tst|i1|LessThan0~5_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 59;
@@ -2549,7 +2580,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Done$latch~combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|nex.Q3~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 60;
@@ -2558,7 +2589,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Selector3~2_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|nex.Q3~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 61;
@@ -2567,7 +2598,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Selector3~3_combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|Div3~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 62;
@@ -2576,7 +2607,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "divider_vlg_vec_tst|i1|Div3$latch~combout";
+	CHANNEL = "divider_vlg_vec_tst|i1|Div3~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 63;
